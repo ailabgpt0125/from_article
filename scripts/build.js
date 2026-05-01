@@ -171,6 +171,14 @@ function worldFor(product) {
   return (product.series || []).join(" / ");
 }
 
+function productSlug(product) {
+  return product.id;
+}
+
+function productRoute(product) {
+  return `/objects/${productSlug(product)}/`;
+}
+
 function productsForWorld(worldName) {
   return publishedProducts.filter((product) => (product.series || []).includes(worldName));
 }
@@ -179,6 +187,39 @@ function productsForType(typeKey, items = publishedProducts) {
   const type = objectTypes.find((item) => item.key === typeKey || item.slug === typeKey || (item.categories || []).includes(typeKey));
   const categories = type ? type.categories : [typeKey];
   return items.filter((product) => categories.includes(product.category));
+}
+
+function fragmentForProduct(product) {
+  const type = objectTypes.find((item) => (item.categories || []).includes(product.category));
+  const fragmentsByType = {
+    entrance: "失われた場所へ戻るための、静かな入口。",
+    records: "火の消えたあとにも、記録だけは残る。",
+    echoes: "記憶の奥で、まだ鳴り続ける断片。",
+    relics: "棚の片隅に、小さな巡礼を置く。",
+    insignia: "わかる者だけに伝わる、古い記章。"
+  };
+  const fragmentsByWorld = {
+    "DARK SOULS": "灰のあとに、まだ消えない輪郭がある。",
+    "Bloodborne": "かつて対峙した影が、日常の余白に残る。",
+    "ELDEN RING": "砕けた黄金の気配を、そっと手元に残す。",
+    "SEKIRO": "刃の沈黙だけが、薄く残り続ける。",
+    "ARMORED CORE": "鋼鉄の通信が、遠い砂のように残る。",
+    "Demon's Souls": "霧の向こうから、古い始まりが戻ってくる。"
+  };
+  const world = (product.series || [])[0];
+  return fragmentsByType[type && type.key] || fragmentsByWorld[world] || "触れたあとに、かすかな気配だけが残る。";
+}
+
+function fragmentForWorld(world) {
+  const fragments = {
+    "DARK SOULS": "火の消えたあとにも、巡礼の記録だけは残る。",
+    "Bloodborne": "夜の底に沈んだ影が、紙と音の奥で息をする。",
+    "ELDEN RING": "砕けた黄金の下に、まだ旅の気配が残っている。",
+    "SEKIRO": "刃と沈黙のあいだに、主従の記憶が眠る。",
+    "ARMORED CORE": "鋼鉄と通信の残響が、冷たい棚に並ぶ。",
+    "Demon's Souls": "霧の向こうの始まりを、まだ忘れないために。"
+  };
+  return fragments[world.name] || "失われた世界の気配を、もう一度たどる。";
 }
 
 function externalLinks(product) {
@@ -201,8 +242,29 @@ function externalLinks(product) {
   return `<div class="object-links" aria-label="External links">${links}</div>`;
 }
 
+function detailLink(product, depth) {
+  return `<a class="text-link detail-link" href="${relPath(depth, `objects/${productSlug(product)}/`)}">Detail</a>`;
+}
+
+function objectDetailMedia(product) {
+  const image = product.image || {};
+  if (image.url) {
+    const alt = image.alt || `${product.title} の収蔵画像`;
+    return `<figure class="object-detail-image">
+        <img src="${escapeHtml(image.url)}" alt="${escapeHtml(alt)}">
+        <figcaption>${escapeHtml(alt)}</figcaption>
+      </figure>`;
+  }
+  const type = objectTypes.find((item) => (item.categories || []).includes(product.category));
+  const mediaLabel = type ? type.label : "OBJECT";
+  return `<div class="object-detail-image object-detail-image--empty" aria-label="${escapeHtml(product.title)} の抽象収蔵パネル">
+        <span>${escapeHtml(mediaLabel)}</span>
+      </div>`;
+}
+
 function objectCards(items, options = {}) {
   const limit = options.limit || items.length;
+  const depth = options.depth || 0;
   const subset = items.slice(0, limit);
   if (!subset.length) {
     return `<p class="notice">この展示室には、まだ公開できる収蔵品がありません。</p>`;
@@ -219,7 +281,9 @@ function objectCards(items, options = {}) {
         <p class="object-world">${escapeHtml(worldFor(product))} / ${escapeHtml(typeLabel(product.category))}</p>
         <h3>${escapeHtml(product.title)}</h3>
         <p class="object-description">${escapeHtml(product.description)}</p>
+        <p class="object-fragment">${escapeHtml(fragmentForProduct(product))}</p>
         <div class="tag-list">${tags}</div>
+        ${detailLink(product, depth)}
         <p class="object-note">${escapeHtml(product.note || "価格・在庫・販売状況は、外部販売先で確認してください。")}</p>
         <p class="object-checked">Checked ${escapeHtml(product.lastChecked)}</p>
         ${externalLinks(product)}
@@ -234,6 +298,7 @@ function worldCard(world, depth, index) {
     <strong>${escapeHtml(world.displayName)}</strong>
     <small>収蔵品 ${count}</small>
     <p>${escapeHtml(world.lead)}</p>
+    <span class="card-fragment">${escapeHtml(fragmentForWorld(world))}</span>
     <em>ENTER THE WORLD</em>
   </a>`;
 }
@@ -274,9 +339,9 @@ function renderHome() {
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">SELECTED RELICS</p>
-          <h2>最後に、いくつかの断片を。</h2>
+          <h2>記憶の欠片</h2>
         </div>
-        <div class="object-grid" data-product-list="featured">${objectCards(publishedProducts, { limit: 4 })}</div>
+        <div class="object-grid" data-product-list="featured">${objectCards(publishedProducts, { limit: 4, depth: 0 })}</div>
       </div>
     </section>`;
   writeFile("index.html", basePage({
@@ -373,7 +438,7 @@ function renderWorldPages() {
             <p class="eyebrow">${escapeHtml(type.label)}</p>
             <h3>${escapeHtml(type.jp)}</h3>
           </div>
-          <div class="object-grid" data-product-list="${escapeHtml(world.slug)}-${escapeHtml(type.slug)}">${objectCards(typeItems)}</div>
+          <div class="object-grid" data-product-list="${escapeHtml(world.slug)}-${escapeHtml(type.slug)}">${objectCards(typeItems, { depth: 2 })}</div>
         </section>`;
     }).join("");
     const content = `    <section class="hero hero--text">
@@ -447,7 +512,7 @@ function renderObjectsIndex() {
             <p class="eyebrow">${escapeHtml(type.label)}</p>
             <h3>${escapeHtml(type.jp)}</h3>
           </div>
-          <div class="object-grid" data-product-list="objects-${escapeHtml(type.slug)}">${objectCards(items)}</div>
+          <div class="object-grid" data-product-list="objects-${escapeHtml(type.slug)}">${objectCards(items, { depth: 1 })}</div>
         </section>`;
   }).join("");
   const content = `    <section class="hero hero--text">
@@ -490,7 +555,7 @@ function renderCategoryPages() {
       </div>
     </section>
     <section class="section">
-      <div class="container"><div class="object-grid" data-product-list="category">${objectCards(items)}</div></div>
+      <div class="container"><div class="object-grid" data-product-list="category">${objectCards(items, { depth: 2 })}</div></div>
     </section>`;
     writeFile(`category/${type.slug}/index.html`, basePage({
       title: `${type.jp} | ${siteName}`,
@@ -498,6 +563,37 @@ function renderCategoryPages() {
       route: `/category/${type.slug}/`,
       depth: 2,
       bodyAttrs: `data-page-type="category" data-category="${type.key}" data-products-path="../../data/products.json"`,
+      content
+    }));
+  });
+}
+
+function renderProductPages() {
+  publishedProducts.forEach((product) => {
+    const content = `    <section class="hero hero--text">
+      <div class="container narrow">
+        <p class="breadcrumb"><a href="../../objects/">OBJECTS</a> / ${escapeHtml(worldFor(product))}</p>
+        <p class="eyebrow">${escapeHtml(typeLabel(product.category))}</p>
+        <h1>${escapeHtml(product.title)}</h1>
+        <p class="lead">${escapeHtml(product.description)}</p>
+      </div>
+    </section>
+    <section class="section object-detail">
+      <div class="container narrow">
+        ${objectDetailMedia(product)}
+        <p class="object-detail-fragment">${escapeHtml(fragmentForProduct(product))}</p>
+        <div class="tag-list">${(product.tags || []).slice(0, 4).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>
+        ${externalLinks(product)}
+        <p class="object-note">${escapeHtml(product.note || "価格・在庫・販売状況は、外部販売先で確認してください。")}</p>
+        <p class="object-checked">Checked ${escapeHtml(product.lastChecked)}</p>
+      </div>
+    </section>`;
+    writeFile(`objects/${productSlug(product)}/index.html`, basePage({
+      title: `${product.title} | ${siteName}`,
+      description: `${product.title}を、収蔵品として静かに記録する詳細ページ。`,
+      route: productRoute(product),
+      depth: 2,
+      bodyAttrs: 'data-page-type="object-detail" data-products-path="../../data/products.json"',
       content
     }));
   });
@@ -522,6 +618,7 @@ function renderSitemapAndRobots() {
     "/about/",
     "/worlds/",
     "/objects/",
+    ...publishedProducts.map((product) => productRoute(product)),
     ...worlds.map((world) => `/worlds/${world.slug}/`),
     ...objectTypes.map((type) => `/category/${type.slug}/`),
     "/guide/buying-notes/"
@@ -543,6 +640,7 @@ renderWorldsIndex();
 renderWorldPages();
 renderObjectsIndex();
 renderCategoryPages();
+renderProductPages();
 renderGuide();
 renderSitemapAndRobots();
 
