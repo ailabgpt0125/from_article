@@ -124,9 +124,9 @@ function header(depth) {
       <a class="site-name" href="${relPath(depth, "index.html")}">${siteName}</a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="${relPath(depth, "index.html")}">TOP</a>
-        <a href="${relPath(depth, "about/")}">ABOUT</a>
         <a href="${relPath(depth, "worlds/")}">WORLDS</a>
         <a href="${relPath(depth, "objects/")}">OBJECTS</a>
+        <a href="${relPath(depth, "about/")}">ABOUT</a>
         <a href="${relPath(depth, "guide/buying-notes/")}">NOTICE</a>
       </nav>
     </div>
@@ -140,9 +140,9 @@ function footer(depth) {
       <p class="last-updated">LAST UPDATED ${escapeHtml(site.lastModified)}</p>
       <div class="footer-links">
         <a href="${relPath(depth, "index.html")}">TOP</a>
-        <a href="${relPath(depth, "about/")}">ABOUT</a>
         <a href="${relPath(depth, "worlds/")}">WORLDS</a>
         <a href="${relPath(depth, "objects/")}">OBJECTS</a>
+        <a href="${relPath(depth, "about/")}">ABOUT</a>
         <a href="${relPath(depth, "guide/buying-notes/")}">NOTICE</a>
       </div>
     </div>

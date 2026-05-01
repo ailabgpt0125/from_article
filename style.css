@@ -459,13 +459,21 @@ h3 {
   }
 
   .header-inner {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 20px 0;
+    gap: 16px;
+    padding: 18px 0 14px;
   }
 
   .site-nav {
-    gap: 18px;
+    width: 100%;
+    gap: 22px;
+    overflow-x: auto;
+    padding: 0 0 6px;
+    scrollbar-width: none;
+    white-space: nowrap;
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .hero {
