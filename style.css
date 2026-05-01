@@ -482,45 +482,6 @@ h3 {
   padding-bottom: clamp(52px, 7vw, 88px);
 }
 
-.home-concept {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
-  gap: clamp(30px, 6vw, 76px);
-  align-items: start;
-}
-
-.home-concept > .eyebrow {
-  grid-column: 1 / -1;
-  margin: 0;
-}
-
-.home-note-list {
-  display: grid;
-  gap: 18px;
-  padding-top: 8px;
-  border-top: 1px solid rgba(32, 32, 29, 0.16);
-}
-
-.home-note-list p,
-.home-section-lead {
-  max-width: 620px;
-  margin: 0;
-  color: #625f58;
-  font-size: 1.06rem;
-  line-height: 1.95;
-}
-
-.home-section-lead {
-  margin-top: 18px;
-}
-
-.statement--left {
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-}
-
 .quiet-grid--worlds {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: clamp(44px, 7vw, 96px);
@@ -572,25 +533,12 @@ h3 {
     grid-template-columns: 1fr;
     align-items: start;
   }
-
-  .home-concept {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 640px) {
   .quiet-grid--worlds,
   .quiet-grid--types {
     grid-template-columns: 1fr;
-  }
-
-  .statement--left {
-    text-align: left;
-  }
-
-  .home-note-list p,
-  .home-section-lead {
-    font-size: 1.02rem;
   }
 }
 

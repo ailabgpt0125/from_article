@@ -255,24 +255,15 @@ function renderHome() {
       </div>
     </section>
     <section class="section section--concept">
-      <div class="container home-concept">
-        <p class="eyebrow">CONCEPT</p>
-        <div class="statement statement--left">
-          <p>声高にすすめることはしない。<br>ただ、失われた世界の気配を、ひとつずつ収めていく。</p>
-        </div>
-        <div class="home-note-list" aria-label="Archive notes">
-          <p>ここは売り場ではなく、静かな収蔵室としてつくる。</p>
-          <p>書物、音、造形、装い。どれも商品ではなく、かつて触れた世界の断片として扱う。</p>
-          <p>価格や在庫よりも先に、記憶の置き場所としての余白を残す。</p>
-        </div>
+      <div class="container statement">
+        <p>声高にすすめることはしない。<br>ただ、失われた世界の気配を、ひとつずつ収めていく。</p>
       </div>
     </section>
     <section class="section section--worlds">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">WORLDS</p>
-          <h2>世界ごとの展示室</h2>
-          <p class="home-section-lead">黄金、火、血、刃、鋼鉄、霧。それぞれの部屋に、異なる静けさを置く。</p>
+          <h2>世界を選ぶ</h2>
         </div>
         <div class="quiet-grid quiet-grid--worlds">${worlds.map((world, index) => worldCard(world, 0, index)).join("")}</div>
       </div>
@@ -281,8 +272,7 @@ function renderHome() {
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">OBJECT TYPES</p>
-          <h2>断片のかたち</h2>
-          <p class="home-section-lead">カテゴリではなく、記憶に触れるための形式として並べる。</p>
+          <h2>かたちを選ぶ</h2>
         </div>
         <div class="quiet-grid quiet-grid--types">${primaryTypes.map((type) => typeCard(type, 0)).join("")}</div>
       </div>
@@ -291,9 +281,9 @@ function renderHome() {
       <div class="container journal-entry">
         <div>
           <p class="eyebrow">JOURNAL</p>
-          <h2>残響を読み直す</h2>
+          <h2>残響について読む</h2>
         </div>
-        <p>所有すること、飾ること、忘れないこと。画面を閉じたあとに残った感覚を、短い記録として棚のそばへ戻していく。</p>
+        <p>所有すること、飾ること、忘れないこと。ゲームを終えたあとに残る感覚を、短い記録として残していく。</p>
         <a class="text-link" href="journal/">READ JOURNAL</a>
       </div>
     </section>
@@ -301,8 +291,7 @@ function renderHome() {
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">SELECTED RELICS</p>
-          <h2>最後に、収められた断片を。</h2>
-          <p class="home-section-lead">ここに置く数は少なくていい。世界の入口を通ったあとに、静かに目に入るものだけを残す。</p>
+          <h2>最後に、いくつかの断片を。</h2>
         </div>
         <div class="object-grid" data-product-list="featured">${objectCards(publishedProducts, { limit: 4 })}</div>
       </div>
