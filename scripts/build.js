@@ -289,15 +289,23 @@ function renderAbout() {
   const content = `    <section class="hero hero--text">
       <div class="container narrow">
         <p class="eyebrow">ABOUT</p>
-        <h1>滅びた世界に触れた記憶を、日常の片隅へ。</h1>
+        <h1>SEED A HOSTILE EARTH</h1>
+        <p class="lead">敵意ある世界に、種をまく。</p>
       </div>
     </section>
     <section class="section">
       <div class="container narrow prose">
-        <p>このサイトは、FromSoftware作品にまつわる書籍、造形物、音楽、周辺アイテムを静かに集める非公式の個人編集アーカイブです。</p>
-        <p>買うためではなく、忘れないために。ここでは、書物も音も造形も、滅びた世界から持ち帰った小さな断片として扱います。</p>
-        <p>売るために急がせるのではなく、比較を煽るのでもなく。ただ、世界観の断片をひとつずつ並べていく。</p>
-        <p>この小さなアーカイブが、同じ作品を愛する誰かにとって、次に手に取りたい一冊や、飾っておきたいひとつの造形物と出会う場所になれば幸いです。</p>
+        <p>明るい世界を、素直には信じられない。<br>日々は荒れ、疲れ、何かを続ける意味すら、少しずつ薄れていく。</p>
+        <p>それでも、かつて歩んだ世界の記憶は、<br>自分の奥に、静かに残り続けている。</p>
+        <p>火、血、霧、黄金、鋼鉄。<br>迷い、倒れ、何度も戻り、それでも進んだ場所。</p>
+        <p>あの世界は、もう現実にはない。<br>けれど、完全に失われたわけでもない。</p>
+        <p>何でもない日常の中で、<br>ふと、その輪郭が戻ってくることがある。</p>
+        <p>それは、大きな救いではない。<br>世界を変えるものでもない。</p>
+        <p>けれど、荒れた日々の中で、<br>まだ美しいと思えるものがあること。<br>まだ忘れたくない世界があること。<br>まだ手放したくない記憶があること。</p>
+        <p>それは、小さな希望に似ている。</p>
+        <p>SEED A HOSTILE EARTH.</p>
+        <p>かつて歩んだ世界の記憶を、<br>ひとつずつ収めていく。</p>
+        <p>あの世界を、つなぎ止めるために。<br>そして、敵意ある日常の中に、<br>それでも小さな種をまくために。</p>
         <hr>
         <p>本サイトは、株式会社フロム・ソフトウェア、FromSoftwareおよび各権利元とは関係のない非公式サイトです。掲載している作品名、商品名、画像、商標等の権利は、それぞれの権利者または販売元に帰属します。価格・在庫・販売状況は、必ず外部販売先で確認してください。</p>
           <p>${amazonImagePolicy}</p>
@@ -322,7 +330,10 @@ function renderWorldsIndex() {
       </div>
     </section>
     <section class="section">
-      <div class="container"><div class="quiet-grid quiet-grid--worlds">${worlds.map((world, index) => worldCard(world, 1, index)).join("")}</div></div>
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">WORLDS</p><h2>世界から辿る</h2></div>
+        <div class="quiet-grid quiet-grid--worlds">${worlds.map((world, index) => worldCard(world, 1, index)).join("")}</div>
+      </div>
     </section>`;
   writeFile("worlds/index.html", basePage({
     title: `WORLDS | ${siteName}`,
@@ -415,21 +426,43 @@ function renderWorldPages() {
 }
 
 function renderObjectsIndex() {
+  const primaryTypes = objectTypes.filter((type) => type.isPrimary);
+  const typeAnchorCards = primaryTypes.map((type) => {
+    const count = productsForType(type.key).length;
+    return `<a class="quiet-card type-card" href="#${escapeHtml(type.slug)}">
+    <strong>${escapeHtml(type.label)}</strong>
+    <small>${escapeHtml(type.jp)} / 収蔵品 ${count}</small>
+    <p>${escapeHtml(type.lead)}</p>
+  </a>`;
+  }).join("");
+  const typeSections = primaryTypes.map((type) => {
+    const items = productsForType(type.key);
+    return `<section class="object-type-section" id="${escapeHtml(type.slug)}">
+          <div class="section-heading section-heading--compact">
+            <p class="eyebrow">${escapeHtml(type.label)}</p>
+            <h3>${escapeHtml(type.jp)}</h3>
+          </div>
+          <div class="object-grid" data-product-list="objects-${escapeHtml(type.slug)}">${objectCards(items)}</div>
+        </section>`;
+  }).join("");
   const content = `    <section class="hero hero--text">
       <div class="container">
         <p class="eyebrow">OBJECTS</p>
         <h1>ARCHIVE OF<br>RELICS</h1>
-        <p class="lead">作品世界を越えて、収蔵品を静かに眺めるための一覧です。</p>
+        <p class="lead">入口、記録、残響、遺物、記章。作品世界を越えて、断片のかたちから収蔵品を辿るための一覧です。</p>
       </div>
     </section>
     <section class="section">
       <div class="container">
-        <div class="section-heading"><p class="eyebrow">WORLDS</p><h2>世界から辿る</h2></div>
-        <div class="quiet-grid quiet-grid--worlds">${worlds.map((world, index) => worldCard(world, 1, index)).join("")}</div>
+        <div class="section-heading"><p class="eyebrow">OBJECT TYPES</p><h2>かたちから辿る</h2></div>
+        <div class="quiet-grid quiet-grid--types">${typeAnchorCards}</div>
       </div>
     </section>
     <section class="section">
-      <div class="container"><div class="object-grid" data-product-list="objects">${objectCards(publishedProducts)}</div></div>
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">OBJECTS</p><h2>分類ごとの収蔵品</h2></div>
+        <div class="world-type-stack">${typeSections}</div>
+      </div>
     </section>`;
   writeFile("objects/index.html", basePage({
     title: `OBJECTS | ${siteName}`,
