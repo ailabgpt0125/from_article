@@ -638,9 +638,11 @@ h3 {
 .object-card__media {
   display: flex;
   align-items: flex-end;
-  min-height: 132px;
-  aspect-ratio: 4 / 3;
-  padding: 12px;
+  width: 100%;
+  min-height: 180px;
+  aspect-ratio: 16 / 10;
+  margin-bottom: 24px;
+  padding: 16px;
   border: 1px solid rgba(32, 32, 29, 0.14);
   background:
     linear-gradient(135deg, rgba(32, 32, 29, 0.05), rgba(255, 255, 255, 0.38)),
@@ -804,9 +806,7 @@ h3,
 }
 
 .object-card {
-  display: grid;
-  grid-template-columns: minmax(112px, 0.34fr) minmax(0, 1fr);
-  gap: clamp(22px, 3.4vw, 42px);
+  display: block;
   border-top-color: rgba(32, 32, 29, 0.16);
 }
 
@@ -885,10 +885,6 @@ h3,
   .journal-entry p,
   .journal-item p:not(.eyebrow) {
     font-size: 1.02rem;
-  }
-
-  .object-card {
-    grid-template-columns: 1fr;
   }
 
   .object-card__media {
