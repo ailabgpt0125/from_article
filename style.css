@@ -89,6 +89,12 @@ a {
   text-decoration: none;
 }
 
+.site-nav a {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
 .site-nav a:hover,
 .text-link:hover,
 .footer-links a:hover {
@@ -283,6 +289,8 @@ h3 {
 .card-fragment {
   max-width: 28em;
   margin-top: 24px;
+  font-size: 0.98rem;
+  line-height: 1.8;
 }
 
 .object-note {
@@ -625,6 +633,13 @@ h3 {
   line-height: 2;
 }
 
+.world-card .card-fragment {
+  max-width: 28em;
+  margin-top: 28px;
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
 .world-card:hover {
   border-top-color: rgba(32, 32, 29, 0.42);
   background: rgba(255, 255, 255, 0.42);
@@ -814,6 +829,10 @@ body {
   letter-spacing: 0.08em;
 }
 
+.site-nav a {
+  letter-spacing: 0.02em;
+}
+
 .eyebrow,
 .breadcrumb,
 .last-updated,
@@ -879,6 +898,19 @@ h3,
 .detail-link {
   display: inline-flex;
   margin-top: 20px;
+}
+
+.archive-link {
+  display: inline-flex;
+  margin-top: 24px;
+}
+
+.section-follow-link {
+  margin-top: clamp(18px, 3vw, 28px);
+}
+
+.category-world-nav {
+  margin-bottom: clamp(42px, 6vw, 72px);
 }
 
 .object-detail-image {
@@ -998,6 +1030,10 @@ h3,
   .text-link,
   .footer-links a {
     font-size: 0.88rem;
+  }
+
+  .site-nav a {
+    font-size: 0.94rem;
   }
 
   .eyebrow,

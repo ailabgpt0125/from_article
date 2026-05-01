@@ -71,6 +71,7 @@ const objectTypes = [
   { key: "relics", slug: "relics", label: "RELICS", jp: "遺物・造形", lead: "棚の上に留まる、小さな気配。", categories: ["figures", "plastic-models"], isPrimary: true },
   { key: "insignia", slug: "insignia", label: "INSIGNIA", jp: "記章・装い", lead: "日常にひそませる、小さなしるし。", categories: ["apparel", "goods"], isPrimary: true }
 ];
+const previewLimit = 3;
 
 const footerText = "当サイトは非公式の個人アーカイブです。各作品名・商品名・商標・画像等の権利は各権利者に帰属します。外部リンク・アフィリエイトに関する詳細はNOTICEをご確認ください。";
 const affiliateText = "当サイトでは、Amazonアソシエイト、楽天アフィリエイト、その他アフィリエイトプログラムを利用する場合があります。リンク先で商品を購入された場合、当サイトが紹介料を受け取ることがあります。Amazon、Amazon.co.jpおよびAmazon.co.jpロゴは、Amazon.com, Inc. またはその関連会社の商標です。";
@@ -179,6 +180,14 @@ function productRoute(product) {
   return `/objects/${productSlug(product)}/`;
 }
 
+function worldByName(worldName) {
+  return worlds.find((world) => world.name === worldName);
+}
+
+function categoryRoute(type) {
+  return `/category/${type.slug}/`;
+}
+
 function productsForWorld(worldName) {
   return publishedProducts.filter((product) => (product.series || []).includes(worldName));
 }
@@ -265,6 +274,7 @@ function objectDetailMedia(product) {
 function objectCards(items, options = {}) {
   const limit = options.limit || items.length;
   const depth = options.depth || 0;
+  const includeExternalLinks = options.includeExternalLinks === true;
   const subset = items.slice(0, limit);
   if (!subset.length) {
     return `<p class="notice">この展示室には、まだ公開できる収蔵品がありません。</p>`;
@@ -286,10 +296,18 @@ function objectCards(items, options = {}) {
         ${detailLink(product, depth)}
         <p class="object-note">${escapeHtml(product.note || "価格・在庫・販売状況は、外部販売先で確認してください。")}</p>
         <p class="object-checked">Checked ${escapeHtml(product.lastChecked)}</p>
-        ${externalLinks(product)}
+        ${includeExternalLinks ? externalLinks(product) : ""}
       </div>
     </article>`;
   }).join("\n");
+}
+
+function typeOverviewLink(type, depth, label = "すべて見る") {
+  return `<a class="text-link archive-link" href="${relPath(depth, `category/${type.slug}/`)}">${escapeHtml(label)}</a>`;
+}
+
+function worldTypeOverviewLink(type, world, depth) {
+  return `<a class="text-link archive-link" href="${relPath(depth, `category/${type.slug}/`)}#world-${escapeHtml(world.slug)}">この世界の${escapeHtml(type.jp)}をすべて見る</a>`;
 }
 
 function worldCard(world, depth, index) {
@@ -433,12 +451,15 @@ function renderWorldPages() {
     }).join("");
     const typeSections = primaryTypes.map((type) => {
       const typeItems = productsForType(type.key, items);
+      const previewItems = typeItems.slice(0, previewLimit);
+      const overview = typeItems.length > previewLimit ? `<div class="section-follow-link">${worldTypeOverviewLink(type, world, 2)}</div>` : "";
       return `<section class="object-type-section" id="${escapeHtml(type.slug)}">
           <div class="section-heading section-heading--compact">
             <p class="eyebrow">${escapeHtml(type.label)}</p>
             <h3>${escapeHtml(type.jp)}</h3>
           </div>
-          <div class="object-grid" data-product-list="${escapeHtml(world.slug)}-${escapeHtml(type.slug)}">${objectCards(typeItems, { depth: 2 })}</div>
+          <div class="object-grid" data-product-list="${escapeHtml(world.slug)}-${escapeHtml(type.slug)}">${objectCards(previewItems, { depth: 2 })}</div>
+          ${overview}
         </section>`;
     }).join("");
     const content = `    <section class="hero hero--text">
@@ -507,12 +528,15 @@ function renderObjectsIndex() {
   }).join("");
   const typeSections = primaryTypes.map((type) => {
     const items = productsForType(type.key);
+    const previewItems = items.slice(0, previewLimit);
+    const overview = items.length > previewLimit ? `<div class="section-follow-link">${typeOverviewLink(type, 1, `${type.jp}をすべて見る`)}</div>` : "";
     return `<section class="object-type-section" id="${escapeHtml(type.slug)}">
           <div class="section-heading section-heading--compact">
             <p class="eyebrow">${escapeHtml(type.label)}</p>
             <h3>${escapeHtml(type.jp)}</h3>
           </div>
-          <div class="object-grid" data-product-list="objects-${escapeHtml(type.slug)}">${objectCards(items, { depth: 1 })}</div>
+          <div class="object-grid" data-product-list="objects-${escapeHtml(type.slug)}">${objectCards(previewItems, { depth: 1 })}</div>
+          ${overview}
         </section>`;
   }).join("");
   const content = `    <section class="hero hero--text">
@@ -547,6 +571,21 @@ function renderObjectsIndex() {
 function renderCategoryPages() {
   objectTypes.forEach((type) => {
     const items = productsForType(type.key);
+    const worldLinks = worlds
+      .filter((world) => productsForType(type.key, productsForWorld(world.name)).length)
+      .map((world) => `<a class="text-link" href="#world-${escapeHtml(world.slug)}">${escapeHtml(world.displayName)}</a>`)
+      .join("");
+    const worldSections = worlds.map((world) => {
+      const worldItems = productsForType(type.key, productsForWorld(world.name));
+      if (!worldItems.length) return "";
+      return `<section class="object-type-section category-world-section" id="world-${escapeHtml(world.slug)}">
+          <div class="section-heading section-heading--compact">
+            <p class="eyebrow">${escapeHtml(world.displayName)}</p>
+            <h3>${escapeHtml(world.name)}</h3>
+          </div>
+          <div class="object-grid" data-product-list="category-${escapeHtml(type.slug)}-${escapeHtml(world.slug)}">${objectCards(worldItems, { depth: 2 })}</div>
+        </section>`;
+    }).filter(Boolean).join("");
     const content = `    <section class="hero hero--text">
       <div class="container">
         <p class="breadcrumb"><a href="../../objects/">OBJECTS</a> / ${escapeHtml(type.jp)}</p>
@@ -555,7 +594,10 @@ function renderCategoryPages() {
       </div>
     </section>
     <section class="section">
-      <div class="container"><div class="object-grid" data-product-list="category">${objectCards(items, { depth: 2 })}</div></div>
+      <div class="container">
+        <div class="other-links category-world-nav"><span>WORLDS</span>${worldLinks}</div>
+        <div class="world-type-stack">${worldSections || objectCards(items, { depth: 2 })}</div>
+      </div>
     </section>`;
     writeFile(`category/${type.slug}/index.html`, basePage({
       title: `${type.jp} | ${siteName}`,
