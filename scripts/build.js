@@ -209,7 +209,12 @@ function objectCards(items, options = {}) {
   }
   return subset.map((product, index) => {
     const tags = (product.tags || []).slice(0, 3).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
+    const type = objectTypes.find((item) => (item.categories || []).includes(product.category));
+    const mediaLabel = type ? type.label : "OBJECT";
     return `<article class="object-card product-card" data-product-card data-category="${escapeHtml(product.category)}" data-series="${escapeHtml(worldFor(product))}">
+      <div class="object-card__media" aria-hidden="true">
+        <span>${escapeHtml(mediaLabel)}</span>
+      </div>
       <div class="object-card__body">
         <p class="object-world">${escapeHtml(worldFor(product))} / ${escapeHtml(typeLabel(product.category))}</p>
         <h3>${escapeHtml(product.title)}</h3>
