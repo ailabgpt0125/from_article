@@ -777,5 +777,590 @@
       "url": "",
       "alt": ""
     }
+  },
+  {
+    "id": "layout-sekiro-shadows-die-twice-entrance",
+    "title": "仮オブジェクト：SEKIRO SHADOWS DIE TWICE",
+    "series": [
+      "SEKIRO"
+    ],
+    "category": "games",
+    "subCategory": "game",
+    "tags": [
+      "レイアウト確認",
+      "入口",
+      "葦名"
+    ],
+    "status": "レイアウト確認用",
+    "priority": 6,
+    "description": "刃と沈黙の国へ踏み入るための、静かな入口。",
+    "officiality": "unknown",
+    "sourceType": "layout-check",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-05-01",
+    "isPublished": true,
+    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "layout-demons-souls-remake-entrance",
+    "title": "仮オブジェクト：Demon's Souls Entrance",
+    "series": [
+      "Demon's Souls"
+    ],
+    "category": "games",
+    "subCategory": "game",
+    "tags": [
+      "レイアウト確認",
+      "入口",
+      "霧"
+    ],
+    "status": "レイアウト確認用",
+    "priority": 7,
+    "description": "霧に沈む古い王国へ戻るための、最初の門。",
+    "officiality": "unknown",
+    "sourceType": "layout-check",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-05-01",
+    "isPublished": true,
+    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "layout-sekiro-art-records",
+    "title": "仮オブジェクト：SEKIRO Art Records",
+    "series": [
+      "SEKIRO"
+    ],
+    "category": "books",
+    "subCategory": "art-book",
+    "tags": [
+      "レイアウト確認",
+      "記録",
+      "葦名"
+    ],
+    "status": "レイアウト確認用",
+    "priority": 6,
+    "description": "刃、雪、古い城の輪郭を、紙の奥に静かに残す記録。",
+    "officiality": "unknown",
+    "sourceType": "layout-check",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-05-01",
+    "isPublished": true,
+    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "layout-armored-core-visual-archive-records",
+    "title": "仮オブジェクト：ARMORED CORE Visual Archive",
+    "series": [
+      "ARMORED CORE"
+    ],
+    "category": "books",
+    "subCategory": "archive",
+    "tags": [
+      "レイアウト確認",
+      "記録",
+      "鋼鉄"
+    ],
+    "status": "レイアウト確認用",
+    "priority": 7,
+    "description": "企業、通信、鋼鉄の影を、余白のある紙面に収めるための記録。",
+    "officiality": "unknown",
+    "sourceType": "layout-check",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-05-01",
+    "isPublished": true,
+    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "layout-sekiro-residual-sound",
+    "title": "仮オブジェクト：SEKIRO Residual Sound",
+    "series": [
+      "SEKIRO"
+    ],
+    "category": "soundtracks",
+    "subCategory": "soundtrack",
+    "tags": [
+      "レイアウト確認",
+      "残響",
+      "葦名"
+    ],
+    "status": "レイアウト確認用",
+    "priority": 6,
+    "description": "斬り結んだあとに残る、かすかな音の記録。",
+    "officiality": "unknown",
+    "sourceType": "layout-check",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-05-01",
+    "isPublished": true,
+    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "layout-demons-souls-fogbound-echoes",
+    "title": "仮オブジェクト：Demon's Souls Fogbound Echoes",
+    "series": [
+      "Demon's Souls"
+    ],
+    "category": "soundtracks",
+    "subCategory": "soundtrack",
+    "tags": [
+      "レイアウト確認",
+      "残響",
+      "霧"
+    ],
+    "status": "レイアウト確認用",
+    "priority": 7,
+    "description": "霧の奥から戻ってくる、古い王国の残響。",
+    "officiality": "unknown",
+    "sourceType": "layout-check",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-05-01",
+    "isPublished": true,
+    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "layout-dark-souls-small-relic",
+    "title": "仮オブジェクト：DARK SOULS Small Relic",
+    "series": [
+      "DARK SOULS"
+    ],
+    "category": "figures",
+    "subCategory": "figure",
+    "tags": [
+      "レイアウト確認",
+      "遺物",
+      "火"
+    ],
+    "status": "レイアウト確認用",
+    "priority": 6,
+    "description": "火の記憶を、棚の上に小さく留めるための造形。",
+    "officiality": "unknown",
+    "sourceType": "layout-check",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-05-01",
+    "isPublished": true,
+    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "layout-bloodborne-hunter-relic",
+    "title": "仮オブジェクト：Bloodborne Hunter Relic",
+    "series": [
+      "Bloodborne"
+    ],
+    "category": "figures",
+    "subCategory": "figure",
+    "tags": [
+      "レイアウト確認",
+      "遺物",
+      "夜"
+    ],
+    "status": "レイアウト確認用",
+    "priority": 7,
+    "description": "かつて対峙した影を、日常の片隅に置くための造形。",
+    "officiality": "unknown",
+    "sourceType": "layout-check",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-05-01",
+    "isPublished": true,
+    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "layout-armored-core-frame-relic",
+    "title": "仮オブジェクト：ARMORED CORE Frame Relic",
+    "series": [
+      "ARMORED CORE"
+    ],
+    "category": "plastic-models",
+    "subCategory": "model-kit",
+    "tags": [
+      "レイアウト確認",
+      "遺物",
+      "鋼鉄"
+    ],
+    "status": "レイアウト確認用",
+    "priority": 8,
+    "description": "名もなき機体の輪郭を、冷たい棚に残すための断片。",
+    "officiality": "unknown",
+    "sourceType": "layout-check",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-05-01",
+    "isPublished": true,
+    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "layout-demons-souls-stone-relic",
+    "title": "仮オブジェクト：Demon's Souls Stone Relic",
+    "series": [
+      "Demon's Souls"
+    ],
+    "category": "figures",
+    "subCategory": "figure",
+    "tags": [
+      "レイアウト確認",
+      "遺物",
+      "霧"
+    ],
+    "status": "レイアウト確認用",
+    "priority": 9,
+    "description": "霧の巡礼の記憶を、静かに閉じ込めた収蔵品。",
+    "officiality": "unknown",
+    "sourceType": "layout-check",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-05-01",
+    "isPublished": true,
+    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "layout-elden-ring-worn-mark",
+    "title": "仮オブジェクト：ELDEN RING Worn Mark",
+    "series": [
+      "ELDEN RING"
+    ],
+    "category": "apparel",
+    "subCategory": "apparel",
+    "tags": [
+      "レイアウト確認",
+      "記章",
+      "黄金"
+    ],
+    "status": "レイアウト確認用",
+    "priority": 6,
+    "description": "日常にひそかに残す、黄金の気配に似た小さなしるし。",
+    "officiality": "unknown",
+    "sourceType": "layout-check",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-05-01",
+    "isPublished": true,
+    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "layout-dark-souls-ashen-token",
+    "title": "仮オブジェクト：DARK SOULS Ashen Token",
+    "series": [
+      "DARK SOULS"
+    ],
+    "category": "goods",
+    "subCategory": "token",
+    "tags": [
+      "レイアウト確認",
+      "記章",
+      "灰"
+    ],
+    "status": "レイアウト確認用",
+    "priority": 7,
+    "description": "身につけるための証ではなく、忘れないための断片。",
+    "officiality": "unknown",
+    "sourceType": "layout-check",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-05-01",
+    "isPublished": true,
+    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "layout-bloodborne-night-insignia",
+    "title": "仮オブジェクト：Bloodborne Night Insignia",
+    "series": [
+      "Bloodborne"
+    ],
+    "category": "apparel",
+    "subCategory": "accessory",
+    "tags": [
+      "レイアウト確認",
+      "記章",
+      "月"
+    ],
+    "status": "レイアウト確認用",
+    "priority": 8,
+    "description": "わかる者だけに伝わる、夜の底に似た静かな記章。",
+    "officiality": "unknown",
+    "sourceType": "layout-check",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-05-01",
+    "isPublished": true,
+    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "layout-sekiro-silent-mark",
+    "title": "仮オブジェクト：SEKIRO Silent Mark",
+    "series": [
+      "SEKIRO"
+    ],
+    "category": "goods",
+    "subCategory": "token",
+    "tags": [
+      "レイアウト確認",
+      "記章",
+      "沈黙"
+    ],
+    "status": "レイアウト確認用",
+    "priority": 9,
+    "description": "声を立てず、日常の布地に沈めておく小さなしるし。",
+    "officiality": "unknown",
+    "sourceType": "layout-check",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-05-01",
+    "isPublished": true,
+    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "layout-armored-core-steel-token",
+    "title": "仮オブジェクト：ARMORED CORE Steel Token",
+    "series": [
+      "ARMORED CORE"
+    ],
+    "category": "apparel",
+    "subCategory": "accessory",
+    "tags": [
+      "レイアウト確認",
+      "記章",
+      "鋼鉄"
+    ],
+    "status": "レイアウト確認用",
+    "priority": 10,
+    "description": "鋼鉄の通信を、日常にひそませるための小さな断片。",
+    "officiality": "unknown",
+    "sourceType": "layout-check",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-05-01",
+    "isPublished": true,
+    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
   }
 ]
