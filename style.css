@@ -1217,6 +1217,10 @@ h3,
   line-height: 1.72;
 }
 
+.concept-line {
+  white-space: nowrap;
+}
+
 .quiet-grid--worlds {
   column-gap: clamp(64px, 8vw, 124px);
   row-gap: clamp(52px, 7vw, 86px);
@@ -1455,7 +1459,11 @@ h3,
   }
 
   .statement p {
-    font-size: clamp(1.34rem, 6vw, 1.74rem);
+    font-size: clamp(1.28rem, 5.5vw, 1.68rem);
+  }
+
+  .concept-line {
+    white-space: normal;
   }
 
   .world-card {

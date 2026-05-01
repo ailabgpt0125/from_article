@@ -341,7 +341,7 @@ function renderHome() {
     </section>
     <section class="section section--concept">
       <div class="container statement">
-        <p>失われた世界の記憶を、ひとつずつ収めていく。<br>あの世界を、つなぎ止めるために。</p>
+        <p><span class="concept-line">失われた世界の記憶を、ひとつずつ集めていく。</span><br><span class="concept-line">あの世界を、つなぎ止めるために。</span></p>
       </div>
     </section>
     <section class="section section--worlds">
