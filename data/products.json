@@ -1,0 +1,781 @@
+[
+  {
+    "id": "elden-ring-official-art-book",
+    "title": "ELDEN RING OFFICIAL ART BOOK",
+    "series": [
+      "ELDEN RING"
+    ],
+    "category": "books",
+    "subCategory": "art-book",
+    "tags": [
+      "公式",
+      "アートブック",
+      "設定資料",
+      "コレクター向け"
+    ],
+    "status": "販売中",
+    "priority": 1,
+    "description": "砕けた黄金律と狭間の地の記憶を、紙の上でもう一度たどるための書物。",
+    "officiality": "official_or_licensed",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": true,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "https://www.amazon.co.jp/s?k=ELDEN+RING+OFFICIAL+ART+BOOK",
+      "rakutenSearch": "https://search.rakuten.co.jp/search/mall/ELDEN+RING+OFFICIAL+ART+BOOK/",
+      "yahooSearch": "https://shopping.yahoo.co.jp/search?p=ELDEN+RING+OFFICIAL+ART+BOOK",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "elden-ring-soundtrack",
+    "title": "ELDEN RING Original Soundtrack",
+    "series": [
+      "ELDEN RING"
+    ],
+    "category": "soundtracks",
+    "subCategory": "soundtrack",
+    "tags": [
+      "公式",
+      "サントラ",
+      "音楽"
+    ],
+    "status": "要確認",
+    "priority": 2,
+    "description": "祝福が遠のいた地に残る、風と戦と祈りの残響。",
+    "officiality": "likely_official",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": true,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "https://www.amazon.co.jp/s?k=ELDEN+RING+Original+Soundtrack",
+      "rakutenSearch": "https://search.rakuten.co.jp/search/mall/ELDEN+RING+Original+Soundtrack/",
+      "yahooSearch": "https://shopping.yahoo.co.jp/search?p=ELDEN+RING+Original+Soundtrack",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "elden-ring-figma-vyke",
+    "title": "figma ELDEN RING 狼の戦鬼",
+    "series": [
+      "ELDEN RING"
+    ],
+    "category": "figures",
+    "subCategory": "action-figure",
+    "tags": [
+      "公式",
+      "フィギュア",
+      "可動"
+    ],
+    "status": "在庫不安定",
+    "priority": 3,
+    "description": "狼の名を帯びた戦鬼を、棚の上に留める小さな遺物。",
+    "officiality": "likely_official",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": true,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "https://www.amazon.co.jp/s?k=figma+ELDEN+RING",
+      "rakutenSearch": "https://search.rakuten.co.jp/search/mall/figma+ELDEN+RING/",
+      "yahooSearch": "https://shopping.yahoo.co.jp/search?p=figma+ELDEN+RING",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "elden-ring-apparel-sample",
+    "title": "仮データ：ELDEN RING アパレル関連アイテム",
+    "series": [
+      "ELDEN RING"
+    ],
+    "category": "apparel",
+    "subCategory": "apparel",
+    "tags": [
+      "仮データ",
+      "アパレル",
+      "要販売元確認"
+    ],
+    "status": "要確認",
+    "priority": 4,
+    "description": "公式または販売元確認可能なアパレル商品を追加するための非公開サンプル枠。",
+    "officiality": "unknown",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": false,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "elden-ring-shadow-of-the-erdtree-edition",
+    "title": "ELDEN RING SHADOW OF THE ERDTREE EDITION",
+    "series": [
+      "ELDEN RING"
+    ],
+    "category": "games",
+    "subCategory": "game",
+    "tags": [
+      "公式",
+      "ゲーム本体",
+      "完全版"
+    ],
+    "status": "販売中",
+    "priority": 5,
+    "description": "祝福を失った者が、狭間の地へ向かうための入口。",
+    "officiality": "official_or_licensed",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": true,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "https://www.amazon.co.jp/s?k=ELDEN+RING+SHADOW+OF+THE+ERDTREE+EDITION",
+      "rakutenSearch": "https://search.rakuten.co.jp/search/mall/ELDEN+RING+SHADOW+OF+THE+ERDTREE+EDITION/",
+      "yahooSearch": "https://shopping.yahoo.co.jp/search?p=ELDEN+RING+SHADOW+OF+THE+ERDTREE+EDITION",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "dark-souls-design-works",
+    "title": "DARK SOULS DESIGN WORKS",
+    "series": [
+      "DARK SOULS"
+    ],
+    "category": "books",
+    "subCategory": "art-book",
+    "tags": [
+      "公式",
+      "アートブック",
+      "設定資料"
+    ],
+    "status": "要確認",
+    "priority": 1,
+    "description": "火の消えかけた世界に残された、甲冑、怪物、祈りの断片。",
+    "officiality": "likely_official",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": true,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "https://www.amazon.co.jp/s?k=DARK+SOULS+DESIGN+WORKS",
+      "rakutenSearch": "https://search.rakuten.co.jp/search/mall/DARK+SOULS+DESIGN+WORKS/",
+      "yahooSearch": "https://shopping.yahoo.co.jp/search?p=DARK+SOULS+DESIGN+WORKS",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "dark-souls-trilogy-soundtrack",
+    "title": "DARK SOULS Trilogy Soundtrack",
+    "series": [
+      "DARK SOULS"
+    ],
+    "category": "soundtracks",
+    "subCategory": "soundtrack",
+    "tags": [
+      "公式",
+      "サントラ",
+      "音楽"
+    ],
+    "status": "要確認",
+    "priority": 2,
+    "description": "灰と篝火の記憶を、耳の奥で静かに読み直すための残響。",
+    "officiality": "likely_official",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": true,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "https://www.amazon.co.jp/s?k=DARK+SOULS+Trilogy+Soundtrack",
+      "rakutenSearch": "https://search.rakuten.co.jp/search/mall/DARK+SOULS+Soundtrack/",
+      "yahooSearch": "https://shopping.yahoo.co.jp/search?p=DARK+SOULS+Soundtrack",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "dark-souls-solaire-figure",
+    "title": "仮データ：DARK SOULS ソラール関連フィギュア",
+    "series": [
+      "DARK SOULS"
+    ],
+    "category": "figures",
+    "subCategory": "figure",
+    "tags": [
+      "仮データ",
+      "フィギュア",
+      "要販売元確認"
+    ],
+    "status": "要確認",
+    "priority": 3,
+    "description": "DARK SOULSのキャラクター立体物を登録するための非公開サンプル商品。",
+    "officiality": "unknown",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": false,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "dark-souls-apparel-sample",
+    "title": "仮データ：DARK SOULS アパレル関連アイテム",
+    "series": [
+      "DARK SOULS"
+    ],
+    "category": "apparel",
+    "subCategory": "apparel",
+    "tags": [
+      "仮データ",
+      "アパレル",
+      "要販売元確認"
+    ],
+    "status": "要確認",
+    "priority": 4,
+    "description": "DARK SOULS関連のTシャツやアクセサリー類を追加するための非公開サンプル枠。",
+    "officiality": "unknown",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": false,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "dark-souls-remastered",
+    "title": "DARK SOULS REMASTERED",
+    "series": [
+      "DARK SOULS"
+    ],
+    "category": "games",
+    "subCategory": "game",
+    "tags": [
+      "公式",
+      "ゲーム本体"
+    ],
+    "status": "販売中",
+    "priority": 5,
+    "description": "まだ火を継ぐ前の者へ。滅びた世界へ足を踏み入れるための入口。",
+    "officiality": "official_or_licensed",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": true,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "https://www.amazon.co.jp/s?k=DARK+SOULS+REMASTERED",
+      "rakutenSearch": "https://search.rakuten.co.jp/search/mall/DARK+SOULS+REMASTERED/",
+      "yahooSearch": "https://shopping.yahoo.co.jp/search?p=DARK+SOULS+REMASTERED",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "bloodborne-official-artworks",
+    "title": "Bloodborne Official Artworks",
+    "series": [
+      "Bloodborne"
+    ],
+    "category": "books",
+    "subCategory": "art-book",
+    "tags": [
+      "公式",
+      "アートブック",
+      "設定資料"
+    ],
+    "status": "要確認",
+    "priority": 1,
+    "description": "血と月と悪夢の都市を、紙の奥に静かに封じた記録。",
+    "officiality": "likely_official",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": true,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "https://www.amazon.co.jp/s?k=Bloodborne+Official+Artworks",
+      "rakutenSearch": "https://search.rakuten.co.jp/search/mall/Bloodborne+Official+Artworks/",
+      "yahooSearch": "https://shopping.yahoo.co.jp/search?p=Bloodborne+Official+Artworks",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "bloodborne-soundtrack",
+    "title": "Bloodborne Original Soundtrack",
+    "series": [
+      "Bloodborne"
+    ],
+    "category": "soundtracks",
+    "subCategory": "soundtrack",
+    "tags": [
+      "公式",
+      "サントラ",
+      "音楽"
+    ],
+    "status": "要確認",
+    "priority": 2,
+    "description": "狩人が見た夜の輪郭を、音の底でもう一度たどるための残響。",
+    "officiality": "likely_official",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": true,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "https://www.amazon.co.jp/s?k=Bloodborne+Original+Soundtrack",
+      "rakutenSearch": "https://search.rakuten.co.jp/search/mall/Bloodborne+Original+Soundtrack/",
+      "yahooSearch": "https://shopping.yahoo.co.jp/search?p=Bloodborne+Original+Soundtrack",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "bloodborne-hunter-figure",
+    "title": "仮データ：Bloodborne 狩人フィギュア",
+    "series": [
+      "Bloodborne"
+    ],
+    "category": "figures",
+    "subCategory": "figure",
+    "tags": [
+      "仮データ",
+      "フィギュア",
+      "要販売元確認"
+    ],
+    "status": "要確認",
+    "priority": 3,
+    "description": "Bloodborne関連の立体物を登録するための非公開サンプル商品。",
+    "officiality": "unknown",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": false,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "bloodborne-apparel-sample",
+    "title": "仮データ：Bloodborne アパレル関連アイテム",
+    "series": [
+      "Bloodborne"
+    ],
+    "category": "apparel",
+    "subCategory": "apparel",
+    "tags": [
+      "仮データ",
+      "アパレル",
+      "要販売元確認"
+    ],
+    "status": "要確認",
+    "priority": 4,
+    "description": "Bloodborne関連のアパレルやアクセサリー類を登録するための非公開サンプル枠。",
+    "officiality": "unknown",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": false,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "bloodborne-comic-sample",
+    "title": "仮データ：Bloodborne 関連コミック・書籍",
+    "series": [
+      "Bloodborne"
+    ],
+    "category": "books",
+    "subCategory": "book",
+    "tags": [
+      "仮データ",
+      "関連書籍",
+      "要販売元確認"
+    ],
+    "status": "要確認",
+    "priority": 5,
+    "description": "Bloodborne関連書籍を追加するための非公開サンプル商品。",
+    "officiality": "unknown",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": false,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "armored-core-vi-game",
+    "title": "ARMORED CORE VI FIRES OF RUBICON",
+    "series": [
+      "ARMORED CORE"
+    ],
+    "category": "games",
+    "subCategory": "game",
+    "tags": [
+      "公式",
+      "ゲーム本体"
+    ],
+    "status": "販売中",
+    "priority": 1,
+    "description": "灰の惑星に降り立ち、名もなき傭兵として再び鋼鉄を組み上げるための入口。",
+    "officiality": "official_or_licensed",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": true,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "https://www.amazon.co.jp/s?k=ARMORED+CORE+VI+FIRES+OF+RUBICON",
+      "rakutenSearch": "https://search.rakuten.co.jp/search/mall/ARMORED+CORE+VI/",
+      "yahooSearch": "https://shopping.yahoo.co.jp/search?p=ARMORED+CORE+VI",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "armored-core-model-kit-sample",
+    "title": "仮データ：ARMORED CORE プラモデル関連アイテム",
+    "series": [
+      "ARMORED CORE"
+    ],
+    "category": "plastic-models",
+    "subCategory": "model-kit",
+    "tags": [
+      "仮データ",
+      "プラモデル",
+      "メカ"
+    ],
+    "status": "要確認",
+    "priority": 2,
+    "description": "ARMORED COREの機体プラモデルを登録するための非公開サンプル商品。",
+    "officiality": "unknown",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": false,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "armored-core-soundtrack",
+    "title": "仮データ：ARMORED CORE Soundtrack Collection",
+    "series": [
+      "ARMORED CORE"
+    ],
+    "category": "soundtracks",
+    "subCategory": "soundtrack",
+    "tags": [
+      "仮データ",
+      "サントラ",
+      "音楽"
+    ],
+    "status": "要確認",
+    "priority": 3,
+    "description": "ARMORED CORE関連の音楽商品を登録するための非公開サンプル枠。",
+    "officiality": "unknown",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": false,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "armored-core-book-sample",
+    "title": "仮データ：ARMORED CORE 関連書籍",
+    "series": [
+      "ARMORED CORE"
+    ],
+    "category": "books",
+    "subCategory": "book",
+    "tags": [
+      "仮データ",
+      "関連書籍",
+      "メカ"
+    ],
+    "status": "要確認",
+    "priority": 4,
+    "description": "設定資料や攻略本など、ARMORED CORE関連書籍を追加するための非公開サンプル商品。",
+    "officiality": "unknown",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": false,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "armored-core-mecha-goods-sample",
+    "title": "仮データ：ARMORED CORE メカ系グッズ",
+    "series": [
+      "ARMORED CORE"
+    ],
+    "category": "goods",
+    "subCategory": "goods",
+    "tags": [
+      "仮データ",
+      "グッズ",
+      "メカ"
+    ],
+    "status": "要確認",
+    "priority": 5,
+    "description": "メカ系グッズや周辺アイテムを登録するための非公開サンプル商品。",
+    "officiality": "unknown",
+    "sourceType": "manual",
+    "asin": "",
+    "jan": "",
+    "maker": "",
+    "publisher": "",
+    "releaseDate": "",
+    "lastChecked": "2026-04-29",
+    "isPublished": false,
+    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "links": {
+      "amazonProduct": "",
+      "amazonSearch": "",
+      "rakutenSearch": "",
+      "yahooSearch": "",
+      "official": ""
+    },
+    "image": {
+      "provider": "",
+      "url": "",
+      "alt": ""
+    }
+  }
+]
