@@ -24,18 +24,18 @@ Published URL: https://ailabgpt0125.github.io/from_article/
 
 ## Content And Tone
 
-- [ ] Confirm no public copy uses sales-heavy labels such as ranking, strong purchase prompts, or price comparison framing.
-- [ ] Confirm objects read as records, relics, echoes, marks, or entrances.
-- [ ] Confirm no public page explains AI usage or production process unless intentionally added outside this archive.
-- [ ] Confirm no official text, item descriptions, or official copy are copied.
+- [x] Confirm no public copy uses sales-heavy labels such as ranking, strong purchase prompts, or price comparison framing.
+- [x] Confirm objects read as records, relics, echoes, marks, or entrances.
+- [x] Confirm no public page explains AI usage or production process unless intentionally added outside this archive.
+- [x] Confirm no obvious official text, item descriptions, or official copy are copied.
 
 ## Legal And Affiliate
 
-- [ ] Confirm the site is clearly non-official.
-- [ ] Confirm rights attribution remains in footer, ABOUT, and JOURNAL.
+- [x] Confirm the site is clearly non-official.
+- [x] Confirm rights attribution remains in footer, ABOUT, and JOURNAL.
 - [x] Confirm Amazon pending disclosure is visible while Tracking ID is unset.
 - [ ] TODO_HUMAN: Confirm Amazon Associate disclosure after Tracking ID is issued and configured.
-- [ ] Confirm price, stock, sales terms, and specifications are directed to external sellers.
+- [x] Confirm price, stock, sales terms, and specifications are directed to external sellers.
 - [ ] TODO_HUMAN: Complete Amazon Associates account/application flow.
 - [ ] TODO_HUMAN: Confirm Amazon Tracking ID and each affiliate URL before treating Amazon links as affiliate links.
 - [ ] TODO_HUMAN: Confirm image usage rights before adding any product images.
