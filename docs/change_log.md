@@ -24,6 +24,7 @@
 - Changed Amazon disclosure behavior so the site does not claim Associate earnings while no Tracking ID is set.
 - Added `docs/amazon_associates_application.md` with the human-only Amazon Associates application handoff text.
 - Extended `scripts/verify.js` to catch mismatched Amazon disclosure and missing configured Amazon tags.
+- Deployed the Amazon pending-disclosure update to GitHub Pages.
 
 ## Notes
 

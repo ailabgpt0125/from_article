@@ -15,7 +15,7 @@ The generated site currently includes:
 - Conditional Amazon Associate wording: pending text is shown until an official Tracking ID is configured; Associate earning text is shown only after configuration.
 - Price, stock, sales terms, and product specification confirmation directed to external sellers.
 - Product image policy that limits use to authorized provider URLs.
-- Public footer legal/affiliate text confirmed locally; live redeploy still required for the latest Amazon pending wording.
+- Public footer legal/affiliate text confirmed locally and deployed to GitHub Pages.
 
 ## Protected Areas
 
