@@ -2,7 +2,7 @@
 
 Date: 2026-06-14
 
-Published URL: https://ailabgpt0125.github.io/from_article/
+Published URL: https://from-item.idea-base.net/
 
 ## Build And Local Check
 
@@ -46,5 +46,5 @@ Published URL: https://ailabgpt0125.github.io/from_article/
 ## Final Human Step
 
 - [x] Upload after checks pass.
-- [x] Publish with final GitHub Pages URL.
+- [x] Publish with final custom domain URL.
 - [ ] TODO_HUMAN: Rebuild and redeploy after Amazon Tracking ID is configured.

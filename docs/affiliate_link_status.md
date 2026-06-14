@@ -2,7 +2,7 @@
 
 Date: 2026-06-14
 
-Published URL: https://ailabgpt0125.github.io/from_article/
+Published URL: https://from-item.idea-base.net/
 
 ## Policy
 
@@ -39,7 +39,7 @@ Amazon product images must not be saved, processed, re-uploaded, or replaced wit
 
 ## TODO_HUMAN
 
-- Register the published site URL in Amazon Associates: `https://ailabgpt0125.github.io/from_article/`.
+- Register the published site URL in Amazon Associates: `https://from-item.idea-base.net/`.
 - Add the issued Amazon Tracking ID with `node scripts/configure-amazon-associate.js <tracking-id>` or `AMAZON_ASSOCIATE_TAG`.
 - Replace search URLs with approved Amazon Special Links or product URLs where appropriate.
 - Confirm whether each external URL should remain a search page or become a specific product page.

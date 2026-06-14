@@ -6,7 +6,7 @@
     "status": "pending_human_account",
     "applicationUrl": "https://affiliate.amazon.co.jp/",
     "notes": [
-      "TODO_HUMAN: AmazonアソシエイトでサイトURL https://ailabgpt0125.github.io/from_article/ を登録する。",
+      "TODO_HUMAN: AmazonアソシエイトでサイトURL https://from-item.idea-base.net/ を登録する。",
       "TODO_HUMAN: 取得したトラッキングIDを associateTag に入れるか、AMAZON_ASSOCIATE_TAG で指定して再ビルドする。",
       "TODO_HUMAN: SiteStripe等で確認した正式なSpecial Linkへ商品URLを差し替える。"
     ]

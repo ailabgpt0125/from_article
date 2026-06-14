@@ -9,7 +9,7 @@ Consultation Conversation:
 https://chatgpt.com/g/g-p-69f1cec184a08191bc1d26562c8fa0d4-fu-ye-from/c/6a2df8b1-89b8-83e8-98c0-ab882a479ff1
 
 Published URL:
-https://ailabgpt0125.github.io/from_article/
+https://from-item.idea-base.net/
 
 ## Consultation Result
 
@@ -33,7 +33,7 @@ Overall judgement:
 ## Human Next Steps
 
 1. Log in to Amazon Associates Japan.
-2. Register `https://ailabgpt0125.github.io/from_article/` as the site URL.
+2. Register `https://from-item.idea-base.net/` as the site URL.
 3. Use the application description in `docs/amazon_associates_application.md`.
 4. Complete account owner, address, phone, payee, tax, payment, CAPTCHA, OTP, SMS, and email verification steps manually.
 5. Submit the application manually.

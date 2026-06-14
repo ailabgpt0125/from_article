@@ -2,7 +2,7 @@
 
 Date: 2026-06-14
 
-Published URL: https://ailabgpt0125.github.io/from_article/
+Published URL: https://from-item.idea-base.net/
 
 ## Current Legal Coverage
 
@@ -15,7 +15,7 @@ The generated site currently includes:
 - Conditional Amazon Associate wording: pending text is shown until an official Tracking ID is configured; Associate earning text is shown only after configuration.
 - Price, stock, sales terms, and product specification confirmation directed to external sellers.
 - Product image policy that limits use to authorized provider URLs.
-- Public footer legal/affiliate text confirmed locally and deployed to GitHub Pages.
+- Public footer legal/affiliate text confirmed locally and deployed to the custom domain.
 
 ## Protected Areas
 
@@ -29,7 +29,7 @@ Do not remove or weaken legal text in:
 
 ## Known Open Items
 
-- Final GitHub Pages `siteUrl` is set.
+- Final custom domain `siteUrl` is set.
 - Product image URLs are blank by design until image rights are confirmed.
 - Several `official` reference URLs are blank until manually verified.
 - Product identifiers such as ASIN, JAN, and ISBN are mostly blank.

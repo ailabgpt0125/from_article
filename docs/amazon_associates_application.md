@@ -2,12 +2,12 @@
 
 Date: 2026-06-14
 
-Published URL: https://ailabgpt0125.github.io/from_article/
+Published URL: https://from-item.idea-base.net/
 Application URL: https://affiliate.amazon.co.jp/
 
 ## Current State
 
-- The site is already public on GitHub Pages.
+- The site is already public on the custom domain.
 - Amazon disclosure logic is implemented.
 - Amazon links are rendered as ordinary external links while no Tracking ID is set.
 - When `data/affiliate.json` `amazon.associateTag` or `AMAZON_ASSOCIATE_TAG` is set, Amazon URLs are automatically rendered with `tag=<tracking-id>`.
@@ -28,7 +28,7 @@ Site name:
 
 Site URL:
 
-`https://ailabgpt0125.github.io/from_article/`
+`https://from-item.idea-base.net/`
 
 Site description:
 
@@ -53,7 +53,7 @@ Traffic/source plan:
 ## Human-Only Steps
 
 - TODO_HUMAN: Amazon account login.
-- TODO_HUMAN: Register `https://ailabgpt0125.github.io/from_article/` as the site URL.
+- TODO_HUMAN: Register `https://from-item.idea-base.net/` as the site URL.
 - TODO_HUMAN: Account owner, address, phone, payee, tax, and payment information entry.
 - TODO_HUMAN: CAPTCHA, OTP, SMS, email verification.
 - TODO_HUMAN: Final application submission.

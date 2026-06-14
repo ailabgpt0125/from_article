@@ -2,7 +2,7 @@
 
 Date: 2026-06-14
 
-Published URL: https://ailabgpt0125.github.io/from_article/
+Published URL: https://from-item.idea-base.net/
 Repository: https://github.com/ailabgpt0125/from_article
 
 ## Summary
@@ -16,7 +16,7 @@ The site is generated from `data/site.json`, `data/products.json`, `scripts/buil
 - Local build source: `scripts/build.js`
 - Product data source: `data/products.json`
 - Published object count: 12
-- Public deployment: GitHub Pages from `main` branch root
+- Public deployment: custom domain `https://from-item.idea-base.net/` backed by the GitHub Pages build from `main` branch root
 - Required worlds: present
 - Required object routes: present
 - Main public routes: TOP, ABOUT, WORLDS, OBJECTS, JOURNAL, object detail pages
@@ -31,6 +31,7 @@ The site is generated from `data/site.json`, `data/products.json`, `scripts/buil
 
 ## Published Verification
 
+- Custom domain status: HTTP 200 confirmed
 - GitHub Pages status: built
 - Public TOP: HTTP 200 confirmed
 - Public canonical URL: confirmed

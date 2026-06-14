@@ -2,7 +2,9 @@
 
 ## 2026-06-14
 
-- Published the site through GitHub Pages at `https://ailabgpt0125.github.io/from_article/`.
+- Published the site through the custom domain at `https://from-item.idea-base.net/`.
+- Replaced the Amazon Associates application URL target from the temporary GitHub Pages URL to the final custom domain.
+- Added `CNAME` to keep the GitHub Pages custom domain bound to `from-item.idea-base.net`.
 - Created the public GitHub repository `https://github.com/ailabgpt0125/from_article`.
 - Enabled GitHub Pages from the `main` branch root.
 - Verified the live TOP, OBJECTS, object detail, JOURNAL, and mobile layouts.
