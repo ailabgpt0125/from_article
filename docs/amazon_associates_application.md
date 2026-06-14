@@ -9,8 +9,8 @@ Application URL: https://affiliate.amazon.co.jp/
 
 - The site is already public on the custom domain.
 - Amazon disclosure logic is implemented.
-- Amazon links are rendered as ordinary external links while no Tracking ID is set.
-- When `data/affiliate.json` `amazon.associateTag` or `AMAZON_ASSOCIATE_TAG` is set, Amazon URLs are automatically rendered with `tag=<tracking-id>`.
+- Amazon links were rendered as ordinary external links while no Tracking ID was set.
+- `data/affiliate.json` `amazon.associateTag` is now set to `fromitem-22`, so Amazon URLs are automatically rendered with `tag=fromitem-22`.
 - Product images remain blank unless a rights-safe PA-API, SiteStripe, or authorized provider URL is available.
 
 ## Official Requirements Checked
@@ -52,20 +52,20 @@ Traffic/source plan:
 
 ## Human-Only Steps
 
-- TODO_HUMAN: Amazon account login.
-- TODO_HUMAN: Register `https://from-item.idea-base.net/` as the site URL.
+- DONE: Amazon account login.
+- DONE: Register `https://from-item.idea-base.net/` as the site URL.
 - TODO_HUMAN: Account owner, address, phone, payee, tax, and payment information entry.
 - TODO_HUMAN: CAPTCHA, OTP, SMS, email verification.
-- TODO_HUMAN: Final application submission.
-- TODO_HUMAN: Copy the issued Tracking ID into `data/affiliate.json`.
+- DONE: Final application submission.
+- DONE: Copy the issued Tracking ID into `data/affiliate.json`.
 
 ## After Tracking ID Is Available
 
-1. Run `node scripts/configure-amazon-associate.js <tracking-id>`.
-2. Run `node scripts/build.js`.
-3. Run `node scripts/verify.js`.
-4. Confirm Amazon links include `tag=<tracking-id>`.
-5. Confirm the pending Tracking ID text is gone and the Amazon Associate earning disclosure is visible.
+1. DONE: Run `node scripts/configure-amazon-associate.js fromitem-22`.
+2. DONE: Run `node scripts/build.js`.
+3. DONE: Run `node scripts/verify.js`.
+4. DONE: Confirm Amazon links include `tag=fromitem-22`.
+5. DONE: Confirm the pending Tracking ID text is gone and the Amazon Associate earning disclosure is visible.
 6. Commit, push, and wait for GitHub Pages to rebuild.
 7. Check one or two public detail-page Amazon links in the browser.
 

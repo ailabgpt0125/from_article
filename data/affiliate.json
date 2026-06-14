@@ -1,14 +1,15 @@
 {
   "amazon": {
     "marketplace": "co.jp",
-    "associateTag": "",
+    "associateTag": "fromitem-22",
     "associateTagEnv": "AMAZON_ASSOCIATE_TAG",
-    "status": "pending_human_account",
+    "status": "tracking_id_configured",
     "applicationUrl": "https://affiliate.amazon.co.jp/",
     "notes": [
-      "TODO_HUMAN: AmazonアソシエイトでサイトURL https://from-item.idea-base.net/ を登録する。",
-      "TODO_HUMAN: 取得したトラッキングIDを associateTag に入れるか、AMAZON_ASSOCIATE_TAG で指定して再ビルドする。",
+      "DONE: AmazonアソシエイトでサイトURL https://from-item.idea-base.net/ を登録済み。",
+      "DONE: 取得したトラッキングIDを associateTag に反映済み。",
       "TODO_HUMAN: SiteStripe等で確認した正式なSpecial Linkへ商品URLを差し替える。"
-    ]
+    ],
+    "configuredAt": "2026-06-14"
   }
 }

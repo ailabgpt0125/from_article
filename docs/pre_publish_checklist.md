@@ -35,10 +35,10 @@ Published URL: https://from-item.idea-base.net/
 - [x] Confirm the site is clearly non-official.
 - [x] Confirm rights attribution remains in footer, ABOUT, and JOURNAL.
 - [x] Confirm Amazon pending disclosure is visible while Tracking ID is unset.
-- [ ] TODO_HUMAN: Confirm Amazon Associate disclosure after Tracking ID is issued and configured.
+- [x] Confirm Amazon Associate disclosure after Tracking ID is issued and configured.
 - [x] Confirm price, stock, sales terms, and specifications are directed to external sellers.
-- [ ] TODO_HUMAN: Complete Amazon Associates account/application flow.
-- [ ] TODO_HUMAN: Confirm Amazon Tracking ID and apply it with `node scripts/configure-amazon-associate.js <tracking-id>`.
+- [x] Complete Amazon Associates account/application flow.
+- [x] Confirm Amazon Tracking ID and apply it with `node scripts/configure-amazon-associate.js <tracking-id>`.
 - [ ] TODO_HUMAN: Confirm each affiliate URL before treating Amazon links as affiliate links.
 - [ ] TODO_HUMAN: Confirm image usage rights before adding any product images.
 - [x] Consult the ChatGPT project in-browser for Amazon Associates readiness.
@@ -47,4 +47,4 @@ Published URL: https://from-item.idea-base.net/
 
 - [x] Upload after checks pass.
 - [x] Publish with final custom domain URL.
-- [ ] TODO_HUMAN: Rebuild and redeploy after Amazon Tracking ID is configured.
+- [x] Rebuild and redeploy after Amazon Tracking ID is configured.

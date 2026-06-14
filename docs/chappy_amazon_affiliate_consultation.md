@@ -19,8 +19,8 @@ Overall judgement:
 
 - GO for Amazon Associates application.
 - No fatal pre-application issue was identified.
-- Tracking ID must be reflected only after human application/login steps are complete.
-- After Tracking ID is configured, the site must show the Amazon Associate earning disclosure and Amazon links must include `tag=<tracking-id>`.
+- Tracking ID was reflected only after human application/login steps were complete.
+- After Tracking ID configuration, the site shows the Amazon Associate earning disclosure and Amazon links include `tag=fromitem-22`.
 
 ## Key Findings
 
@@ -37,12 +37,12 @@ Overall judgement:
 3. Use the application description in `docs/amazon_associates_application.md`.
 4. Complete account owner, address, phone, payee, tax, payment, CAPTCHA, OTP, SMS, and email verification steps manually.
 5. Submit the application manually.
-6. Copy the issued Tracking ID.
-7. Run `node scripts/configure-amazon-associate.js <tracking-id>` or set `AMAZON_ASSOCIATE_TAG`.
-8. Run `node scripts/build.js`.
-9. Run `node scripts/verify.js`.
-10. Confirm public Amazon links include `tag=<tracking-id>`.
-11. Confirm the public footer/JOURNAL no longer show the pending Tracking ID text.
+6. DONE: Copy the issued Tracking ID.
+7. DONE: Run `node scripts/configure-amazon-associate.js fromitem-22`.
+8. DONE: Run `node scripts/build.js`.
+9. DONE: Run `node scripts/verify.js`.
+10. DONE: Confirm generated Amazon links include `tag=fromitem-22`.
+11. DONE: Confirm generated footer/JOURNAL no longer show the pending Tracking ID text.
 
 ## Priority Notes
 

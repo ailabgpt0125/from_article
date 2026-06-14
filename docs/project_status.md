@@ -22,8 +22,8 @@ The site is generated from `data/site.json`, `data/products.json`, `scripts/buil
 - Main public routes: TOP, ABOUT, WORLDS, OBJECTS, JOURNAL, object detail pages
 - External link structure: present through `outboundLinks`
 - Amazon Associate configuration: present through `data/affiliate.json`
-- Amazon Associate Tracking ID: TODO_HUMAN, not configured yet
-- Amazon disclosure behavior: pending text is shown until a Tracking ID is configured; Associate earning text is shown only after configuration
+- Amazon Associate Tracking ID: configured as `fromitem-22`
+- Amazon disclosure behavior: Associate earning text is shown after Tracking ID configuration
 - Legal/non-official disclosure: present in footer, ABOUT, and JOURNAL
 - Product images: unset unless a permitted provider URL is available
 - ChatGPT project consultation: completed in-browser for Amazon Associates readiness
@@ -41,12 +41,12 @@ The site is generated from `data/site.json`, `data/products.json`, `scripts/buil
 
 ## Public-Ready Boundaries
 
-The site is published. Amazon Associates account creation, login, Tracking ID issuance, paid services, account settings outside GitHub Pages, tax/payment information, and final legal review remain human-only or credential-bound work.
+The site is published. Amazon Associates account creation and initial Tracking ID configuration are complete. Paid services, account settings outside GitHub Pages, tax/payment information, and final legal review remain human-only or credential-bound work.
 
 ## TODO_HUMAN
 
-- Complete Amazon Associates account/application steps at `https://affiliate.amazon.co.jp/`.
-- Add the issued Amazon Tracking ID with `node scripts/configure-amazon-associate.js <tracking-id>` or `AMAZON_ASSOCIATE_TAG`, rebuild, verify, and redeploy.
+- Confirm Amazon Associates account status and any remaining account-center prompts at `https://affiliate.amazon.co.jp/`.
+- Redeploy after this Tracking ID configuration commit is pushed and GitHub Pages finishes rebuilding.
 - Replace Amazon search URLs with approved Associate Special Links where available.
 - Confirm each product title, ASIN/JAN/ISBN, and official/licensed status before publication.
 - Add only permitted product image URLs, such as PA-API or authorized shop/ASP images.

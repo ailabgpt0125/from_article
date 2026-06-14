@@ -31,6 +31,8 @@
 - Added three quiet JOURNAL fragments to strengthen the public archive substance without adding sales copy.
 - Updated the Amazon Associates application description with the reviewed concise and long versions.
 - Added `scripts/configure-amazon-associate.js` so a human-issued Tracking ID can be applied consistently before rebuild and verification.
+- Completed Amazon Associates signup and configured the issued Tracking ID `fromitem-22`.
+- Rebuilt generated pages so Amazon links include `tag=fromitem-22` and the Amazon Associate earning disclosure is visible.
 
 ## Notes
 

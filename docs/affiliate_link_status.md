@@ -21,10 +21,10 @@ Amazon product images must not be saved, processed, re-uploaded, or replaced wit
 
 ## Current Status
 
-- Amazon: structure present; search URLs present for published objects; Associate Tracking ID is not set yet.
+- Amazon: structure present; search URLs present for published objects; Associate Tracking ID is configured as `fromitem-22`.
 - Amazon without Tracking ID: rendered as ordinary external links with `rel="nofollow noopener"`.
-- Amazon with Tracking ID: build script appends `tag=<tracking-id>` to Amazon Japan URLs and renders `rel="nofollow sponsored noopener"`.
-- ChatGPT project consultation: GO for Amazon Associates application, with Tracking ID and disclosure recheck required after human application.
+- Amazon with Tracking ID: build script appends `tag=fromitem-22` to Amazon Japan URLs and renders `rel="nofollow sponsored noopener"`.
+- ChatGPT project consultation: GO for Amazon Associates application; Tracking ID and disclosure recheck completed after human application.
 - Rakuten: structure present; search URLs present for published objects.
 - Yahoo Shopping: structure present; search URLs present for published objects.
 - Official/reference links: structure present; most values intentionally blank until confirmed.
@@ -39,8 +39,8 @@ Amazon product images must not be saved, processed, re-uploaded, or replaced wit
 
 ## TODO_HUMAN
 
-- Register the published site URL in Amazon Associates: `https://from-item.idea-base.net/`.
-- Add the issued Amazon Tracking ID with `node scripts/configure-amazon-associate.js <tracking-id>` or `AMAZON_ASSOCIATE_TAG`.
+- DONE: Register the published site URL in Amazon Associates: `https://from-item.idea-base.net/`.
+- DONE: Add the issued Amazon Tracking ID with `node scripts/configure-amazon-associate.js fromitem-22`.
 - Replace search URLs with approved Amazon Special Links or product URLs where appropriate.
 - Confirm whether each external URL should remain a search page or become a specific product page.
 - Add ASIN/JAN/ISBN fields where confirmed.
