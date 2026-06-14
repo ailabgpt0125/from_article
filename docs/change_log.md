@@ -33,6 +33,7 @@
 - Added `scripts/configure-amazon-associate.js` so a human-issued Tracking ID can be applied consistently before rebuild and verification.
 - Completed Amazon Associates signup and configured the issued Tracking ID `fromitem-22`.
 - Rebuilt generated pages so Amazon links include `tag=fromitem-22` and the Amazon Associate earning disclosure is visible.
+- Added `.nojekyll` to force GitHub Pages to publish the committed static files directly.
 
 ## Notes
 
