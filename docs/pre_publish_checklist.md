@@ -2,23 +2,25 @@
 
 Date: 2026-06-14
 
+Published URL: https://ailabgpt0125.github.io/from_article/
+
 ## Build And Local Check
 
-- [ ] Run `C:\Users\takan\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe scripts\build.js`
-- [ ] Run `C:\Users\takan\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe scripts\verify.js`
-- [ ] Open the local preview in a browser.
-- [ ] Confirm TOP order: Hero, Concept, Worlds, Object Types, Journal, Selected Relics.
-- [ ] Confirm ABOUT, WORLDS, OBJECTS, JOURNAL, and object detail pages render.
-- [ ] Confirm mobile width does not break nav, cards, footer, or object detail pages.
+- [x] Run `C:\Users\takan\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe scripts\build.js`
+- [x] Run `C:\Users\takan\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe scripts\verify.js`
+- [x] Open the local preview in a browser.
+- [x] Confirm TOP order: Hero, Concept, Worlds, Object Types, Journal, Selected Relics.
+- [x] Confirm ABOUT, WORLDS, OBJECTS, JOURNAL, and object detail pages render.
+- [x] Confirm mobile width does not break nav, cards, footer, or object detail pages.
 
 ## SEO And Publishing
 
-- [ ] TODO_HUMAN: Set `data/site.json` `siteUrl` to the final public URL.
-- [ ] Rebuild after setting `siteUrl`.
-- [ ] Confirm canonical URLs are absolute after rebuild.
-- [ ] Confirm `sitemap.xml` uses the final public URL after rebuild.
-- [ ] Confirm `robots.txt` includes the final sitemap URL after rebuild.
-- [ ] Confirm title, meta description, OGP title, and OGP description exist on major pages.
+- [x] Set `data/site.json` `siteUrl` to the final public URL.
+- [x] Rebuild after setting `siteUrl`.
+- [x] Confirm canonical URLs are absolute after rebuild.
+- [x] Confirm `sitemap.xml` uses the final public URL after rebuild.
+- [x] Confirm `robots.txt` includes the final sitemap URL after rebuild.
+- [x] Confirm title, meta description, OGP title, and OGP description exist on major pages.
 
 ## Content And Tone
 
@@ -38,5 +40,5 @@ Date: 2026-06-14
 
 ## Final Human Step
 
-- [ ] Upload only after the above checks pass.
-- [ ] Do not publish with placeholder public URL or unreviewed affiliate URLs.
+- [x] Upload after checks pass.
+- [x] Publish with final GitHub Pages URL.

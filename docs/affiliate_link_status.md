@@ -2,6 +2,8 @@
 
 Date: 2026-06-14
 
+Published URL: https://ailabgpt0125.github.io/from_article/
+
 ## Policy
 
 External links are quiet exits, not purchase prompts. The site may contain affiliate links, but they must remain visually restrained and use `rel="nofollow sponsored noopener"` where appropriate.
@@ -22,6 +24,7 @@ Amazon product images must not be saved, processed, re-uploaded, or replaced wit
 - Yahoo Shopping: structure present; search URLs present for published objects.
 - Official/reference links: structure present; most values intentionally blank until confirmed.
 - Product images: intentionally blank until rights-safe URLs are available.
+- Public detail page link attributes: confirmed on the live site.
 
 ## TODO_HUMAN
 

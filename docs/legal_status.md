@@ -2,6 +2,8 @@
 
 Date: 2026-06-14
 
+Published URL: https://ailabgpt0125.github.io/from_article/
+
 ## Current Legal Coverage
 
 The generated site currently includes:
@@ -12,6 +14,7 @@ The generated site currently includes:
 - Affiliate disclosure, including Amazon Associate wording.
 - Price, stock, sales terms, and product specification confirmation directed to external sellers.
 - Product image policy that limits use to authorized provider URLs.
+- Public footer legal/affiliate text confirmed on the live site.
 
 ## Protected Areas
 
@@ -25,7 +28,7 @@ Do not remove or weaken legal text in:
 
 ## Known Open Items
 
-- `siteUrl` is not yet set because the final public URL is unknown.
+- Final GitHub Pages `siteUrl` is set.
 - Product image URLs are blank by design until image rights are confirmed.
 - Several `official` reference URLs are blank until manually verified.
 - Product identifiers such as ASIN, JAN, and ISBN are mostly blank.

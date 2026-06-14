@@ -2,6 +2,10 @@
 
 ## 2026-06-14
 
+- Published the site through GitHub Pages at `https://ailabgpt0125.github.io/from_article/`.
+- Created the public GitHub repository `https://github.com/ailabgpt0125/from_article`.
+- Enabled GitHub Pages from the `main` branch root.
+- Verified the live TOP, OBJECTS, object detail, JOURNAL, and mobile layouts.
 - Aligned generated public navigation with the fixed main navigation: ABOUT, WORLDS, OBJECTS, JOURNAL.
 - Restored the fixed Hero lead from `AGENTS.md`.
 - Aligned world display names with the required archive room names.
