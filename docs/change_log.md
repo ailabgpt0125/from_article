@@ -25,6 +25,9 @@
 - Added `docs/amazon_associates_application.md` with the human-only Amazon Associates application handoff text.
 - Extended `scripts/verify.js` to catch mismatched Amazon disclosure and missing configured Amazon tags.
 - Deployed the Amazon pending-disclosure update to GitHub Pages.
+- Consulted the ChatGPT project in-browser and saved the Amazon affiliate review in `docs/chappy_amazon_affiliate_consultation.md`.
+- Added three quiet JOURNAL fragments to strengthen the public archive substance without adding sales copy.
+- Updated the Amazon Associates application description with the reviewed concise and long versions.
 
 ## Notes
 

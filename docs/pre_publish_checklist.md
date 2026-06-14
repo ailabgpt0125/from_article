@@ -28,6 +28,7 @@ Published URL: https://ailabgpt0125.github.io/from_article/
 - [x] Confirm objects read as records, relics, echoes, marks, or entrances.
 - [x] Confirm no public page explains AI usage or production process unless intentionally added outside this archive.
 - [x] Confirm no obvious official text, item descriptions, or official copy are copied.
+- [x] Add quiet editorial JOURNAL fragments so the page is more than only a legal notice.
 
 ## Legal And Affiliate
 
@@ -39,6 +40,7 @@ Published URL: https://ailabgpt0125.github.io/from_article/
 - [ ] TODO_HUMAN: Complete Amazon Associates account/application flow.
 - [ ] TODO_HUMAN: Confirm Amazon Tracking ID and each affiliate URL before treating Amazon links as affiliate links.
 - [ ] TODO_HUMAN: Confirm image usage rights before adding any product images.
+- [x] Consult the ChatGPT project in-browser for Amazon Associates readiness.
 
 ## Final Human Step
 

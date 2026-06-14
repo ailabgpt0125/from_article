@@ -26,6 +26,8 @@ The site is generated from `data/site.json`, `data/products.json`, `scripts/buil
 - Amazon disclosure behavior: pending text is shown until a Tracking ID is configured; Associate earning text is shown only after configuration
 - Legal/non-official disclosure: present in footer, ABOUT, and JOURNAL
 - Product images: unset unless a permitted provider URL is available
+- ChatGPT project consultation: completed in-browser for Amazon Associates readiness
+- Consultation record: `docs/chappy_amazon_affiliate_consultation.md`
 
 ## Published Verification
 

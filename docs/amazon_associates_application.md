@@ -32,7 +32,11 @@ Site URL:
 
 Site description:
 
-`FromSoftware作品にまつわる書物、音、造形、入口を、商品ではなく世界観の断片として静かに収める非公式の個人編集アーカイブです。購入を急がせるサイトではなく、外部販売先へのリンクは取り扱い確認のための静かな出口として設置しています。`
+`FromSoftware作品に関連する書籍、音楽、造形物、ゲームソフト等を、個人の視点で整理する非公式キュレーションサイトです。ランキングやセール訴求ではなく、作品世界の余韻を補完する周辺アイテムを「記録」「断片」「収蔵品」として紹介しています。Amazon.co.jpへのリンクは取り扱い確認用に設置し、価格・在庫・販売条件はリンク先で確認いただく方針です。本サイトはFromSoftware公式サイトではなく、各権利は権利者に帰属する旨を明記しています。`
+
+Longer description if the form allows:
+
+`FromSoftware作品にまつわる書籍、音楽、造形物、ゲームソフト等を、個人の視点で静かに収集・編集する非公式キュレーションサイトです。本サイトは、商品をランキング形式で紹介したり、セールや最安値を強調したりするサイトではありません。作品世界の余韻や美意識を補完する周辺アイテムを、「記録」「断片」「収蔵品」として整理し、作品ごとの世界観やカテゴリごとに閲覧できるようにしています。Amazon.co.jpへのリンクは、各商品の取り扱い状況を確認するための外部リンクとして設置します。価格、在庫、販売条件はAmazon.co.jp上で確認していただく方針です。本サイトはFromSoftware公式サイトではなく、株式会社フロム・ソフトウェアおよび各権利元とは関係のない個人運営の非公式アーカイブです。作品名、商品名、画像、商標等の権利は各権利者に帰属する旨をサイト内に明記しています。`
 
 Topics:
 
@@ -49,6 +53,7 @@ Traffic/source plan:
 ## Human-Only Steps
 
 - TODO_HUMAN: Amazon account login.
+- TODO_HUMAN: Register `https://ailabgpt0125.github.io/from_article/` as the site URL.
 - TODO_HUMAN: Account owner, address, phone, payee, tax, and payment information entry.
 - TODO_HUMAN: CAPTCHA, OTP, SMS, email verification.
 - TODO_HUMAN: Final application submission.
@@ -60,4 +65,6 @@ Traffic/source plan:
 2. Run `node scripts/build.js`.
 3. Run `node scripts/verify.js`.
 4. Confirm Amazon links include `tag=<tracking-id>`.
-5. Commit, push, and wait for GitHub Pages to rebuild.
+5. Confirm the pending Tracking ID text is gone and the Amazon Associate earning disclosure is visible.
+6. Commit, push, and wait for GitHub Pages to rebuild.
+7. Check one or two public detail-page Amazon links in the browser.

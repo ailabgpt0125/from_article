@@ -24,6 +24,7 @@ Amazon product images must not be saved, processed, re-uploaded, or replaced wit
 - Amazon: structure present; search URLs present for published objects; Associate Tracking ID is not set yet.
 - Amazon without Tracking ID: rendered as ordinary external links with `rel="nofollow noopener"`.
 - Amazon with Tracking ID: build script appends `tag=<tracking-id>` to Amazon Japan URLs and renders `rel="nofollow sponsored noopener"`.
+- ChatGPT project consultation: GO for Amazon Associates application, with Tracking ID and disclosure recheck required after human application.
 - Rakuten: structure present; search URLs present for published objects.
 - Yahoo Shopping: structure present; search URLs present for published objects.
 - Official/reference links: structure present; most values intentionally blank until confirmed.
