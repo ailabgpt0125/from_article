@@ -3,7 +3,8 @@
 Date: 2026-06-14
 
 Published URL: https://from-item.idea-base.net/
-Repository: https://github.com/ailabgpt0125/from_article
+Local working repository: https://github.com/ailabgpt0125/from_article
+Cloudflare Pages repository: https://github.com/oldking1986/from_article
 
 ## Summary
 
@@ -17,8 +18,9 @@ The site is generated from `data/site.json`, `data/products.json`, `scripts/buil
 - Product data source: `data/products.json`
 - Published object count: 12
 - Public deployment target: custom domain `https://from-item.idea-base.net/`
-- GitHub Pages artifact: current, built from `main` branch root
-- Active custom-domain delivery: currently returns an older Cloudflare-hosted build and does not yet match the GitHub Pages artifact
+- GitHub Pages artifact: current, built from `main` branch root in `ailabgpt0125/from_article`
+- Cloudflare Pages Git connection: connected to `oldking1986/from_article` on branch `main`
+- Active custom-domain delivery: currently returns an older Cloudflare-hosted build from `oldking1986/from_article` and does not yet match the local/latest artifact
 - Required worlds: present
 - Required object routes: present
 - Main public routes: TOP, ABOUT, WORLDS, OBJECTS, JOURNAL, object detail pages
@@ -34,8 +36,9 @@ The site is generated from `data/site.json`, `data/products.json`, `scripts/buil
 ## Published Verification
 
 - Custom domain status: HTTP 200 confirmed, but serving an older build
-- GitHub Pages status: built, latest artifact confirmed from commit `c26136d`
-- GitHub Pages artifact: Amazon Associate disclosure and `tag=fromitem-22` links confirmed
+- Cloudflare Pages source: connected to `oldking1986/from_article`, latest observed Cloudflare deployment commit `ead1a44718cfed25d65827b50a42b4db3a91c18c`
+- GitHub Pages status: built, latest artifact confirmed from commit `c26136d`; local latest commit is `dcce58b`
+- GitHub Pages/local artifact: Amazon Associate disclosure and `tag=fromitem-22` links confirmed
 - Public custom-domain TOP: stale title `FROM ITEM ARCHIVE` still visible
 - Public custom-domain detail external links: stale Amazon links without `tag=fromitem-22`
 - Public mobile checks: previously confirmed; should be rechecked after Cloudflare/DNS update
@@ -47,7 +50,7 @@ The site is published. Amazon Associates account creation and initial Tracking I
 ## TODO_HUMAN
 
 - Confirm Amazon Associates account status and any remaining account-center prompts at `https://affiliate.amazon.co.jp/`.
-- TODO_HUMAN: Update Cloudflare Pages/deployment source or DNS so `https://from-item.idea-base.net/` serves the latest GitHub Pages artifact.
+- TODO_HUMAN: Push or otherwise sync the latest local/static artifact into `oldking1986/from_article`; Cloudflare is now connected to that repository.
 - TODO_HUMAN: After Cloudflare/DNS update, confirm public detail pages include `tag=fromitem-22`.
 - Replace Amazon search URLs with approved Associate Special Links where available.
 - Confirm each product title, ASIN/JAN/ISBN, and official/licensed status before publication.
