@@ -45,7 +45,7 @@ The site is published. Amazon Associates account creation, login, Tracking ID is
 ## TODO_HUMAN
 
 - Complete Amazon Associates account/application steps at `https://affiliate.amazon.co.jp/`.
-- Add the issued Amazon Tracking ID to `data/affiliate.json` or `AMAZON_ASSOCIATE_TAG`, rebuild, verify, and redeploy.
+- Add the issued Amazon Tracking ID with `node scripts/configure-amazon-associate.js <tracking-id>` or `AMAZON_ASSOCIATE_TAG`, rebuild, verify, and redeploy.
 - Replace Amazon search URLs with approved Associate Special Links where available.
 - Confirm each product title, ASIN/JAN/ISBN, and official/licensed status before publication.
 - Add only permitted product image URLs, such as PA-API or authorized shop/ASP images.

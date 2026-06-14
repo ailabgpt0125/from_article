@@ -34,11 +34,13 @@ Do not remove or weaken legal text in:
 - Several `official` reference URLs are blank until manually verified.
 - Product identifiers such as ASIN, JAN, and ISBN are mostly blank.
 - Amazon Associates account/application and Tracking ID are not completed.
+- Tracking ID configuration script exists, but must only be run after a human obtains the official ID.
 
 ## TODO_HUMAN
 
 - Conduct final legal review before publication.
 - Confirm affiliate program wording against the active account requirements.
 - Complete Amazon Associates application/login steps and keep the issued Tracking ID private except for the public Associate tag itself.
+- After Tracking ID configuration, confirm the public Amazon Associate earning disclosure and `tag=<tracking-id>` links on the live site.
 - Confirm all image sources and usage permissions.
 - Confirm public pages cannot be mistaken for an official FromSoftware or rights-holder site.

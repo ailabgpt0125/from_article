@@ -28,6 +28,7 @@
 - Consulted the ChatGPT project in-browser and saved the Amazon affiliate review in `docs/chappy_amazon_affiliate_consultation.md`.
 - Added three quiet JOURNAL fragments to strengthen the public archive substance without adding sales copy.
 - Updated the Amazon Associates application description with the reviewed concise and long versions.
+- Added `scripts/configure-amazon-associate.js` so a human-issued Tracking ID can be applied consistently before rebuild and verification.
 
 ## Notes
 

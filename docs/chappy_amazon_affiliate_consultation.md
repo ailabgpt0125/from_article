@@ -38,7 +38,7 @@ Overall judgement:
 4. Complete account owner, address, phone, payee, tax, payment, CAPTCHA, OTP, SMS, and email verification steps manually.
 5. Submit the application manually.
 6. Copy the issued Tracking ID.
-7. Add the Tracking ID to `data/affiliate.json` `amazon.associateTag` or set `AMAZON_ASSOCIATE_TAG`.
+7. Run `node scripts/configure-amazon-associate.js <tracking-id>` or set `AMAZON_ASSOCIATE_TAG`.
 8. Run `node scripts/build.js`.
 9. Run `node scripts/verify.js`.
 10. Confirm public Amazon links include `tag=<tracking-id>`.

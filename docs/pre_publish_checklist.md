@@ -38,7 +38,8 @@ Published URL: https://ailabgpt0125.github.io/from_article/
 - [ ] TODO_HUMAN: Confirm Amazon Associate disclosure after Tracking ID is issued and configured.
 - [x] Confirm price, stock, sales terms, and specifications are directed to external sellers.
 - [ ] TODO_HUMAN: Complete Amazon Associates account/application flow.
-- [ ] TODO_HUMAN: Confirm Amazon Tracking ID and each affiliate URL before treating Amazon links as affiliate links.
+- [ ] TODO_HUMAN: Confirm Amazon Tracking ID and apply it with `node scripts/configure-amazon-associate.js <tracking-id>`.
+- [ ] TODO_HUMAN: Confirm each affiliate URL before treating Amazon links as affiliate links.
 - [ ] TODO_HUMAN: Confirm image usage rights before adding any product images.
 - [x] Consult the ChatGPT project in-browser for Amazon Associates readiness.
 

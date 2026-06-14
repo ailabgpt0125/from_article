@@ -61,10 +61,14 @@ Traffic/source plan:
 
 ## After Tracking ID Is Available
 
-1. Set `data/affiliate.json` `amazon.associateTag`.
+1. Run `node scripts/configure-amazon-associate.js <tracking-id>`.
 2. Run `node scripts/build.js`.
 3. Run `node scripts/verify.js`.
 4. Confirm Amazon links include `tag=<tracking-id>`.
 5. Confirm the pending Tracking ID text is gone and the Amazon Associate earning disclosure is visible.
 6. Commit, push, and wait for GitHub Pages to rebuild.
 7. Check one or two public detail-page Amazon links in the browser.
+
+Dry-run command before writing:
+
+`node scripts/configure-amazon-associate.js <tracking-id> --dry-run`
