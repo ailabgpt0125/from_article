@@ -16,7 +16,9 @@ The site is generated from `data/site.json`, `data/products.json`, `scripts/buil
 - Local build source: `scripts/build.js`
 - Product data source: `data/products.json`
 - Published object count: 12
-- Public deployment: custom domain `https://from-item.idea-base.net/` backed by the GitHub Pages build from `main` branch root
+- Public deployment target: custom domain `https://from-item.idea-base.net/`
+- GitHub Pages artifact: current, built from `main` branch root
+- Active custom-domain delivery: currently returns an older Cloudflare-hosted build and does not yet match the GitHub Pages artifact
 - Required worlds: present
 - Required object routes: present
 - Main public routes: TOP, ABOUT, WORLDS, OBJECTS, JOURNAL, object detail pages
@@ -31,13 +33,12 @@ The site is generated from `data/site.json`, `data/products.json`, `scripts/buil
 
 ## Published Verification
 
-- Custom domain status: HTTP 200 confirmed
-- GitHub Pages status: built
-- Public TOP: HTTP 200 confirmed
-- Public canonical URL: confirmed
-- Public OBJECTS filter: confirmed
-- Public detail external links: confirmed
-- Public mobile checks: TOP, OBJECTS, JOURNAL confirmed with no horizontal overflow
+- Custom domain status: HTTP 200 confirmed, but serving an older build
+- GitHub Pages status: built, latest artifact confirmed from commit `c26136d`
+- GitHub Pages artifact: Amazon Associate disclosure and `tag=fromitem-22` links confirmed
+- Public custom-domain TOP: stale title `FROM ITEM ARCHIVE` still visible
+- Public custom-domain detail external links: stale Amazon links without `tag=fromitem-22`
+- Public mobile checks: previously confirmed; should be rechecked after Cloudflare/DNS update
 
 ## Public-Ready Boundaries
 
@@ -46,7 +47,8 @@ The site is published. Amazon Associates account creation and initial Tracking I
 ## TODO_HUMAN
 
 - Confirm Amazon Associates account status and any remaining account-center prompts at `https://affiliate.amazon.co.jp/`.
-- Redeploy after this Tracking ID configuration commit is pushed and GitHub Pages finishes rebuilding.
+- TODO_HUMAN: Update Cloudflare Pages/deployment source or DNS so `https://from-item.idea-base.net/` serves the latest GitHub Pages artifact.
+- TODO_HUMAN: After Cloudflare/DNS update, confirm public detail pages include `tag=fromitem-22`.
 - Replace Amazon search URLs with approved Associate Special Links where available.
 - Confirm each product title, ASIN/JAN/ISBN, and official/licensed status before publication.
 - Add only permitted product image URLs, such as PA-API or authorized shop/ASP images.

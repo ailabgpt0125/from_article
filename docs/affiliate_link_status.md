@@ -25,6 +25,8 @@ Amazon product images must not be saved, processed, re-uploaded, or replaced wit
 - Amazon without Tracking ID: rendered as ordinary external links with `rel="nofollow noopener"`.
 - Amazon with Tracking ID: build script appends `tag=fromitem-22` to Amazon Japan URLs and renders `rel="nofollow sponsored noopener"`.
 - ChatGPT project consultation: GO for Amazon Associates application; Tracking ID and disclosure recheck completed after human application.
+- GitHub Pages artifact: generated Amazon links include `tag=fromitem-22`.
+- Active custom-domain delivery: currently stale; `https://from-item.idea-base.net/` still returns older Amazon links without `tag=fromitem-22` until Cloudflare/DNS deployment is updated.
 - Rakuten: structure present; search URLs present for published objects.
 - Yahoo Shopping: structure present; search URLs present for published objects.
 - Official/reference links: structure present; most values intentionally blank until confirmed.
@@ -41,6 +43,7 @@ Amazon product images must not be saved, processed, re-uploaded, or replaced wit
 
 - DONE: Register the published site URL in Amazon Associates: `https://from-item.idea-base.net/`.
 - DONE: Add the issued Amazon Tracking ID with `node scripts/configure-amazon-associate.js fromitem-22`.
+- TODO_HUMAN: Update Cloudflare Pages/deployment source or DNS so the custom domain serves the tagged build.
 - Replace search URLs with approved Amazon Special Links or product URLs where appropriate.
 - Confirm whether each external URL should remain a search page or become a specific product page.
 - Add ASIN/JAN/ISBN fields where confirmed.

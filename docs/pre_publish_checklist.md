@@ -47,4 +47,6 @@ Published URL: https://from-item.idea-base.net/
 
 - [x] Upload after checks pass.
 - [x] Publish with final custom domain URL.
-- [x] Rebuild and redeploy after Amazon Tracking ID is configured.
+- [x] Rebuild and push after Amazon Tracking ID is configured.
+- [ ] TODO_HUMAN: Update the actual Cloudflare-hosted custom-domain delivery so it serves the latest build.
+- [ ] TODO_HUMAN: Recheck `https://from-item.idea-base.net/` after Cloudflare/DNS update.

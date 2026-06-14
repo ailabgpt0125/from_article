@@ -41,6 +41,6 @@ Do not remove or weaken legal text in:
 - Conduct final legal review before publication.
 - Confirm affiliate program wording against the active account requirements.
 - Monitor Amazon Associates account-center prompts and keep account/payment/tax information human-controlled.
-- After deployment completes, confirm the public Amazon Associate earning disclosure and `tag=fromitem-22` links on the live site.
+- After Cloudflare/DNS deployment is corrected, confirm the public Amazon Associate earning disclosure and `tag=fromitem-22` links on the live site.
 - Confirm all image sources and usage permissions.
 - Confirm public pages cannot be mistaken for an official FromSoftware or rights-holder site.

@@ -34,6 +34,7 @@
 - Completed Amazon Associates signup and configured the issued Tracking ID `fromitem-22`.
 - Rebuilt generated pages so Amazon links include `tag=fromitem-22` and the Amazon Associate earning disclosure is visible.
 - Added `.nojekyll` to force GitHub Pages to publish the committed static files directly.
+- Confirmed the GitHub Pages artifact is current, but the active custom domain is still serving an older Cloudflare-hosted build; Cloudflare deployment or DNS must be corrected before live affiliate links are current.
 
 ## Notes
 
