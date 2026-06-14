@@ -4,6 +4,10 @@ const path = require("path");
 const root = path.resolve(__dirname, "..");
 const products = JSON.parse(fs.readFileSync(path.join(root, "data", "products.json"), "utf8"));
 const site = JSON.parse(fs.readFileSync(path.join(root, "data", "site.json"), "utf8"));
+const affiliatePath = path.join(root, "data", "affiliate.json");
+const affiliate = fs.existsSync(affiliatePath)
+  ? JSON.parse(fs.readFileSync(affiliatePath, "utf8"))
+  : {};
 
 const rawSiteUrl = String(site.siteUrl || "").replace(/\/$/, "");
 const siteUrl = rawSiteUrl && !/example\.com/i.test(rawSiteUrl) ? rawSiteUrl : "";
@@ -82,7 +86,15 @@ const objectTypes = [
 const typeFilterCandidates = objectTypes.map((type) => ({ key: type.slug, label: type.jp }));
 const previewLimit = 3;
 
-const amazonAssociateDisclosure = `Amazonのアソシエイトとして、${siteName}は適格販売により収入を得ています。`;
+const configuredAmazonTag = String(
+  process.env.AMAZON_ASSOCIATE_TAG ||
+  (affiliate.amazon && affiliate.amazon.associateTag) ||
+  ""
+).trim();
+const hasAmazonAssociateTag = Boolean(configuredAmazonTag);
+const amazonAssociateDisclosure = hasAmazonAssociateTag
+  ? `Amazonのアソシエイトとして、${siteName}は適格販売により収入を得ています。`
+  : "Amazonアソシエイトの正式なトラッキングIDは未設定です。Amazonへのリンクは、現時点では通常の外部確認リンクとして扱っています。";
 const footerText = `このサイトは非公式の個人アーカイブです。作品名・商品名・画像・商標等の権利は各権利者に帰属します。外部リンクにはアフィリエイトリンクを含む場合があります。${amazonAssociateDisclosure}`;
 const externalCheckText = "取り扱い、価格、在庫の状況は、外部販売先の記録をご確認ください。";
 const amazonImagePolicy = "Amazon商品画像は、PA-APIまたはAmazonアソシエイトが提供する正規の画像URLを利用できる場合のみ表示します。画像の保存、加工、再アップロード、スクリーンショットによる仮置きは行いません。";
@@ -127,6 +139,19 @@ function escapeHtml(value) {
 
 function pageUrl(route) {
   return siteUrl ? `${siteUrl}${route}` : route;
+}
+
+function taggedAmazonUrl(url) {
+  if (!hasAmazonAssociateTag || !url || !/^https:\/\/www\.amazon\.co\.jp\//i.test(url)) {
+    return url;
+  }
+  try {
+    const parsed = new URL(url);
+    parsed.searchParams.set("tag", configuredAmazonTag);
+    return parsed.toString();
+  } catch (error) {
+    return url;
+  }
 }
 
 function relPath(depth, target) {
@@ -339,8 +364,11 @@ function externalLinks(product) {
     .filter((link) => link && link.enabled !== false && link.url)
     .sort((a, b) => Number(a.priority || 999) - Number(b.priority || 999))
     .map((link) => {
-      const rel = link.rel || (link.type === "reference" ? "nofollow noopener" : "nofollow sponsored noopener");
-      return `<a href="${escapeHtml(link.url)}" target="_blank" rel="${escapeHtml(rel)}">${escapeHtml(link.label || "External Link")}</a>`;
+      const isAmazon = link.provider === "amazon";
+      const url = isAmazon ? taggedAmazonUrl(link.url) : link.url;
+      const isAffiliate = link.type === "affiliate" && (!isAmazon || hasAmazonAssociateTag);
+      const rel = isAffiliate ? "nofollow sponsored noopener" : "nofollow noopener";
+      return `<a href="${escapeHtml(url)}" target="_blank" rel="${escapeHtml(rel)}">${escapeHtml(link.label || "External Link")}</a>`;
     })
     .join("");
   if (!links) return "";

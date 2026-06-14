@@ -21,7 +21,9 @@ The site is generated from `data/site.json`, `data/products.json`, `scripts/buil
 - Required object routes: present
 - Main public routes: TOP, ABOUT, WORLDS, OBJECTS, JOURNAL, object detail pages
 - External link structure: present through `outboundLinks`
-- Amazon Associate disclosure: present in footer and JOURNAL
+- Amazon Associate configuration: present through `data/affiliate.json`
+- Amazon Associate Tracking ID: TODO_HUMAN, not configured yet
+- Amazon disclosure behavior: pending text is shown until a Tracking ID is configured; Associate earning text is shown only after configuration
 - Legal/non-official disclosure: present in footer, ABOUT, and JOURNAL
 - Product images: unset unless a permitted provider URL is available
 
@@ -36,11 +38,13 @@ The site is generated from `data/site.json`, `data/products.json`, `scripts/buil
 
 ## Public-Ready Boundaries
 
-The site is published. Affiliate account-specific tracking IDs, paid services, account settings outside GitHub Pages, and final legal review remain human-only or credential-bound work.
+The site is published. Amazon Associates account creation, login, Tracking ID issuance, paid services, account settings outside GitHub Pages, tax/payment information, and final legal review remain human-only or credential-bound work.
 
 ## TODO_HUMAN
 
-- Replace Amazon search URLs with approved Associate links where available.
+- Complete Amazon Associates account/application steps at `https://affiliate.amazon.co.jp/`.
+- Add the issued Amazon Tracking ID to `data/affiliate.json` or `AMAZON_ASSOCIATE_TAG`, rebuild, verify, and redeploy.
+- Replace Amazon search URLs with approved Associate Special Links where available.
 - Confirm each product title, ASIN/JAN/ISBN, and official/licensed status before publication.
 - Add only permitted product image URLs, such as PA-API or authorized shop/ASP images.
 - Review the final browser-rendered pages before upload.

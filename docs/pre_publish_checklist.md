@@ -33,12 +33,15 @@ Published URL: https://ailabgpt0125.github.io/from_article/
 
 - [ ] Confirm the site is clearly non-official.
 - [ ] Confirm rights attribution remains in footer, ABOUT, and JOURNAL.
-- [ ] Confirm affiliate disclosure remains visible.
+- [x] Confirm Amazon pending disclosure is visible while Tracking ID is unset.
+- [ ] TODO_HUMAN: Confirm Amazon Associate disclosure after Tracking ID is issued and configured.
 - [ ] Confirm price, stock, sales terms, and specifications are directed to external sellers.
-- [ ] TODO_HUMAN: Confirm Amazon Associate ID and each affiliate URL before publication.
+- [ ] TODO_HUMAN: Complete Amazon Associates account/application flow.
+- [ ] TODO_HUMAN: Confirm Amazon Tracking ID and each affiliate URL before treating Amazon links as affiliate links.
 - [ ] TODO_HUMAN: Confirm image usage rights before adding any product images.
 
 ## Final Human Step
 
 - [x] Upload after checks pass.
 - [x] Publish with final GitHub Pages URL.
+- [ ] TODO_HUMAN: Rebuild and redeploy after Amazon Tracking ID is configured.

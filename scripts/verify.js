@@ -4,6 +4,11 @@ const path = require("path");
 const root = path.resolve(__dirname, "..");
 const site = JSON.parse(fs.readFileSync(path.join(root, "data", "site.json"), "utf8"));
 const products = JSON.parse(fs.readFileSync(path.join(root, "data", "products.json"), "utf8"));
+const affiliatePath = path.join(root, "data", "affiliate.json");
+const affiliate = fs.existsSync(affiliatePath)
+  ? JSON.parse(fs.readFileSync(affiliatePath, "utf8"))
+  : {};
+const amazonAssociateTag = String(process.env.AMAZON_ASSOCIATE_TAG || affiliate.amazon?.associateTag || "").trim();
 
 const expectedWorldSlugs = [
   "elden-ring",
@@ -116,6 +121,12 @@ function checkHtml() {
     if (!/<meta property="og:title" content="[^"]+">/.test(text)) fail(`missing og:title: ${name}`);
     if (!/<meta property="og:description" content="[^"]+">/.test(text)) fail(`missing og:description: ${name}`);
     if (site.siteUrl && !/<link rel="canonical" href="https?:\/\//.test(text)) fail(`missing absolute canonical: ${name}`);
+    if (!amazonAssociateTag && text.includes("適格販売により収入を得ています")) {
+      fail(`Amazon Associate earning disclosure appears without a configured tracking ID: ${name}`);
+    }
+    if (amazonAssociateTag && text.includes("Amazonアソシエイトの正式なトラッキングIDは未設定です")) {
+      fail(`Amazon pending disclosure appears despite a configured tracking ID: ${name}`);
+    }
     for (const term of prohibitedPublicTerms) {
       if (text.includes(term)) fail(`prohibited public term "${term}" in ${name}`);
     }
@@ -123,9 +134,21 @@ function checkHtml() {
     for (const href of hrefs) {
       const target = resolveHref(file, href);
       if (target && !fs.existsSync(target)) fail(`broken internal link in ${name}: ${href}`);
+      const decodedHref = href.replace(/&amp;/g, "&");
+      if (amazonAssociateTag && /^https:\/\/www\.amazon\.co\.jp\//i.test(decodedHref)) {
+        try {
+          const parsed = new URL(decodedHref);
+          if (parsed.searchParams.get("tag") !== amazonAssociateTag) {
+            fail(`Amazon link missing configured tracking tag in ${name}: ${href}`);
+          }
+        } catch (error) {
+          fail(`Amazon link could not be parsed in ${name}: ${href}`);
+        }
+      }
     }
   }
   if (!site.siteUrl) warn("siteUrl is empty; canonical URLs and absolute sitemap URLs will be generated after TODO_HUMAN public URL is set.");
+  if (!amazonAssociateTag) warn("Amazon Associate tracking ID is not configured; Amazon links are rendered as ordinary external links.");
 }
 
 function checkHomeOrder() {

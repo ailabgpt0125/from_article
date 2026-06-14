@@ -19,6 +19,11 @@
   - `docs/affiliate_link_status.md`
   - `docs/legal_status.md`
   - `docs/change_log.md`
+- Added `data/affiliate.json` as the Amazon Associates configuration point.
+- Added conditional Amazon link handling: Amazon Japan links become tagged Special Links only when an Associate Tracking ID is configured.
+- Changed Amazon disclosure behavior so the site does not claim Associate earnings while no Tracking ID is set.
+- Added `docs/amazon_associates_application.md` with the human-only Amazon Associates application handoff text.
+- Extended `scripts/verify.js` to catch mismatched Amazon disclosure and missing configured Amazon tags.
 
 ## Notes
 

@@ -14,22 +14,33 @@ Amazon product images must not be saved, processed, re-uploaded, or replaced wit
 
 - Product links live in `data/products.json` under `outboundLinks`.
 - Legacy search fields remain under `links` for compatibility.
+- Amazon Associate configuration lives in `data/affiliate.json`.
+- `AMAZON_ASSOCIATE_TAG` can override `data/affiliate.json` for local or deployment builds.
 - Enabled affiliate links currently point to search pages unless a product URL has been manually confirmed.
 - Published products are expected to have at least one enabled external link.
 
 ## Current Status
 
-- Amazon: structure present; search URLs present for published objects.
+- Amazon: structure present; search URLs present for published objects; Associate Tracking ID is not set yet.
+- Amazon without Tracking ID: rendered as ordinary external links with `rel="nofollow noopener"`.
+- Amazon with Tracking ID: build script appends `tag=<tracking-id>` to Amazon Japan URLs and renders `rel="nofollow sponsored noopener"`.
 - Rakuten: structure present; search URLs present for published objects.
 - Yahoo Shopping: structure present; search URLs present for published objects.
 - Official/reference links: structure present; most values intentionally blank until confirmed.
 - Product images: intentionally blank until rights-safe URLs are available.
 - Public detail page link attributes: confirmed on the live site.
 
+## Official Amazon References
+
+- Amazon Associates Japan entry point: https://affiliate.amazon.co.jp/
+- Amazon Operating Agreement: https://affiliate.amazon.co.jp/help/operating/agreement/
+- Amazon guidance on multiple websites and Tracking IDs: https://affiliate.amazon.co.jp/help/node/topic/GM3CX5D6DSLGVSJD
+
 ## TODO_HUMAN
 
-- Replace search URLs with approved affiliate/product URLs where appropriate.
-- Add Amazon Associate tracking only after confirming account and program rules.
+- Register the published site URL in Amazon Associates: `https://ailabgpt0125.github.io/from_article/`.
+- Add the issued Amazon Tracking ID to `data/affiliate.json` or `AMAZON_ASSOCIATE_TAG`.
+- Replace search URLs with approved Amazon Special Links or product URLs where appropriate.
 - Confirm whether each external URL should remain a search page or become a specific product page.
 - Add ASIN/JAN/ISBN fields where confirmed.
 - Keep disabled links disabled until the URL and rights status are confirmed.
