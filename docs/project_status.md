@@ -20,7 +20,7 @@ The site is generated from `data/site.json`, `data/products.json`, `scripts/buil
 - Public deployment target: custom domain `https://from-item.idea-base.net/`
 - GitHub Pages artifact: current, built from `main` branch root in `ailabgpt0125/from_article`
 - Cloudflare Pages Git connection: connected to `oldking1986/from_article` on branch `main`
-- Active custom-domain delivery: currently returns an older Cloudflare-hosted build from `oldking1986/from_article` and does not yet match the local/latest artifact
+- Active custom-domain delivery: current Cloudflare Pages production deployment from local commit `fc31062`
 - Required worlds: present
 - Required object routes: present
 - Main public routes: TOP, ABOUT, WORLDS, OBJECTS, JOURNAL, object detail pages
@@ -35,13 +35,13 @@ The site is generated from `data/site.json`, `data/products.json`, `scripts/buil
 
 ## Published Verification
 
-- Custom domain status: HTTP 200 confirmed, but serving an older build
-- Cloudflare Pages source: connected to `oldking1986/from_article`, latest observed Cloudflare deployment commit `ead1a44718cfed25d65827b50a42b4db3a91c18c`
-- GitHub Pages status: built, latest artifact confirmed from commit `c26136d`; local latest commit is `dcce58b`
+- Custom domain status: HTTP 200 confirmed, serving current `SEED A HOSTILE EARTH` build
+- Cloudflare Pages source: connected to `oldking1986/from_article`; latest production deployment was uploaded directly with Wrangler from local commit `fc31062`
+- GitHub Pages status: built, latest artifact confirmed from commit `c26136d`; Cloudflare direct deployment uses local commit `fc31062`
 - GitHub Pages/local artifact: Amazon Associate disclosure and `tag=fromitem-22` links confirmed
-- Public custom-domain TOP: stale title `FROM ITEM ARCHIVE` still visible
-- Public custom-domain detail external links: stale Amazon links without `tag=fromitem-22`
-- Public mobile checks: previously confirmed; should be rechecked after Cloudflare/DNS update
+- Public custom-domain TOP: `SEED A HOSTILE EARTH` title confirmed
+- Public custom-domain detail external links: Amazon links include `tag=fromitem-22`
+- Public mobile checks: previously confirmed; should still be spot-checked after future visual edits
 
 ## Public-Ready Boundaries
 
@@ -50,8 +50,7 @@ The site is published. Amazon Associates account creation and initial Tracking I
 ## TODO_HUMAN
 
 - Confirm Amazon Associates account status and any remaining account-center prompts at `https://affiliate.amazon.co.jp/`.
-- TODO_HUMAN: Push or otherwise sync the latest local/static artifact into `oldking1986/from_article`; Cloudflare is now connected to that repository.
-- TODO_HUMAN: After Cloudflare/DNS update, confirm public detail pages include `tag=fromitem-22`.
+- TODO_HUMAN: If future updates should deploy automatically from Git, push or otherwise sync the latest local/static artifact into `oldking1986/from_article`; the current production site was updated by direct Wrangler deploy.
 - Replace Amazon search URLs with approved Associate Special Links where available.
 - Confirm each product title, ASIN/JAN/ISBN, and official/licensed status before publication.
 - Add only permitted product image URLs, such as PA-API or authorized shop/ASP images.

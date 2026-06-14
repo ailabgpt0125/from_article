@@ -26,8 +26,8 @@ Amazon product images must not be saved, processed, re-uploaded, or replaced wit
 - Amazon with Tracking ID: build script appends `tag=fromitem-22` to Amazon Japan URLs and renders `rel="nofollow sponsored noopener"`.
 - ChatGPT project consultation: GO for Amazon Associates application; Tracking ID and disclosure recheck completed after human application.
 - GitHub Pages/local artifact: generated Amazon links include `tag=fromitem-22`.
-- Cloudflare Pages source: connected to `oldking1986/from_article` on branch `main`.
-- Active custom-domain delivery: currently stale; `https://from-item.idea-base.net/` still returns older Amazon links without `tag=fromitem-22` until `oldking1986/from_article` is synced with the latest local build.
+- Cloudflare Pages source: connected to `oldking1986/from_article` on branch `main`; latest production deployment was uploaded directly with Wrangler.
+- Active custom-domain delivery: current; `https://from-item.idea-base.net/objects/elden-ring-official-art-book/` includes `tag=fromitem-22`.
 - Rakuten: structure present; search URLs present for published objects.
 - Yahoo Shopping: structure present; search URLs present for published objects.
 - Official/reference links: structure present; most values intentionally blank until confirmed.
@@ -44,7 +44,7 @@ Amazon product images must not be saved, processed, re-uploaded, or replaced wit
 
 - DONE: Register the published site URL in Amazon Associates: `https://from-item.idea-base.net/`.
 - DONE: Add the issued Amazon Tracking ID with `node scripts/configure-amazon-associate.js fromitem-22`.
-- TODO_HUMAN: Push or otherwise sync the latest tagged build into `oldking1986/from_article` so the custom domain serves the tagged build.
+- TODO_HUMAN: Push or otherwise sync the latest tagged build into `oldking1986/from_article` if future updates should deploy automatically from Git rather than Wrangler direct upload.
 - Replace search URLs with approved Amazon Special Links or product URLs where appropriate.
 - Confirm whether each external URL should remain a search page or become a specific product page.
 - Add ASIN/JAN/ISBN fields where confirmed.

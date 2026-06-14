@@ -37,6 +37,8 @@
 - Confirmed the GitHub Pages artifact is current, but the active custom domain is still serving an older Cloudflare-hosted build; Cloudflare deployment or DNS must be corrected before live affiliate links are current.
 - Connected Cloudflare Pages production to `oldking1986/from_article` on branch `main`.
 - Confirmed Cloudflare is deploying old commit `ead1a44718cfed25d65827b50a42b4db3a91c18c`; live custom-domain pages still show `FROM ITEM ARCHIVE` and Amazon links without `tag=fromitem-22` until the latest build is synced into `oldking1986/from_article`.
+- Authenticated Wrangler for the Cloudflare account and directly deployed local commit `fc31062` to Cloudflare Pages production.
+- Verified `https://from-item.idea-base.net/objects/elden-ring-official-art-book/` now serves `SEED A HOSTILE EARTH` and includes Amazon `tag=fromitem-22`.
 
 ## Notes
 

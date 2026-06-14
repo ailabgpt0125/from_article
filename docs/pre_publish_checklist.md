@@ -49,5 +49,6 @@ Published URL: https://from-item.idea-base.net/
 - [x] Publish with final custom domain URL.
 - [x] Rebuild and push after Amazon Tracking ID is configured.
 - [x] Connect Cloudflare Pages production to `oldking1986/from_article` on branch `main`.
-- [ ] TODO_HUMAN: Sync the latest local/static artifact into `oldking1986/from_article` so Cloudflare serves the latest build.
-- [ ] TODO_HUMAN: Recheck `https://from-item.idea-base.net/` after Cloudflare/DNS update.
+- [x] Directly deploy the latest local build to Cloudflare Pages production with Wrangler.
+- [x] Recheck `https://from-item.idea-base.net/` after Cloudflare deployment.
+- [ ] TODO_HUMAN: Sync the latest local/static artifact into `oldking1986/from_article` if future updates should deploy automatically from Git.
