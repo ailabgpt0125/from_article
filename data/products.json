@@ -13,7 +13,7 @@
       "設定資料",
       "コレクター向け"
     ],
-    "status": "販売中",
+    "status": "link_only",
     "priority": 1,
     "description": "砕けた黄金律と狭間の地の記憶を、紙の上でもう一度たどるための書物。",
     "officiality": "official_or_licensed",
@@ -25,7 +25,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": true,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "https://www.amazon.co.jp/s?k=ELDEN+RING+OFFICIAL+ART+BOOK",
@@ -36,8 +36,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "ELDEN RING OFFICIAL ART BOOK 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "https://www.amazon.co.jp/s?k=ELDEN+RING+OFFICIAL+ART+BOOK",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "https://search.rakuten.co.jp/search/mall/ELDEN+RING+OFFICIAL+ART+BOOK/",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "https://shopping.yahoo.co.jp/search?p=ELDEN+RING+OFFICIAL+ART+BOOK",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "elden-ring-soundtrack",
@@ -52,7 +96,7 @@
       "サントラ",
       "音楽"
     ],
-    "status": "要確認",
+    "status": "link_only",
     "priority": 2,
     "description": "祝福が遠のいた地に残る、風と戦と祈りの残響。",
     "officiality": "likely_official",
@@ -64,7 +108,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": true,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "https://www.amazon.co.jp/s?k=ELDEN+RING+Original+Soundtrack",
@@ -75,8 +119,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "ELDEN RING Original Soundtrack 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "https://www.amazon.co.jp/s?k=ELDEN+RING+Original+Soundtrack",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "https://search.rakuten.co.jp/search/mall/ELDEN+RING+Original+Soundtrack/",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "https://shopping.yahoo.co.jp/search?p=ELDEN+RING+Original+Soundtrack",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "elden-ring-figma-vyke",
@@ -91,7 +179,7 @@
       "フィギュア",
       "可動"
     ],
-    "status": "在庫不安定",
+    "status": "link_only",
     "priority": 3,
     "description": "狼の名を帯びた戦鬼を、棚の上に留める小さな遺物。",
     "officiality": "likely_official",
@@ -103,7 +191,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": true,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "https://www.amazon.co.jp/s?k=figma+ELDEN+RING",
@@ -114,8 +202,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "figma ELDEN RING 狼の戦鬼 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "https://www.amazon.co.jp/s?k=figma+ELDEN+RING",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "https://search.rakuten.co.jp/search/mall/figma+ELDEN+RING/",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "https://shopping.yahoo.co.jp/search?p=figma+ELDEN+RING",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "elden-ring-apparel-sample",
@@ -142,7 +274,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": false,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -153,8 +285,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮データ：ELDEN RING アパレル関連アイテム 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "elden-ring-shadow-of-the-erdtree-edition",
@@ -169,7 +345,7 @@
       "ゲーム本体",
       "完全版"
     ],
-    "status": "販売中",
+    "status": "link_only",
     "priority": 5,
     "description": "祝福を失った者が、狭間の地へ向かうための入口。",
     "officiality": "official_or_licensed",
@@ -181,7 +357,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": true,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "https://www.amazon.co.jp/s?k=ELDEN+RING+SHADOW+OF+THE+ERDTREE+EDITION",
@@ -192,8 +368,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "ELDEN RING SHADOW OF THE ERDTREE EDITION 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "https://www.amazon.co.jp/s?k=ELDEN+RING+SHADOW+OF+THE+ERDTREE+EDITION",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "https://search.rakuten.co.jp/search/mall/ELDEN+RING+SHADOW+OF+THE+ERDTREE+EDITION/",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "https://shopping.yahoo.co.jp/search?p=ELDEN+RING+SHADOW+OF+THE+ERDTREE+EDITION",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "dark-souls-design-works",
@@ -208,7 +428,7 @@
       "アートブック",
       "設定資料"
     ],
-    "status": "要確認",
+    "status": "link_only",
     "priority": 1,
     "description": "火の消えかけた世界に残された、甲冑、怪物、祈りの断片。",
     "officiality": "likely_official",
@@ -220,7 +440,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": true,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "https://www.amazon.co.jp/s?k=DARK+SOULS+DESIGN+WORKS",
@@ -231,8 +451,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "DARK SOULS DESIGN WORKS 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "https://www.amazon.co.jp/s?k=DARK+SOULS+DESIGN+WORKS",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "https://search.rakuten.co.jp/search/mall/DARK+SOULS+DESIGN+WORKS/",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "https://shopping.yahoo.co.jp/search?p=DARK+SOULS+DESIGN+WORKS",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "dark-souls-trilogy-soundtrack",
@@ -247,7 +511,7 @@
       "サントラ",
       "音楽"
     ],
-    "status": "要確認",
+    "status": "link_only",
     "priority": 2,
     "description": "灰と篝火の記憶を、耳の奥で静かに読み直すための残響。",
     "officiality": "likely_official",
@@ -259,7 +523,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": true,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "https://www.amazon.co.jp/s?k=DARK+SOULS+Trilogy+Soundtrack",
@@ -270,8 +534,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "DARK SOULS Trilogy Soundtrack 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "https://www.amazon.co.jp/s?k=DARK+SOULS+Trilogy+Soundtrack",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "https://search.rakuten.co.jp/search/mall/DARK+SOULS+Soundtrack/",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "https://shopping.yahoo.co.jp/search?p=DARK+SOULS+Soundtrack",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "dark-souls-solaire-figure",
@@ -298,7 +606,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": false,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -309,8 +617,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮データ：DARK SOULS ソラール関連フィギュア 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "dark-souls-apparel-sample",
@@ -337,7 +689,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": false,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -348,8 +700,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮データ：DARK SOULS アパレル関連アイテム 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "dark-souls-remastered",
@@ -363,7 +759,7 @@
       "公式",
       "ゲーム本体"
     ],
-    "status": "販売中",
+    "status": "link_only",
     "priority": 5,
     "description": "まだ火を継ぐ前の者へ。滅びた世界へ足を踏み入れるための入口。",
     "officiality": "official_or_licensed",
@@ -375,7 +771,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": true,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "https://www.amazon.co.jp/s?k=DARK+SOULS+REMASTERED",
@@ -386,8 +782,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "DARK SOULS REMASTERED 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "https://www.amazon.co.jp/s?k=DARK+SOULS+REMASTERED",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "https://search.rakuten.co.jp/search/mall/DARK+SOULS+REMASTERED/",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "https://shopping.yahoo.co.jp/search?p=DARK+SOULS+REMASTERED",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "bloodborne-official-artworks",
@@ -402,7 +842,7 @@
       "アートブック",
       "設定資料"
     ],
-    "status": "要確認",
+    "status": "link_only",
     "priority": 1,
     "description": "血と月と悪夢の都市を、紙の奥に静かに封じた記録。",
     "officiality": "likely_official",
@@ -414,7 +854,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": true,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "https://www.amazon.co.jp/s?k=Bloodborne+Official+Artworks",
@@ -425,8 +865,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "Bloodborne Official Artworks 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "https://www.amazon.co.jp/s?k=Bloodborne+Official+Artworks",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "https://search.rakuten.co.jp/search/mall/Bloodborne+Official+Artworks/",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "https://shopping.yahoo.co.jp/search?p=Bloodborne+Official+Artworks",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "bloodborne-soundtrack",
@@ -441,7 +925,7 @@
       "サントラ",
       "音楽"
     ],
-    "status": "要確認",
+    "status": "link_only",
     "priority": 2,
     "description": "狩人が見た夜の輪郭を、音の底でもう一度たどるための残響。",
     "officiality": "likely_official",
@@ -453,7 +937,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": true,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "https://www.amazon.co.jp/s?k=Bloodborne+Original+Soundtrack",
@@ -464,8 +948,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "Bloodborne Original Soundtrack 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "https://www.amazon.co.jp/s?k=Bloodborne+Original+Soundtrack",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "https://search.rakuten.co.jp/search/mall/Bloodborne+Original+Soundtrack/",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "https://shopping.yahoo.co.jp/search?p=Bloodborne+Original+Soundtrack",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "bloodborne-hunter-figure",
@@ -492,7 +1020,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": false,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -503,8 +1031,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮データ：Bloodborne 狩人フィギュア 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "bloodborne-apparel-sample",
@@ -531,7 +1103,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": false,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -542,8 +1114,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮データ：Bloodborne アパレル関連アイテム 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "bloodborne-comic-sample",
@@ -570,7 +1186,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": false,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -581,8 +1197,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮データ：Bloodborne 関連コミック・書籍 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "armored-core-vi-game",
@@ -596,7 +1256,7 @@
       "公式",
       "ゲーム本体"
     ],
-    "status": "販売中",
+    "status": "link_only",
     "priority": 1,
     "description": "灰の惑星に降り立ち、名もなき傭兵として再び鋼鉄を組み上げるための入口。",
     "officiality": "official_or_licensed",
@@ -608,7 +1268,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": true,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "https://www.amazon.co.jp/s?k=ARMORED+CORE+VI+FIRES+OF+RUBICON",
@@ -619,8 +1279,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "ARMORED CORE VI FIRES OF RUBICON 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "https://www.amazon.co.jp/s?k=ARMORED+CORE+VI+FIRES+OF+RUBICON",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "https://search.rakuten.co.jp/search/mall/ARMORED+CORE+VI/",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "https://shopping.yahoo.co.jp/search?p=ARMORED+CORE+VI",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "armored-core-model-kit-sample",
@@ -647,7 +1351,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": false,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -658,8 +1362,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮データ：ARMORED CORE プラモデル関連アイテム 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "armored-core-soundtrack",
@@ -686,7 +1434,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": false,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -697,8 +1445,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮データ：ARMORED CORE Soundtrack Collection 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "armored-core-book-sample",
@@ -725,7 +1517,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": false,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -736,8 +1528,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮データ：ARMORED CORE 関連書籍 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "armored-core-mecha-goods-sample",
@@ -764,7 +1600,7 @@
     "releaseDate": "",
     "lastChecked": "2026-04-29",
     "isPublished": false,
-    "note": "価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -775,86 +1611,216 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮データ：ARMORED CORE メカ系グッズ 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
-    "id": "layout-sekiro-shadows-die-twice-entrance",
-    "title": "仮オブジェクト：SEKIRO SHADOWS DIE TWICE",
+    "id": "sekiro-shadows-die-twice-game",
+    "title": "SEKIRO: SHADOWS DIE TWICE GAME OF THE YEAR EDITION",
     "series": [
       "SEKIRO"
     ],
     "category": "games",
     "subCategory": "game",
     "tags": [
-      "レイアウト確認",
       "入口",
       "葦名"
     ],
-    "status": "レイアウト確認用",
+    "status": "link_only",
     "priority": 6,
     "description": "刃と沈黙の国へ踏み入るための、静かな入口。",
-    "officiality": "unknown",
-    "sourceType": "layout-check",
+    "officiality": "official_or_licensed",
+    "sourceType": "manual",
     "asin": "",
     "jan": "",
     "maker": "",
     "publisher": "",
     "releaseDate": "",
-    "lastChecked": "2026-05-01",
+    "lastChecked": "2026-06-14",
     "isPublished": true,
-    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "TODO_HUMAN: 正規の商品ページURL、ASIN/JAN、画像利用可否を公開前に確認する。",
     "links": {
       "amazonProduct": "",
-      "amazonSearch": "",
-      "rakutenSearch": "",
-      "yahooSearch": "",
+      "amazonSearch": "https://www.amazon.co.jp/s?k=SEKIRO+SHADOWS+DIE+TWICE+GAME+OF+THE+YEAR+EDITION",
+      "rakutenSearch": "https://search.rakuten.co.jp/search/mall/SEKIRO+SHADOWS+DIE+TWICE+GAME+OF+THE+YEAR+EDITION/",
+      "yahooSearch": "https://shopping.yahoo.co.jp/search?p=SEKIRO+SHADOWS+DIE+TWICE+GAME+OF+THE+YEAR+EDITION",
       "official": ""
     },
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "SEKIRO: SHADOWS DIE TWICE GAME OF THE YEAR EDITION 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "https://www.amazon.co.jp/s?k=SEKIRO+SHADOWS+DIE+TWICE+GAME+OF+THE+YEAR+EDITION",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "https://search.rakuten.co.jp/search/mall/SEKIRO+SHADOWS+DIE+TWICE+GAME+OF+THE+YEAR+EDITION/",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "https://shopping.yahoo.co.jp/search?p=SEKIRO+SHADOWS+DIE+TWICE+GAME+OF+THE+YEAR+EDITION",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
-    "id": "layout-demons-souls-remake-entrance",
-    "title": "仮オブジェクト：Demon's Souls Entrance",
+    "id": "demons-souls-remake-game",
+    "title": "Demon's Souls",
     "series": [
       "Demon's Souls"
     ],
     "category": "games",
     "subCategory": "game",
     "tags": [
-      "レイアウト確認",
       "入口",
       "霧"
     ],
-    "status": "レイアウト確認用",
+    "status": "link_only",
     "priority": 7,
     "description": "霧に沈む古い王国へ戻るための、最初の門。",
-    "officiality": "unknown",
-    "sourceType": "layout-check",
+    "officiality": "official_or_licensed",
+    "sourceType": "manual",
     "asin": "",
     "jan": "",
     "maker": "",
     "publisher": "",
     "releaseDate": "",
-    "lastChecked": "2026-05-01",
+    "lastChecked": "2026-06-14",
     "isPublished": true,
-    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "note": "TODO_HUMAN: 正規の商品ページURL、ASIN/JAN、画像利用可否を公開前に確認する。",
     "links": {
       "amazonProduct": "",
-      "amazonSearch": "",
-      "rakutenSearch": "",
-      "yahooSearch": "",
+      "amazonSearch": "https://www.amazon.co.jp/s?k=Demon%27s+Souls+PS5",
+      "rakutenSearch": "https://search.rakuten.co.jp/search/mall/Demon%27s+Souls+PS5/",
+      "yahooSearch": "https://shopping.yahoo.co.jp/search?p=Demon%27s+Souls+PS5",
       "official": ""
     },
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "Demon's Souls 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "https://www.amazon.co.jp/s?k=Demon%27s+Souls+PS5",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "https://search.rakuten.co.jp/search/mall/Demon%27s+Souls+PS5/",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "https://shopping.yahoo.co.jp/search?p=Demon%27s+Souls+PS5",
+        "rel": "nofollow sponsored noopener",
+        "enabled": true,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "layout-sekiro-art-records",
@@ -880,8 +1846,8 @@
     "publisher": "",
     "releaseDate": "",
     "lastChecked": "2026-05-01",
-    "isPublished": true,
-    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "isPublished": false,
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -892,8 +1858,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮オブジェクト：SEKIRO Art Records 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "layout-armored-core-visual-archive-records",
@@ -919,8 +1929,8 @@
     "publisher": "",
     "releaseDate": "",
     "lastChecked": "2026-05-01",
-    "isPublished": true,
-    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "isPublished": false,
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -931,8 +1941,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮オブジェクト：ARMORED CORE Visual Archive 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "layout-sekiro-residual-sound",
@@ -958,8 +2012,8 @@
     "publisher": "",
     "releaseDate": "",
     "lastChecked": "2026-05-01",
-    "isPublished": true,
-    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "isPublished": false,
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -970,8 +2024,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮オブジェクト：SEKIRO Residual Sound 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "layout-demons-souls-fogbound-echoes",
@@ -997,8 +2095,8 @@
     "publisher": "",
     "releaseDate": "",
     "lastChecked": "2026-05-01",
-    "isPublished": true,
-    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "isPublished": false,
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -1009,8 +2107,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮オブジェクト：Demon's Souls Fogbound Echoes 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "layout-dark-souls-small-relic",
@@ -1036,8 +2178,8 @@
     "publisher": "",
     "releaseDate": "",
     "lastChecked": "2026-05-01",
-    "isPublished": true,
-    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "isPublished": false,
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -1048,8 +2190,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮オブジェクト：DARK SOULS Small Relic 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "layout-bloodborne-hunter-relic",
@@ -1075,8 +2261,8 @@
     "publisher": "",
     "releaseDate": "",
     "lastChecked": "2026-05-01",
-    "isPublished": true,
-    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "isPublished": false,
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -1087,8 +2273,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮オブジェクト：Bloodborne Hunter Relic 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "layout-armored-core-frame-relic",
@@ -1114,8 +2344,8 @@
     "publisher": "",
     "releaseDate": "",
     "lastChecked": "2026-05-01",
-    "isPublished": true,
-    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "isPublished": false,
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -1126,8 +2356,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮オブジェクト：ARMORED CORE Frame Relic 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "layout-demons-souls-stone-relic",
@@ -1153,8 +2427,8 @@
     "publisher": "",
     "releaseDate": "",
     "lastChecked": "2026-05-01",
-    "isPublished": true,
-    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "isPublished": false,
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -1165,8 +2439,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮オブジェクト：Demon's Souls Stone Relic 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "layout-elden-ring-worn-mark",
@@ -1192,8 +2510,8 @@
     "publisher": "",
     "releaseDate": "",
     "lastChecked": "2026-05-01",
-    "isPublished": true,
-    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "isPublished": false,
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -1204,8 +2522,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮オブジェクト：ELDEN RING Worn Mark 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "layout-dark-souls-ashen-token",
@@ -1231,8 +2593,8 @@
     "publisher": "",
     "releaseDate": "",
     "lastChecked": "2026-05-01",
-    "isPublished": true,
-    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "isPublished": false,
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -1243,8 +2605,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮オブジェクト：DARK SOULS Ashen Token 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "layout-bloodborne-night-insignia",
@@ -1270,8 +2676,8 @@
     "publisher": "",
     "releaseDate": "",
     "lastChecked": "2026-05-01",
-    "isPublished": true,
-    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "isPublished": false,
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -1282,8 +2688,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮オブジェクト：Bloodborne Night Insignia 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "layout-sekiro-silent-mark",
@@ -1309,8 +2759,8 @@
     "publisher": "",
     "releaseDate": "",
     "lastChecked": "2026-05-01",
-    "isPublished": true,
-    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "isPublished": false,
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -1321,8 +2771,52 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮オブジェクト：SEKIRO Silent Mark 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   },
   {
     "id": "layout-armored-core-steel-token",
@@ -1348,8 +2842,8 @@
     "publisher": "",
     "releaseDate": "",
     "lastChecked": "2026-05-01",
-    "isPublished": true,
-    "note": "レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。",
+    "isPublished": false,
+    "note": "",
     "links": {
       "amazonProduct": "",
       "amazonSearch": "",
@@ -1360,7 +2854,51 @@
     "image": {
       "provider": "",
       "url": "",
-      "alt": ""
-    }
+      "alt": "仮オブジェクト：ARMORED CORE Steel Token 商品画像",
+      "usageNote": "Amazon画像はPA-APIまたはアソシエイト公式提供URLのみ使用。保存・加工・再アップロード不可。"
+    },
+    "identifiers": {
+      "asin": "",
+      "jan": "",
+      "isbn": ""
+    },
+    "outboundLinks": [
+      {
+        "label": "Amazon",
+        "type": "affiliate",
+        "provider": "amazon",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 1
+      },
+      {
+        "label": "Rakuten",
+        "type": "affiliate",
+        "provider": "rakuten",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 2
+      },
+      {
+        "label": "Yahoo Shopping",
+        "type": "affiliate",
+        "provider": "yahoo",
+        "url": "",
+        "rel": "nofollow sponsored noopener",
+        "enabled": false,
+        "priority": 3
+      },
+      {
+        "label": "Official",
+        "type": "reference",
+        "provider": "official",
+        "url": "",
+        "rel": "nofollow noopener",
+        "enabled": false,
+        "priority": 9
+      }
+    ]
   }
 ]

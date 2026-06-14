@@ -9,7 +9,7 @@
   function init() {
     setupQuietMotion();
     setupHeaderState();
-    setupStaticFilters();
+    setupObjectFilters();
     checkProductData();
   }
 
@@ -65,24 +65,41 @@
     window.addEventListener("scroll", update, { passive: true });
   }
 
-  function setupStaticFilters() {
-    const filterList = document.querySelector("[data-filter-list]");
+  function setupObjectFilters() {
+    const filterPanel = document.querySelector("[data-object-filters]");
     const cards = Array.from(document.querySelectorAll("[data-product-card]"));
-    if (!filterList || !cards.length) return;
+    if (!filterPanel || !cards.length) return;
 
-    filterList.addEventListener("click", (event) => {
-      const button = event.target.closest("[data-filter-category]");
+    const state = {
+      world: "all",
+      type: "all"
+    };
+    const emptyMessage = filterPanel.querySelector("[data-filter-empty]");
+
+    filterPanel.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-filter-group][data-filter-value]");
       if (!button) return;
 
-      const category = button.dataset.filterCategory;
-      filterList.querySelectorAll(".filter-button").forEach((item) => {
+      const group = button.dataset.filterGroup;
+      const value = button.dataset.filterValue;
+      if (!Object.prototype.hasOwnProperty.call(state, group)) return;
+      state[group] = value;
+
+      filterPanel.querySelectorAll(`[data-filter-group="${group}"]`).forEach((item) => {
         item.classList.toggle("is-active", item === button);
       });
 
+      let visibleCount = 0;
       cards.forEach((card) => {
-        const shouldShow = category === "all" || card.dataset.category === category;
+        const worlds = (card.dataset.filterWorlds || "").split(/\s+/).filter(Boolean);
+        const types = (card.dataset.filterTypes || "").split(/\s+/).filter(Boolean);
+        const matchesWorld = state.world === "all" || worlds.includes(state.world);
+        const matchesType = state.type === "all" || types.includes(state.type);
+        const shouldShow = matchesWorld && matchesType;
         card.hidden = !shouldShow;
+        if (shouldShow) visibleCount += 1;
       });
+      if (emptyMessage) emptyMessage.hidden = visibleCount > 0;
     });
   }
 
@@ -97,7 +114,7 @@
       if (!container) return;
       const message = document.createElement("p");
       message.className = "notice notice--error";
-      message.textContent = "商品情報の読み込みに失敗しました。時間をおいて再度お試しください。";
+      message.textContent = "収蔵データの読み込みに失敗しました。時間をおいて再度ご確認ください。";
       container.before(message);
     }
   }

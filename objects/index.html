@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OBJECTS | SEED A HOSTILE EARTH</title>
   <meta name="description" content="FromSoftware作品にまつわる書籍、造形物、音楽、周辺アイテムを収蔵品のように眺める一覧ページ。">
-  <link rel="canonical" href="https://from-items.example.com/objects/">
+  <link rel="canonical" href="https://ailabgpt0125.github.io/from_article/objects/">
+  <meta property="og:url" content="https://ailabgpt0125.github.io/from_article/objects/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SEED A HOSTILE EARTH">
+  <meta property="og:locale" content="ja_JP">
   <meta property="og:title" content="OBJECTS | SEED A HOSTILE EARTH">
   <meta property="og:description" content="FromSoftware作品にまつわる書籍、造形物、音楽、周辺アイテムを収蔵品のように眺める一覧ページ。">
-  <meta property="og:url" content="https://from-items.example.com/objects/">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body data-page-type="objects" data-products-path="../data/products.json">
@@ -17,11 +19,10 @@
     <div class="header-inner">
       <a class="site-name" href="../index.html">SEED A HOSTILE EARTH</a>
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="../index.html">TOP</a>
+        <a href="../about/">ABOUT</a>
         <a href="../worlds/">WORLDS</a>
         <a href="../objects/">OBJECTS</a>
-        <a href="../about/">ABOUT</a>
-        <a href="../guide/buying-notes/">NOTICE</a>
+        <a href="../journal/">JOURNAL</a>
       </nav>
     </div>
   </header>
@@ -29,32 +30,32 @@
     <section class="hero hero--text">
       <div class="container">
         <p class="eyebrow">OBJECTS</p>
-        <h1>ARCHIVE OF<br>RELICS</h1>
+        <h1 aria-label="ARCHIVE OF RELICS">ARCHIVE OF<br>RELICS</h1>
         <p class="lead">入口、記録、残響、遺物、記章。作品世界を越えて、断片のかたちから収蔵品を辿るための一覧です。</p>
       </div>
     </section>
     <section class="section">
       <div class="container">
         <div class="section-heading"><p class="eyebrow">OBJECT TYPES</p><h2>かたちから辿る</h2></div>
-        <div class="quiet-grid quiet-grid--types"><a class="quiet-card type-card" href="#entrance">
-    <strong>ENTRANCE</strong>
-    <small>入口 / 収蔵品 5</small>
+        <div class="quiet-grid quiet-grid--types"><a class="quiet-card type-card" href="../category/entrance/" aria-label="入口の部屋へ">
+    <strong>入口</strong>
+    <small>ENTRANCE / 収蔵品 5</small>
     <p>世界へ踏み入るための門。</p>
-  </a><a class="quiet-card type-card" href="#records">
-    <strong>RECORDS</strong>
-    <small>記録・資料 / 収蔵品 5</small>
+  </a><a class="quiet-card type-card" href="../category/records/" aria-label="記録・書物の部屋へ">
+    <strong>記録・書物</strong>
+    <small>RECORDS / 収蔵品 3</small>
     <p>紙と余白に残された、古い世界の輪郭。</p>
-  </a><a class="quiet-card type-card" href="#echoes">
-    <strong>ECHOES</strong>
-    <small>残響 / 収蔵品 5</small>
+  </a><a class="quiet-card type-card" href="../category/echoes/" aria-label="残響の部屋へ">
+    <strong>残響</strong>
+    <small>ECHOES / 収蔵品 3</small>
     <p>失われた場所へ戻るための音。</p>
-  </a><a class="quiet-card type-card" href="#relics">
-    <strong>RELICS</strong>
-    <small>遺物・造形 / 収蔵品 5</small>
+  </a><a class="quiet-card type-card" href="../category/relics/" aria-label="遺物・造形の部屋へ">
+    <strong>遺物・造形</strong>
+    <small>RELICS / 収蔵品 1</small>
     <p>棚の上に留まる、小さな気配。</p>
-  </a><a class="quiet-card type-card" href="#insignia">
-    <strong>INSIGNIA</strong>
-    <small>記章・装い / 収蔵品 5</small>
+  </a><a class="quiet-card type-card" href="../category/insignia/" aria-label="装い・記章の部屋へ">
+    <strong>装い・記章</strong>
+    <small>MARKS / 収蔵準備中</small>
     <p>日常にひそませる、小さなしるし。</p>
   </a></div>
       </div>
@@ -62,12 +63,18 @@
     <section class="section">
       <div class="container">
         <div class="section-heading"><p class="eyebrow">OBJECTS</p><h2>分類ごとの収蔵品</h2></div>
-        <div class="world-type-stack"><section class="object-type-section" id="entrance">
-          <div class="section-heading section-heading--compact">
-            <p class="eyebrow">ENTRANCE</p>
-            <h3>入口</h3>
-          </div>
-          <div class="object-grid" data-product-list="objects-entrance"><article class="object-card product-card" data-product-card data-category="games" data-series="ARMORED CORE">
+        <div class="object-filter-panel" data-object-filters>
+        <div class="filter-group" aria-label="World filter">
+          <p class="eyebrow">WORLD FILTER</p>
+          <div class="filter-list"><button class="filter-button is-active" type="button" data-filter-group="world" data-filter-value="all">All</button><button class="filter-button" type="button" data-filter-group="world" data-filter-value="dark-souls">DARK SOULS</button><button class="filter-button" type="button" data-filter-group="world" data-filter-value="bloodborne">Bloodborne</button><button class="filter-button" type="button" data-filter-group="world" data-filter-value="elden-ring">ELDEN RING</button><button class="filter-button" type="button" data-filter-group="world" data-filter-value="sekiro">SEKIRO</button><button class="filter-button" type="button" data-filter-group="world" data-filter-value="armored-core">ARMORED CORE</button><button class="filter-button" type="button" data-filter-group="world" data-filter-value="demons-souls">Demon's Souls</button></div>
+        </div>
+        <div class="filter-group" aria-label="Type filter">
+          <p class="eyebrow">TYPE FILTER</p>
+          <div class="filter-list"><button class="filter-button is-active" type="button" data-filter-group="type" data-filter-value="all">All</button><button class="filter-button" type="button" data-filter-group="type" data-filter-value="entrance">入口</button><button class="filter-button" type="button" data-filter-group="type" data-filter-value="records">記録・書物</button><button class="filter-button" type="button" data-filter-group="type" data-filter-value="echoes">残響</button><button class="filter-button" type="button" data-filter-group="type" data-filter-value="relics">遺物・造形</button></div>
+        </div>
+        <p class="notice object-filter-empty" data-filter-empty hidden>この条件で見える収蔵品は、まだありません。</p>
+      </div>
+        <div class="object-grid" data-product-list="objects-all"><article class="object-card product-card" data-product-card data-category="games" data-series="ARMORED CORE" data-filter-worlds="armored-core" data-filter-types="entrance">
       <div class="object-card__media" aria-hidden="true">
         <span>ENTRANCE</span>
       </div>
@@ -77,105 +84,57 @@
         <p class="object-description">灰の惑星に降り立ち、名もなき傭兵として再び鋼鉄を組み上げるための入口。</p>
         <p class="object-fragment">失われた場所へ戻るための、静かな入口。</p>
         <div class="tag-list"><span>公式</span><span>ゲーム本体</span></div>
-        <a class="text-link detail-link" href="../objects/armored-core-vi-game/">Detail</a>
-        <p class="object-note">価格・在庫・販売状況は、外部販売先で確認してください。</p>
+        <a class="text-link detail-link" href="../objects/armored-core-vi-game/">収蔵記録を見る</a>
         <p class="object-checked">Checked 2026-04-29</p>
         
       </div>
     </article>
-<article class="object-card product-card" data-product-card data-category="games" data-series="DARK SOULS">
-      <div class="object-card__media" aria-hidden="true">
-        <span>ENTRANCE</span>
-      </div>
-      <div class="object-card__body">
-        <p class="object-world">DARK SOULS / ENTRANCE / 入口</p>
-        <h3>DARK SOULS REMASTERED</h3>
-        <p class="object-description">まだ火を継ぐ前の者へ。滅びた世界へ足を踏み入れるための入口。</p>
-        <p class="object-fragment">失われた場所へ戻るための、静かな入口。</p>
-        <div class="tag-list"><span>公式</span><span>ゲーム本体</span></div>
-        <a class="text-link detail-link" href="../objects/dark-souls-remastered/">Detail</a>
-        <p class="object-note">価格・在庫・販売状況は、外部販売先で確認してください。</p>
-        <p class="object-checked">Checked 2026-04-29</p>
-        
-      </div>
-    </article>
-<article class="object-card product-card" data-product-card data-category="games" data-series="ELDEN RING">
-      <div class="object-card__media" aria-hidden="true">
-        <span>ENTRANCE</span>
-      </div>
-      <div class="object-card__body">
-        <p class="object-world">ELDEN RING / ENTRANCE / 入口</p>
-        <h3>ELDEN RING SHADOW OF THE ERDTREE EDITION</h3>
-        <p class="object-description">祝福を失った者が、狭間の地へ向かうための入口。</p>
-        <p class="object-fragment">失われた場所へ戻るための、静かな入口。</p>
-        <div class="tag-list"><span>公式</span><span>ゲーム本体</span><span>完全版</span></div>
-        <a class="text-link detail-link" href="../objects/elden-ring-shadow-of-the-erdtree-edition/">Detail</a>
-        <p class="object-note">価格・在庫・販売状況は、外部販売先で確認してください。</p>
-        <p class="object-checked">Checked 2026-04-29</p>
-        
-      </div>
-    </article></div>
-          <div class="section-follow-link"><a class="text-link archive-link" href="../category/entrance/">入口をすべて見る</a></div>
-        </section><section class="object-type-section" id="records">
-          <div class="section-heading section-heading--compact">
-            <p class="eyebrow">RECORDS</p>
-            <h3>記録・資料</h3>
-          </div>
-          <div class="object-grid" data-product-list="objects-records"><article class="object-card product-card" data-product-card data-category="books" data-series="Bloodborne">
+<article class="object-card product-card" data-product-card data-category="books" data-series="Bloodborne" data-filter-worlds="bloodborne" data-filter-types="records">
       <div class="object-card__media" aria-hidden="true">
         <span>RECORDS</span>
       </div>
       <div class="object-card__body">
-        <p class="object-world">Bloodborne / RECORDS / 記録・資料</p>
+        <p class="object-world">Bloodborne / RECORDS / 記録・書物</p>
         <h3>Bloodborne Official Artworks</h3>
         <p class="object-description">血と月と悪夢の都市を、紙の奥に静かに封じた記録。</p>
         <p class="object-fragment">火の消えたあとにも、記録だけは残る。</p>
         <div class="tag-list"><span>公式</span><span>アートブック</span><span>設定資料</span></div>
-        <a class="text-link detail-link" href="../objects/bloodborne-official-artworks/">Detail</a>
-        <p class="object-note">価格・在庫・販売状況は、外部販売先で確認してください。</p>
+        <a class="text-link detail-link" href="../objects/bloodborne-official-artworks/">収蔵記録を見る</a>
         <p class="object-checked">Checked 2026-04-29</p>
         
       </div>
     </article>
-<article class="object-card product-card" data-product-card data-category="books" data-series="DARK SOULS">
+<article class="object-card product-card" data-product-card data-category="books" data-series="DARK SOULS" data-filter-worlds="dark-souls" data-filter-types="records">
       <div class="object-card__media" aria-hidden="true">
         <span>RECORDS</span>
       </div>
       <div class="object-card__body">
-        <p class="object-world">DARK SOULS / RECORDS / 記録・資料</p>
+        <p class="object-world">DARK SOULS / RECORDS / 記録・書物</p>
         <h3>DARK SOULS DESIGN WORKS</h3>
         <p class="object-description">火の消えかけた世界に残された、甲冑、怪物、祈りの断片。</p>
         <p class="object-fragment">火の消えたあとにも、記録だけは残る。</p>
         <div class="tag-list"><span>公式</span><span>アートブック</span><span>設定資料</span></div>
-        <a class="text-link detail-link" href="../objects/dark-souls-design-works/">Detail</a>
-        <p class="object-note">価格・在庫・販売状況は、外部販売先で確認してください。</p>
+        <a class="text-link detail-link" href="../objects/dark-souls-design-works/">収蔵記録を見る</a>
         <p class="object-checked">Checked 2026-04-29</p>
         
       </div>
     </article>
-<article class="object-card product-card" data-product-card data-category="books" data-series="ELDEN RING">
+<article class="object-card product-card" data-product-card data-category="books" data-series="ELDEN RING" data-filter-worlds="elden-ring" data-filter-types="records">
       <div class="object-card__media" aria-hidden="true">
         <span>RECORDS</span>
       </div>
       <div class="object-card__body">
-        <p class="object-world">ELDEN RING / RECORDS / 記録・資料</p>
+        <p class="object-world">ELDEN RING / RECORDS / 記録・書物</p>
         <h3>ELDEN RING OFFICIAL ART BOOK</h3>
         <p class="object-description">砕けた黄金律と狭間の地の記憶を、紙の上でもう一度たどるための書物。</p>
         <p class="object-fragment">火の消えたあとにも、記録だけは残る。</p>
         <div class="tag-list"><span>公式</span><span>アートブック</span><span>設定資料</span></div>
-        <a class="text-link detail-link" href="../objects/elden-ring-official-art-book/">Detail</a>
-        <p class="object-note">価格・在庫・販売状況は、外部販売先で確認してください。</p>
+        <a class="text-link detail-link" href="../objects/elden-ring-official-art-book/">収蔵記録を見る</a>
         <p class="object-checked">Checked 2026-04-29</p>
         
       </div>
-    </article></div>
-          <div class="section-follow-link"><a class="text-link archive-link" href="../category/records/">記録・資料をすべて見る</a></div>
-        </section><section class="object-type-section" id="echoes">
-          <div class="section-heading section-heading--compact">
-            <p class="eyebrow">ECHOES</p>
-            <h3>残響</h3>
-          </div>
-          <div class="object-grid" data-product-list="objects-echoes"><article class="object-card product-card" data-product-card data-category="soundtracks" data-series="Bloodborne">
+    </article>
+<article class="object-card product-card" data-product-card data-category="soundtracks" data-series="Bloodborne" data-filter-worlds="bloodborne" data-filter-types="echoes">
       <div class="object-card__media" aria-hidden="true">
         <span>ECHOES</span>
       </div>
@@ -185,13 +144,12 @@
         <p class="object-description">狩人が見た夜の輪郭を、音の底でもう一度たどるための残響。</p>
         <p class="object-fragment">記憶の奥で、まだ鳴り続ける断片。</p>
         <div class="tag-list"><span>公式</span><span>サントラ</span><span>音楽</span></div>
-        <a class="text-link detail-link" href="../objects/bloodborne-soundtrack/">Detail</a>
-        <p class="object-note">価格・在庫・販売状況は、外部販売先で確認してください。</p>
+        <a class="text-link detail-link" href="../objects/bloodborne-soundtrack/">収蔵記録を見る</a>
         <p class="object-checked">Checked 2026-04-29</p>
         
       </div>
     </article>
-<article class="object-card product-card" data-product-card data-category="soundtracks" data-series="DARK SOULS">
+<article class="object-card product-card" data-product-card data-category="soundtracks" data-series="DARK SOULS" data-filter-worlds="dark-souls" data-filter-types="echoes">
       <div class="object-card__media" aria-hidden="true">
         <span>ECHOES</span>
       </div>
@@ -201,13 +159,12 @@
         <p class="object-description">灰と篝火の記憶を、耳の奥で静かに読み直すための残響。</p>
         <p class="object-fragment">記憶の奥で、まだ鳴り続ける断片。</p>
         <div class="tag-list"><span>公式</span><span>サントラ</span><span>音楽</span></div>
-        <a class="text-link detail-link" href="../objects/dark-souls-trilogy-soundtrack/">Detail</a>
-        <p class="object-note">価格・在庫・販売状況は、外部販売先で確認してください。</p>
+        <a class="text-link detail-link" href="../objects/dark-souls-trilogy-soundtrack/">収蔵記録を見る</a>
         <p class="object-checked">Checked 2026-04-29</p>
         
       </div>
     </article>
-<article class="object-card product-card" data-product-card data-category="soundtracks" data-series="ELDEN RING">
+<article class="object-card product-card" data-product-card data-category="soundtracks" data-series="ELDEN RING" data-filter-worlds="elden-ring" data-filter-types="echoes">
       <div class="object-card__media" aria-hidden="true">
         <span>ECHOES</span>
       </div>
@@ -217,19 +174,12 @@
         <p class="object-description">祝福が遠のいた地に残る、風と戦と祈りの残響。</p>
         <p class="object-fragment">記憶の奥で、まだ鳴り続ける断片。</p>
         <div class="tag-list"><span>公式</span><span>サントラ</span><span>音楽</span></div>
-        <a class="text-link detail-link" href="../objects/elden-ring-soundtrack/">Detail</a>
-        <p class="object-note">価格・在庫・販売状況は、外部販売先で確認してください。</p>
+        <a class="text-link detail-link" href="../objects/elden-ring-soundtrack/">収蔵記録を見る</a>
         <p class="object-checked">Checked 2026-04-29</p>
         
       </div>
-    </article></div>
-          <div class="section-follow-link"><a class="text-link archive-link" href="../category/echoes/">残響をすべて見る</a></div>
-        </section><section class="object-type-section" id="relics">
-          <div class="section-heading section-heading--compact">
-            <p class="eyebrow">RELICS</p>
-            <h3>遺物・造形</h3>
-          </div>
-          <div class="object-grid" data-product-list="objects-relics"><article class="object-card product-card" data-product-card data-category="figures" data-series="ELDEN RING">
+    </article>
+<article class="object-card product-card" data-product-card data-category="figures" data-series="ELDEN RING" data-filter-worlds="elden-ring" data-filter-types="relics">
       <div class="object-card__media" aria-hidden="true">
         <span>RELICS</span>
       </div>
@@ -239,113 +189,84 @@
         <p class="object-description">狼の名を帯びた戦鬼を、棚の上に留める小さな遺物。</p>
         <p class="object-fragment">棚の片隅に、小さな巡礼を置く。</p>
         <div class="tag-list"><span>公式</span><span>フィギュア</span><span>可動</span></div>
-        <a class="text-link detail-link" href="../objects/elden-ring-figma-vyke/">Detail</a>
-        <p class="object-note">価格・在庫・販売状況は、外部販売先で確認してください。</p>
+        <a class="text-link detail-link" href="../objects/elden-ring-figma-vyke/">収蔵記録を見る</a>
         <p class="object-checked">Checked 2026-04-29</p>
         
       </div>
     </article>
-<article class="object-card product-card" data-product-card data-category="figures" data-series="DARK SOULS">
+<article class="object-card product-card" data-product-card data-category="games" data-series="DARK SOULS" data-filter-worlds="dark-souls" data-filter-types="entrance">
       <div class="object-card__media" aria-hidden="true">
-        <span>RELICS</span>
+        <span>ENTRANCE</span>
       </div>
       <div class="object-card__body">
-        <p class="object-world">DARK SOULS / RELICS / 遺物・造形</p>
-        <h3>仮オブジェクト：DARK SOULS Small Relic</h3>
-        <p class="object-description">火の記憶を、棚の上に小さく留めるための造形。</p>
-        <p class="object-fragment">棚の片隅に、小さな巡礼を置く。</p>
-        <div class="tag-list"><span>レイアウト確認</span><span>遺物</span><span>火</span></div>
-        <a class="text-link detail-link" href="../objects/layout-dark-souls-small-relic/">Detail</a>
-        <p class="object-note">レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。</p>
-        <p class="object-checked">Checked 2026-05-01</p>
+        <p class="object-world">DARK SOULS / ENTRANCE / 入口</p>
+        <h3>DARK SOULS REMASTERED</h3>
+        <p class="object-description">まだ火を継ぐ前の者へ。滅びた世界へ足を踏み入れるための入口。</p>
+        <p class="object-fragment">失われた場所へ戻るための、静かな入口。</p>
+        <div class="tag-list"><span>公式</span><span>ゲーム本体</span></div>
+        <a class="text-link detail-link" href="../objects/dark-souls-remastered/">収蔵記録を見る</a>
+        <p class="object-checked">Checked 2026-04-29</p>
         
       </div>
     </article>
-<article class="object-card product-card" data-product-card data-category="figures" data-series="Bloodborne">
+<article class="object-card product-card" data-product-card data-category="games" data-series="ELDEN RING" data-filter-worlds="elden-ring" data-filter-types="entrance">
       <div class="object-card__media" aria-hidden="true">
-        <span>RELICS</span>
+        <span>ENTRANCE</span>
       </div>
       <div class="object-card__body">
-        <p class="object-world">Bloodborne / RELICS / 遺物・造形</p>
-        <h3>仮オブジェクト：Bloodborne Hunter Relic</h3>
-        <p class="object-description">かつて対峙した影を、日常の片隅に置くための造形。</p>
-        <p class="object-fragment">棚の片隅に、小さな巡礼を置く。</p>
-        <div class="tag-list"><span>レイアウト確認</span><span>遺物</span><span>夜</span></div>
-        <a class="text-link detail-link" href="../objects/layout-bloodborne-hunter-relic/">Detail</a>
-        <p class="object-note">レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。</p>
-        <p class="object-checked">Checked 2026-05-01</p>
+        <p class="object-world">ELDEN RING / ENTRANCE / 入口</p>
+        <h3>ELDEN RING SHADOW OF THE ERDTREE EDITION</h3>
+        <p class="object-description">祝福を失った者が、狭間の地へ向かうための入口。</p>
+        <p class="object-fragment">失われた場所へ戻るための、静かな入口。</p>
+        <div class="tag-list"><span>公式</span><span>ゲーム本体</span><span>完全版</span></div>
+        <a class="text-link detail-link" href="../objects/elden-ring-shadow-of-the-erdtree-edition/">収蔵記録を見る</a>
+        <p class="object-checked">Checked 2026-04-29</p>
+        
+      </div>
+    </article>
+<article class="object-card product-card" data-product-card data-category="games" data-series="SEKIRO" data-filter-worlds="sekiro" data-filter-types="entrance">
+      <div class="object-card__media" aria-hidden="true">
+        <span>ENTRANCE</span>
+      </div>
+      <div class="object-card__body">
+        <p class="object-world">SEKIRO / ENTRANCE / 入口</p>
+        <h3>SEKIRO: SHADOWS DIE TWICE GAME OF THE YEAR EDITION</h3>
+        <p class="object-description">刃と沈黙の国へ踏み入るための、静かな入口。</p>
+        <p class="object-fragment">失われた場所へ戻るための、静かな入口。</p>
+        <div class="tag-list"><span>入口</span><span>葦名</span></div>
+        <a class="text-link detail-link" href="../objects/sekiro-shadows-die-twice-game/">収蔵記録を見る</a>
+        <p class="object-checked">Checked 2026-06-14</p>
+        
+      </div>
+    </article>
+<article class="object-card product-card" data-product-card data-category="games" data-series="Demon's Souls" data-filter-worlds="demons-souls" data-filter-types="entrance">
+      <div class="object-card__media" aria-hidden="true">
+        <span>ENTRANCE</span>
+      </div>
+      <div class="object-card__body">
+        <p class="object-world">Demon's Souls / ENTRANCE / 入口</p>
+        <h3>Demon's Souls</h3>
+        <p class="object-description">霧に沈む古い王国へ戻るための、最初の門。</p>
+        <p class="object-fragment">失われた場所へ戻るための、静かな入口。</p>
+        <div class="tag-list"><span>入口</span><span>霧</span></div>
+        <a class="text-link detail-link" href="../objects/demons-souls-remake-game/">収蔵記録を見る</a>
+        <p class="object-checked">Checked 2026-06-14</p>
         
       </div>
     </article></div>
-          <div class="section-follow-link"><a class="text-link archive-link" href="../category/relics/">遺物・造形をすべて見る</a></div>
-        </section><section class="object-type-section" id="insignia">
-          <div class="section-heading section-heading--compact">
-            <p class="eyebrow">INSIGNIA</p>
-            <h3>記章・装い</h3>
-          </div>
-          <div class="object-grid" data-product-list="objects-insignia"><article class="object-card product-card" data-product-card data-category="apparel" data-series="ELDEN RING">
-      <div class="object-card__media" aria-hidden="true">
-        <span>INSIGNIA</span>
-      </div>
-      <div class="object-card__body">
-        <p class="object-world">ELDEN RING / INSIGNIA / 記章・装い</p>
-        <h3>仮オブジェクト：ELDEN RING Worn Mark</h3>
-        <p class="object-description">日常にひそかに残す、黄金の気配に似た小さなしるし。</p>
-        <p class="object-fragment">わかる者だけに伝わる、古い記章。</p>
-        <div class="tag-list"><span>レイアウト確認</span><span>記章</span><span>黄金</span></div>
-        <a class="text-link detail-link" href="../objects/layout-elden-ring-worn-mark/">Detail</a>
-        <p class="object-note">レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。</p>
-        <p class="object-checked">Checked 2026-05-01</p>
-        
-      </div>
-    </article>
-<article class="object-card product-card" data-product-card data-category="goods" data-series="DARK SOULS">
-      <div class="object-card__media" aria-hidden="true">
-        <span>INSIGNIA</span>
-      </div>
-      <div class="object-card__body">
-        <p class="object-world">DARK SOULS / INSIGNIA / 記章・装い</p>
-        <h3>仮オブジェクト：DARK SOULS Ashen Token</h3>
-        <p class="object-description">身につけるための証ではなく、忘れないための断片。</p>
-        <p class="object-fragment">わかる者だけに伝わる、古い記章。</p>
-        <div class="tag-list"><span>レイアウト確認</span><span>記章</span><span>灰</span></div>
-        <a class="text-link detail-link" href="../objects/layout-dark-souls-ashen-token/">Detail</a>
-        <p class="object-note">レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。</p>
-        <p class="object-checked">Checked 2026-05-01</p>
-        
-      </div>
-    </article>
-<article class="object-card product-card" data-product-card data-category="apparel" data-series="Bloodborne">
-      <div class="object-card__media" aria-hidden="true">
-        <span>INSIGNIA</span>
-      </div>
-      <div class="object-card__body">
-        <p class="object-world">Bloodborne / INSIGNIA / 記章・装い</p>
-        <h3>仮オブジェクト：Bloodborne Night Insignia</h3>
-        <p class="object-description">わかる者だけに伝わる、夜の底に似た静かな記章。</p>
-        <p class="object-fragment">わかる者だけに伝わる、古い記章。</p>
-        <div class="tag-list"><span>レイアウト確認</span><span>記章</span><span>月</span></div>
-        <a class="text-link detail-link" href="../objects/layout-bloodborne-night-insignia/">Detail</a>
-        <p class="object-note">レイアウト確認用の仮オブジェクトです。価格・在庫・販売状況は、外部販売先で確認してください。</p>
-        <p class="object-checked">Checked 2026-05-01</p>
-        
-      </div>
-    </article></div>
-          <div class="section-follow-link"><a class="text-link archive-link" href="../category/insignia/">記章・装いをすべて見る</a></div>
-        </section></div>
       </div>
     </section>
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>当サイトは非公式の個人アーカイブです。各作品名・商品名・商標・画像等の権利は各権利者に帰属します。外部リンク・アフィリエイトに関する詳細はNOTICEをご確認ください。</p>
-      <p class="last-updated">LAST UPDATED 2026-05-01</p>
+      <p>このサイトは非公式の個人アーカイブです。作品名・商品名・画像・商標等の権利は各権利者に帰属します。外部リンクにはアフィリエイトリンクを含む場合があります。Amazonのアソシエイトとして、SEED A HOSTILE EARTHは適格販売により収入を得ています。</p>
+      <p class="last-updated">LAST UPDATED 2026-06-14</p>
       <div class="footer-links">
         <a href="../index.html">TOP</a>
         <a href="../worlds/">WORLDS</a>
         <a href="../objects/">OBJECTS</a>
+        <a href="../journal/">JOURNAL</a>
         <a href="../about/">ABOUT</a>
-        <a href="../guide/buying-notes/">NOTICE</a>
       </div>
     </div>
   </footer>

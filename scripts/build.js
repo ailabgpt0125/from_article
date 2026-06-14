@@ -5,8 +5,10 @@ const root = path.resolve(__dirname, "..");
 const products = JSON.parse(fs.readFileSync(path.join(root, "data", "products.json"), "utf8"));
 const site = JSON.parse(fs.readFileSync(path.join(root, "data", "site.json"), "utf8"));
 
-const siteUrl = site.siteUrl.replace(/\/$/, "");
+const rawSiteUrl = String(site.siteUrl || "").replace(/\/$/, "");
+const siteUrl = rawSiteUrl && !/example\.com/i.test(rawSiteUrl) ? rawSiteUrl : "";
 const siteName = "SEED A HOSTILE EARTH";
+const siteSubtitle = "FromSoftware作品の断片を収める非公式アーカイブ";
 const publishedProducts = products
   .filter((product) => product.isPublished === true && !(product.tags || []).includes("仮データ"))
   .sort((a, b) => Number(a.priority || 999) - Number(b.priority || 999) || a.title.localeCompare(b.title, "ja"));
@@ -15,49 +17,55 @@ const worlds = [
   {
     name: "ELDEN RING",
     slug: "elden-ring",
-    displayName: "ELDEN RING",
+    displayName: "THE LANDS BETWEEN",
     title: "ELDEN RING | SEED A HOSTILE EARTH",
     lead: "砕けた黄金と祝福の残響を辿る。",
+    reading: "砕けた黄金律の断片を、狭間の地の記憶として拾う。",
     statement: "黄金は砕け、祝福は遠い。それでも旅のあとに残るものがある。書物、音、造形のかたちで、狭間の地の気配を静かに収める。"
   },
   {
     name: "DARK SOULS",
     slug: "dark-souls",
-    displayName: "DARK SOULS",
+    displayName: "LINKED FIRE",
     title: "DARK SOULS | SEED A HOSTILE EARTH",
     lead: "火、灰、甲冑、祈り。滅びた巡礼の記録。",
+    reading: "火の消えたあとを、巡礼として辿る。",
     statement: "火の消えかけた世界に、なお残るものがある。甲冑、祈り、怪物、そして倒れた者の記憶を、日常の片隅に残す。"
   },
   {
     name: "Bloodborne",
     slug: "bloodborne",
-    displayName: "Bloodborne",
+    displayName: "PALE NIGHT",
     title: "Bloodborne | SEED A HOSTILE EARTH",
     lead: "血と月と悪夢の都市に残る、狩人の気配。",
+    reading: "醒めない悪夢の底に、獣と祈りの痕跡を見る。",
     statement: "血の夜を越えた者だけが覚えている気配がある。それは音であり、紙に残された線であり、棚の上に留まる小さな影でもある。"
   },
   {
     name: "ARMORED CORE",
     slug: "armored-core",
-    displayName: "ARMORED CORE",
+    displayName: "STEEL ECHOES",
     title: "ARMORED CORE | SEED A HOSTILE EARTH",
     lead: "鋼鉄、企業、通信、燃え残る星の残響。",
+    reading: "通信、残骸、機体の輪郭から、戦場の気配を読む。",
     statement: "灰の惑星、企業の火、通信のざらつき。鋼鉄を組み上げ、名もなき傭兵として進んだ記録を、冷たい余韻のまま収める。"
   },
   {
     name: "Demon's Souls",
     slug: "demons-souls",
-    displayName: "Demon's Souls",
+    displayName: "FOGBOUND ORIGIN",
     title: "Demon's Souls | SEED A HOSTILE EARTH",
     lead: "霧の向こうに沈む古い王国の断片。",
+    reading: "霧の向こうに沈んだ王国の残響を辿る。",
     statement: "霧の向こうに沈む古い王国。その始まりの気配を忘れないために、まだ空に近い棚をひとつ残しておく。"
   },
   {
     name: "SEKIRO",
     slug: "sekiro",
-    displayName: "SEKIRO",
+    displayName: "ASHINA SILENCE",
     title: "SEKIRO | SEED A HOSTILE EARTH",
     lead: "刃、沈黙、主従。研ぎ澄まされた死生の記録。",
+    reading: "刃、主従、不死の呪いを、静かな記録として残す。",
     statement: "刃と沈黙のあいだに残るものがある。まだ収蔵品は少ないが、忍びの記録を置くための静かな余白として、この部屋を残しておく。"
   }
 ];
@@ -66,16 +74,48 @@ worlds.sort((a, b) => worldOrder.indexOf(a.name) - worldOrder.indexOf(b.name));
 
 const objectTypes = [
   { key: "entrance", slug: "entrance", label: "ENTRANCE", jp: "入口", lead: "世界へ踏み入るための門。", categories: ["games"], isPrimary: true },
-  { key: "records", slug: "records", label: "RECORDS", jp: "記録・資料", lead: "紙と余白に残された、古い世界の輪郭。", categories: ["books"], isPrimary: true },
+  { key: "records", slug: "records", label: "RECORDS", jp: "記録・書物", lead: "紙と余白に残された、古い世界の輪郭。", categories: ["books"], isPrimary: true },
   { key: "echoes", slug: "echoes", label: "ECHOES", jp: "残響", lead: "失われた場所へ戻るための音。", categories: ["soundtracks"], isPrimary: true },
   { key: "relics", slug: "relics", label: "RELICS", jp: "遺物・造形", lead: "棚の上に留まる、小さな気配。", categories: ["figures", "plastic-models"], isPrimary: true },
-  { key: "insignia", slug: "insignia", label: "INSIGNIA", jp: "記章・装い", lead: "日常にひそませる、小さなしるし。", categories: ["apparel", "goods"], isPrimary: true }
+  { key: "insignia", slug: "insignia", label: "MARKS", jp: "装い・記章", lead: "日常にひそませる、小さなしるし。", categories: ["apparel", "goods"], isPrimary: true }
 ];
+const typeFilterCandidates = objectTypes.map((type) => ({ key: type.slug, label: type.jp }));
 const previewLimit = 3;
 
-const footerText = "当サイトは非公式の個人アーカイブです。各作品名・商品名・商標・画像等の権利は各権利者に帰属します。外部リンク・アフィリエイトに関する詳細はNOTICEをご確認ください。";
-const affiliateText = "当サイトでは、Amazonアソシエイト、楽天アフィリエイト、その他アフィリエイトプログラムを利用する場合があります。リンク先で商品を購入された場合、当サイトが紹介料を受け取ることがあります。Amazon、Amazon.co.jpおよびAmazon.co.jpロゴは、Amazon.com, Inc. またはその関連会社の商標です。";
-const amazonImagePolicy = "当サイトに掲載するAmazonの商品画像・商品名・商品リンク等は、Amazon Product Advertising API またはAmazonアソシエイトが提供する情報をもとに表示します。当サイトでは、Amazon商品ページ上の画像を保存・再アップロード・加工して掲載することはありません。Amazon以外の商品画像を掲載する場合も、楽天API、各ASP、公式販売元など、提供元が利用を許可している範囲の画像URLのみを使用します。";
+const amazonAssociateDisclosure = `Amazonのアソシエイトとして、${siteName}は適格販売により収入を得ています。`;
+const footerText = `このサイトは非公式の個人アーカイブです。作品名・商品名・画像・商標等の権利は各権利者に帰属します。外部リンクにはアフィリエイトリンクを含む場合があります。${amazonAssociateDisclosure}`;
+const externalCheckText = "取り扱い、価格、在庫の状況は、外部販売先の記録をご確認ください。";
+const amazonImagePolicy = "Amazon商品画像は、PA-APIまたはAmazonアソシエイトが提供する正規の画像URLを利用できる場合のみ表示します。画像の保存、加工、再アップロード、スクリーンショットによる仮置きは行いません。";
+const journalSections = [
+  {
+    title: "このサイトについて",
+    body: "SEED A HOSTILE EARTHは、FromSoftware作品の周辺に残る書物、音、造形、入口を、個人の視点で静かに収める非公式アーカイブです。商品を急いで選ぶ場所ではなく、世界の断片を眺めるための小さな展示室として作っています。"
+  },
+  {
+    title: "外部リンクについて",
+    body: `${amazonAssociateDisclosure} Amazon、Rakuten、Yahoo Shopping、Officialへの外部リンクには、アフィリエイトリンクを含む場合があります。リンクは購入を急がせるためではなく、取り扱いを確認するための静かな出口として置いています。`
+  },
+  {
+    title: "商品画像について",
+    body: amazonImagePolicy
+  },
+  {
+    title: "価格・在庫・販売状況について",
+    body: "このサイトでは価格、在庫、販売状況を固定表示しません。変わり続ける情報は、各外部販売先で確認してください。"
+  },
+  {
+    title: "権利・商標について",
+    body: "掲載している作品名、商品名、画像、商標等の権利は、それぞれの権利者または販売元に帰属します。"
+  },
+  {
+    title: "非公式サイトであること",
+    body: "本サイトは株式会社フロム・ソフトウェア、FromSoftware、および各権利元とは関係のない非公式サイトです。公式サイト、販売元、監修済み媒体ではありません。"
+  },
+  {
+    title: "このサイトの姿勢",
+    body: "売り場ではなく、編集された余白を作るための記録です。声高にすすめることはせず、失われた世界の気配を、日常のそばにそっと残します。"
+  }
+];
 
 function escapeHtml(value) {
   return String(value || "")
@@ -86,7 +126,7 @@ function escapeHtml(value) {
 }
 
 function pageUrl(route) {
-  return `${siteUrl}${route}`;
+  return siteUrl ? `${siteUrl}${route}` : route;
 }
 
 function relPath(depth, target) {
@@ -102,6 +142,9 @@ function writeFile(filePath, content) {
 function head({ title, description, ogDescription, route, depth }) {
   const canonical = pageUrl(route);
   const ogDesc = ogDescription || description;
+  const urlMeta = siteUrl ? `  <link rel="canonical" href="${canonical}">
+  <meta property="og:url" content="${canonical}">
+` : "";
   return `<!doctype html>
 <html lang="ja">
 <head>
@@ -109,11 +152,11 @@ function head({ title, description, ogDescription, route, depth }) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}">
-  <link rel="canonical" href="${canonical}">
-  <meta property="og:type" content="website">
+${urlMeta}  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="${escapeHtml(siteName)}">
+  <meta property="og:locale" content="ja_JP">
   <meta property="og:title" content="${escapeHtml(title)}">
   <meta property="og:description" content="${escapeHtml(ogDesc)}">
-  <meta property="og:url" content="${canonical}">
   <link rel="stylesheet" href="${relPath(depth, "style.css")}">
 </head>`;
 }
@@ -123,11 +166,10 @@ function header(depth) {
     <div class="header-inner">
       <a class="site-name" href="${relPath(depth, "index.html")}">${siteName}</a>
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="${relPath(depth, "index.html")}">TOP</a>
+        <a href="${relPath(depth, "about/")}">ABOUT</a>
         <a href="${relPath(depth, "worlds/")}">WORLDS</a>
         <a href="${relPath(depth, "objects/")}">OBJECTS</a>
-        <a href="${relPath(depth, "about/")}">ABOUT</a>
-        <a href="${relPath(depth, "guide/buying-notes/")}">NOTICE</a>
+        <a href="${relPath(depth, "journal/")}">JOURNAL</a>
       </nav>
     </div>
   </header>`;
@@ -142,8 +184,8 @@ function footer(depth) {
         <a href="${relPath(depth, "index.html")}">TOP</a>
         <a href="${relPath(depth, "worlds/")}">WORLDS</a>
         <a href="${relPath(depth, "objects/")}">OBJECTS</a>
+        <a href="${relPath(depth, "journal/")}">JOURNAL</a>
         <a href="${relPath(depth, "about/")}">ABOUT</a>
-        <a href="${relPath(depth, "guide/buying-notes/")}">NOTICE</a>
       </div>
     </div>
   </footer>`;
@@ -231,28 +273,98 @@ function fragmentForWorld(world) {
   return fragments[world.name] || "失われた世界の気配を、もう一度たどる。";
 }
 
+function archiveNoteForProduct(product) {
+  const type = objectTypes.find((item) => (item.categories || []).includes(product.category));
+  const description = String(product.description || "触れたあとに残る気配を留めるための収蔵品。").trim();
+  const firstSentence = /[。.!！?？]$/.test(description) ? description : `${description}。`;
+  const typePhrase = type ? `${type.jp}として、` : "";
+  return `${firstSentence}${typePhrase}攻略や比較のためではなく、旅のあとに残った輪郭を静かに収めるために置いています。`;
+}
+
+function worldFragmentForProduct(product) {
+  const world = worldByName((product.series || [])[0]);
+  if (!world) {
+    return "これは分類のための品ではなく、触れたあとに残る気配を思い出すための断片です。";
+  }
+  return `${world.reading} このオブジェクトは、${world.displayName}を分類するためではなく、かつて歩いた場所の温度を思い出すための断片です。`;
+}
+
+function normalizedOutboundLinks(product) {
+  if (Array.isArray(product.outboundLinks)) {
+    return product.outboundLinks;
+  }
+  const legacyLinks = product.links || {};
+  return [
+    {
+      label: "Amazon",
+      type: "affiliate",
+      provider: "amazon",
+      url: legacyLinks.amazonProduct || legacyLinks.amazonSearch || "",
+      rel: "nofollow sponsored noopener",
+      enabled: Boolean(legacyLinks.amazonProduct || legacyLinks.amazonSearch),
+      priority: 1
+    },
+    {
+      label: "Rakuten",
+      type: "affiliate",
+      provider: "rakuten",
+      url: legacyLinks.rakutenSearch || "",
+      rel: "nofollow sponsored noopener",
+      enabled: Boolean(legacyLinks.rakutenSearch),
+      priority: 2
+    },
+    {
+      label: "Yahoo Shopping",
+      type: "affiliate",
+      provider: "yahoo",
+      url: legacyLinks.yahooSearch || "",
+      rel: "nofollow sponsored noopener",
+      enabled: Boolean(legacyLinks.yahooSearch),
+      priority: 3
+    },
+    {
+      label: "Official",
+      type: "reference",
+      provider: "official",
+      url: legacyLinks.official || "",
+      rel: "nofollow noopener",
+      enabled: Boolean(legacyLinks.official),
+      priority: 9
+    }
+  ];
+}
+
 function externalLinks(product) {
-  const labels = {
-    amazonProduct: "Amazon",
-    amazonSearch: "Amazon",
-    rakutenSearch: "Rakuten",
-    yahooSearch: "Yahoo Shopping",
-    official: "External Link"
-  };
-  const links = Object.entries(labels)
-    .map(([key, label]) => {
-      const href = product.links && product.links[key];
-      if (!href) return "";
-      return `<a href="${escapeHtml(href)}" target="_blank" rel="nofollow sponsored noopener">${label}</a>`;
+  const links = normalizedOutboundLinks(product)
+    .filter((link) => link && link.enabled !== false && link.url)
+    .sort((a, b) => Number(a.priority || 999) - Number(b.priority || 999))
+    .map((link) => {
+      const rel = link.rel || (link.type === "reference" ? "nofollow noopener" : "nofollow sponsored noopener");
+      return `<a href="${escapeHtml(link.url)}" target="_blank" rel="${escapeHtml(rel)}">${escapeHtml(link.label || "External Link")}</a>`;
     })
-    .filter(Boolean)
     .join("");
   if (!links) return "";
   return `<div class="object-links" aria-label="External links">${links}</div>`;
 }
 
+function detailNotice() {
+  return `<p class="object-detail-notice">${externalCheckText}</p>`;
+}
+
+function filterWorldSlugs(product) {
+  return (product.series || [])
+    .map((name) => worldByName(name))
+    .filter(Boolean)
+    .map((world) => world.slug);
+}
+
+function filterTypeKeys(product) {
+  const type = objectTypes.find((item) => (item.categories || []).includes(product.category));
+  return type ? [type.slug] : [];
+}
+
 function detailLink(product, depth) {
-  return `<a class="text-link detail-link" href="${relPath(depth, `objects/${productSlug(product)}/`)}">Detail</a>`;
+  return `<a class="text-link detail-link" href="${relPath(depth, `objects/${productSlug(product)}/`)}">収蔵記録を見る</a>`;
 }
 
 function objectDetailMedia(product) {
@@ -260,7 +372,7 @@ function objectDetailMedia(product) {
   if (image.url) {
     const alt = image.alt || `${product.title} の収蔵画像`;
     return `<figure class="object-detail-image">
-        <img src="${escapeHtml(image.url)}" alt="${escapeHtml(alt)}">
+        <img src="${escapeHtml(image.url)}" alt="${escapeHtml(alt)}" loading="lazy">
         <figcaption>${escapeHtml(alt)}</figcaption>
       </figure>`;
   }
@@ -271,22 +383,36 @@ function objectDetailMedia(product) {
       </div>`;
 }
 
+function objectCardMedia(product, mediaLabel) {
+  const image = product.image || {};
+  if (image.url) {
+    const alt = image.alt || `${product.title} 商品画像`;
+    return `<figure class="object-card__media object-card__media--image">
+        <img src="${escapeHtml(image.url)}" alt="${escapeHtml(alt)}" loading="lazy">
+      </figure>`;
+  }
+  return `<div class="object-card__media" aria-hidden="true">
+        <span>${escapeHtml(mediaLabel)}</span>
+      </div>`;
+}
+
 function objectCards(items, options = {}) {
   const limit = options.limit || items.length;
   const depth = options.depth || 0;
   const includeExternalLinks = options.includeExternalLinks === true;
   const subset = items.slice(0, limit);
   if (!subset.length) {
-    return `<p class="notice">この展示室には、まだ公開できる収蔵品がありません。</p>`;
+    return `<div class="empty-state object-empty-state">
+      <p class="eyebrow">EMPTY SHELF</p>
+      <h3>この展示室には、まだ公開できる収蔵品がありません。</h3>
+    </div>`;
   }
   return subset.map((product, index) => {
     const tags = (product.tags || []).slice(0, 3).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
     const type = objectTypes.find((item) => (item.categories || []).includes(product.category));
     const mediaLabel = type ? type.label : "OBJECT";
-    return `<article class="object-card product-card" data-product-card data-category="${escapeHtml(product.category)}" data-series="${escapeHtml(worldFor(product))}">
-      <div class="object-card__media" aria-hidden="true">
-        <span>${escapeHtml(mediaLabel)}</span>
-      </div>
+    return `<article class="object-card product-card" data-product-card data-category="${escapeHtml(product.category)}" data-series="${escapeHtml(worldFor(product))}" data-filter-worlds="${escapeHtml(filterWorldSlugs(product).join(" "))}" data-filter-types="${escapeHtml(filterTypeKeys(product).join(" "))}">
+      ${objectCardMedia(product, mediaLabel)}
       <div class="object-card__body">
         <p class="object-world">${escapeHtml(worldFor(product))} / ${escapeHtml(typeLabel(product.category))}</p>
         <h3>${escapeHtml(product.title)}</h3>
@@ -294,7 +420,6 @@ function objectCards(items, options = {}) {
         <p class="object-fragment">${escapeHtml(fragmentForProduct(product))}</p>
         <div class="tag-list">${tags}</div>
         ${detailLink(product, depth)}
-        <p class="object-note">${escapeHtml(product.note || "価格・在庫・販売状況は、外部販売先で確認してください。")}</p>
         <p class="object-checked">Checked ${escapeHtml(product.lastChecked)}</p>
         ${includeExternalLinks ? externalLinks(product) : ""}
       </div>
@@ -310,24 +435,71 @@ function worldTypeOverviewLink(type, world, depth) {
   return `<a class="text-link archive-link" href="${relPath(depth, `category/${type.slug}/`)}#world-${escapeHtml(world.slug)}">この世界の${escapeHtml(type.jp)}をすべて見る</a>`;
 }
 
+function collectionCountLabel(count) {
+  return count > 0 ? `収蔵品 ${count}` : "収蔵準備中";
+}
+
 function worldCard(world, depth, index) {
   const count = productsForWorld(world.name).length;
   return `<a class="quiet-card world-card" href="${relPath(depth, `worlds/${world.slug}/`)}">
     <strong>${escapeHtml(world.displayName)}</strong>
-    <small>収蔵品 ${count}</small>
+    <small>${collectionCountLabel(count)}</small>
     <p>${escapeHtml(world.lead)}</p>
+    <span class="world-reading">${escapeHtml(world.reading)}</span>
     <span class="card-fragment">${escapeHtml(fragmentForWorld(world))}</span>
     <em>ENTER THE WORLD</em>
   </a>`;
+}
+
+function worldEmptyState(world) {
+  const bodies = {
+    "DARK SOULS": "火の記録を置く棚として、この場所だけを静かに残しています。",
+    "Bloodborne": "醒めない夜の断片を迎える余白として、この場所だけを残しています。",
+    "ELDEN RING": "狭間の地の記憶を置くための余白として、この場所だけを残しています。",
+    "SEKIRO": "刃と沈黙の記録を置くための余白として、この場所だけを残しています。",
+    "ARMORED CORE": "通信と鋼鉄の残響を置くための余白として、この場所だけを残しています。",
+    "Demon's Souls": "霧の向こうの記録を置くための余白として、この場所だけを残しています。"
+  };
+  return `<section class="empty-state world-empty-state">
+          <p class="eyebrow">EMPTY SHELF</p>
+          <h2>まだ、この部屋には公開できる収蔵品がありません。</h2>
+          <p>${escapeHtml(bodies[world.name] || "世界の断片を置くための余白として、この場所だけを残しています。")}</p>
+        </section>`;
 }
 
 function typeCard(type, depth) {
   const count = productsForType(type.key).length;
   return `<a class="quiet-card type-card" href="${relPath(depth, `category/${type.slug}/`)}">
     <strong>${escapeHtml(type.jp)}</strong>
-    <small>${escapeHtml(type.label)} / 収蔵品 ${count}</small>
+    <small>${escapeHtml(type.label)} / ${collectionCountLabel(count)}</small>
     <p>${escapeHtml(type.lead)}</p>
   </a>`;
+}
+
+function filterButton(group, value, label, isActive = false) {
+  return `<button class="filter-button${isActive ? " is-active" : ""}" type="button" data-filter-group="${escapeHtml(group)}" data-filter-value="${escapeHtml(value)}">${escapeHtml(label)}</button>`;
+}
+
+function objectsFilterPanel() {
+  const worldButtons = worlds
+    .filter((world) => productsForWorld(world.name).length)
+    .map((world) => filterButton("world", world.slug, world.name))
+    .join("");
+  const typeButtons = typeFilterCandidates
+    .filter((candidate) => publishedProducts.some((product) => filterTypeKeys(product).includes(candidate.key)))
+    .map((candidate) => filterButton("type", candidate.key, candidate.label))
+    .join("");
+  return `<div class="object-filter-panel" data-object-filters>
+        <div class="filter-group" aria-label="World filter">
+          <p class="eyebrow">WORLD FILTER</p>
+          <div class="filter-list">${filterButton("world", "all", "All", true)}${worldButtons}</div>
+        </div>
+        <div class="filter-group" aria-label="Type filter">
+          <p class="eyebrow">TYPE FILTER</p>
+          <div class="filter-list">${filterButton("type", "all", "All", true)}${typeButtons}</div>
+        </div>
+        <p class="notice object-filter-empty" data-filter-empty hidden>この条件で見える収蔵品は、まだありません。</p>
+      </div>`;
 }
 
 function renderHome() {
@@ -335,8 +507,9 @@ function renderHome() {
       <div class="container">
         <p class="eyebrow">PRIVATE ARCHIVE</p>
         <h1>${siteName}</h1>
+        <p class="site-subtitle">${siteSubtitle}</p>
         <p class="hero-copy">もう戻れない世界の気配を、日常のそばに残す。</p>
-        <p class="lead">火、血、霧、黄金、鋼鉄。<br>かつて日常と共にあった世界の残響、そして戦いの日々。</p>
+        <p class="lead">火、血、霧、黄金、鋼鉄。<br>かつて画面の奥にあった世界の残響を、<br>静かに収めていく。</p>
       </div>
     </section>
     <section class="section section--concept">
@@ -353,6 +526,27 @@ function renderHome() {
         <div class="quiet-grid quiet-grid--worlds">${worlds.map((world, index) => worldCard(world, 0, index)).join("")}</div>
       </div>
     </section>
+    <section class="section section--types">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">OBJECT TYPES</p>
+          <h2>かたちから辿る</h2>
+        </div>
+        <div class="quiet-grid quiet-grid--types">${objectTypes.map((type) => typeCard(type, 0)).join("")}</div>
+      </div>
+    </section>
+    <section class="section section--journal">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">JOURNAL</p>
+          <h2>静かな出口の前に</h2>
+        </div>
+        <div class="journal-teaser">
+          <p>外部リンク、画像、権利、広告表記について。必要なことだけを、ひとつの記録にまとめています。</p>
+          <a class="text-link archive-link" href="${relPath(0, "journal/")}">JOURNAL</a>
+        </div>
+      </div>
+    </section>
     <section class="section section--selected">
       <div class="container">
         <div class="section-heading">
@@ -363,7 +557,7 @@ function renderHome() {
       </div>
     </section>`;
   writeFile("index.html", basePage({
-    title: siteName,
+    title: `${siteName} | ${siteSubtitle}`,
     description: "火、血、霧、黄金、鋼鉄。かつて画面の奥にあった気配を、静かに収めていく個人編集アーカイブ。",
     ogDescription: "滅びた世界の気配を、日常のそばに置く。",
     route: "/",
@@ -383,25 +577,26 @@ function renderAbout() {
     </section>
     <section class="section">
       <div class="container narrow prose">
-        <p>明るい世界を、素直には信じられない。<br>日々は荒れ、疲れ、何かを続ける意味すら、少しずつ薄れていく。</p>
-        <p>それでも、かつて歩んだ世界の記憶は、<br>自分の奥に、静かに残り続けている。</p>
-        <p>火、血、霧、黄金、鋼鉄。<br>迷い、倒れ、何度も戻り、それでも進んだ場所。</p>
-        <p>あの世界は、もう現実にはない。<br>けれど、完全に失われたわけでもない。</p>
-        <p>何でもない日常の中で、<br>ふと、その輪郭が戻ってくることがある。</p>
-        <p>それは、大きな救いではない。<br>世界を変えるものでもない。</p>
-        <p>けれど、荒れた日々の中で、<br>まだ美しいと思えるものがあること。<br>まだ忘れたくない世界があること。<br>まだ手放したくない記憶があること。</p>
-        <p>それは、小さな希望に似ている。</p>
-        <p>SEED A HOSTILE EARTH.</p>
-        <p>かつて歩んだ世界の記憶を、<br>ひとつずつ収めていく。</p>
-        <p>あの世界を、つなぎ止めるために。<br>そして、敵意ある日常の中に、<br>それでも小さな種をまくために。</p>
-        <hr>
-        <p>本サイトは、株式会社フロム・ソフトウェア、FromSoftwareおよび各権利元とは関係のない非公式サイトです。掲載している作品名、商品名、画像、商標等の権利は、それぞれの権利者または販売元に帰属します。価格・在庫・販売状況は、必ず外部販売先で確認してください。</p>
-          <p>${amazonImagePolicy}</p>
+        <section class="about-section">
+          <h2>この場所について</h2>
+          <p>明るい世界を、素直には信じられない日があります。それでも、かつて歩んだ火、血、霧、黄金、鋼鉄の記憶は、自分の奥に静かに残り続けています。</p>
+          <p>SEED A HOSTILE EARTHは、その記憶をひとつずつ収めるための個人編集アーカイブです。商品ではなく、旅のあとに残った断片として、書物、音、造形、入口を置いています。</p>
+        </section>
+        <section class="about-section">
+          <h2>収蔵の基準</h2>
+          <p>この場所に置くものは、数を増やすためではなく、作品のあとに残る気配を損なわないものに限っています。書物、音、造形、入口。どれも商品としてではなく、かつて歩いた世界を思い出すための断片として収めています。</p>
+          <p>すべての記録は、ひとりの観測者の視点で選び、短い言葉に整えています。説明しすぎず、すすめすぎず、ただ世界の外縁に残ったものを静かに置く。その距離感を、このアーカイブの基準にしています。</p>
+        </section>
+        <section class="about-section">
+          <h2>非公式サイトとしての立ち位置</h2>
+          <p>本サイトは、株式会社フロム・ソフトウェア、FromSoftwareおよび各権利元とは関係のない非公式サイトです。作品名、商品名、画像、商標等の権利は、それぞれの権利者に帰属します。</p>
+          <p>外部リンクにはアフィリエイトリンクを含む場合があります。価格、在庫、販売条件、画像利用の方針など、詳しい記録は<a class="text-link" href="${relPath(1, "journal/")}">JOURNAL</a>にまとめています。</p>
+        </section>
       </div>
     </section>`;
   writeFile("about/index.html", basePage({
     title: `ABOUT | ${siteName}`,
-    description: "SEED A HOSTILE EARTHの思想、非公式表記、権利表記、アフィリエイト利用方針について。",
+    description: "SEED A HOSTILE EARTHの思想、個人編集アーカイブとしての姿勢、非公式表記について。",
     route: "/about/",
     depth: 1,
     bodyAttrs: 'data-page-type="static"',
@@ -413,7 +608,7 @@ function renderWorldsIndex() {
   const content = `    <section class="hero hero--text">
       <div class="container">
         <p class="eyebrow">WORLDS</p>
-        <h1>ROOMS OF<br>OLD WORLDS</h1>
+        <h1 aria-label="ROOMS OF OLD WORLDS">ROOMS OF<br>OLD WORLDS</h1>
         <p class="lead">火、霧、血、黄金、鋼鉄。世界ごとに異なる残響を、静かな部屋として分けました。</p>
       </div>
     </section>
@@ -437,19 +632,20 @@ function renderWorldPages() {
   const primaryTypes = objectTypes.filter((type) => type.isPrimary);
   worlds.forEach((world) => {
     const items = productsForWorld(world.name);
+    const visibleTypes = primaryTypes.filter((type) => productsForType(type.key, items).length);
     const otherWorlds = worlds
       .filter((item) => item.name !== world.name)
       .map((item) => `<a class="text-link" href="../${item.slug}/">${escapeHtml(item.displayName)}</a>`)
       .join("");
-    const typeNav = primaryTypes.map((type) => {
+    const typeNav = visibleTypes.map((type) => {
       const count = productsForType(type.key, items).length;
       return `<a class="quiet-card type-card" href="#${escapeHtml(type.slug)}">
-        <strong>${escapeHtml(type.label)}</strong>
-        <small>${escapeHtml(type.jp)} / 収蔵品 ${count}</small>
+        <strong>${escapeHtml(type.jp)}</strong>
+        <small>${escapeHtml(type.label)} / 収蔵品 ${count}</small>
         <p>${escapeHtml(type.lead)}</p>
       </a>`;
     }).join("");
-    const typeSections = primaryTypes.map((type) => {
+    const typeSections = visibleTypes.map((type) => {
       const typeItems = productsForType(type.key, items);
       const previewItems = typeItems.slice(0, previewLimit);
       const overview = typeItems.length > previewLimit ? `<div class="section-follow-link">${worldTypeOverviewLink(type, world, 2)}</div>` : "";
@@ -462,6 +658,22 @@ function renderWorldPages() {
           ${overview}
         </section>`;
     }).join("");
+    const worldObjectSections = items.length ? `<section class="section section--types">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">OBJECT TYPES</p><h2>この世界のかたち</h2></div>
+        <div class="quiet-grid quiet-grid--types">${typeNav}</div>
+      </div>
+    </section>
+    <section class="section section--selected">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">OBJECTS FROM THIS WORLD</p><h2>収められた断片</h2></div>
+        <div class="world-type-stack">${typeSections}</div>
+      </div>
+    </section>` : `<section class="section section--selected">
+      <div class="container">
+        ${worldEmptyState(world)}
+      </div>
+    </section>`;
     const content = `    <section class="hero hero--text">
       <div class="container">
         <p class="breadcrumb"><a href="../../worlds/">WORLDS</a> / ${escapeHtml(world.name)}</p>
@@ -475,18 +687,7 @@ function renderWorldPages() {
         <p>${escapeHtml(world.statement)}</p>
       </div>
     </section>
-    <section class="section section--types">
-      <div class="container">
-        <div class="section-heading"><p class="eyebrow">OBJECT TYPES</p><h2>この世界のかたち</h2></div>
-        <div class="quiet-grid quiet-grid--types">${typeNav}</div>
-      </div>
-    </section>
-    <section class="section section--selected">
-      <div class="container">
-        <div class="section-heading"><p class="eyebrow">OBJECTS FROM THIS WORLD</p><h2>収められた断片</h2></div>
-        <div class="world-type-stack">${typeSections}</div>
-      </div>
-    </section>
+    ${worldObjectSections}
     <section class="section">
       <div class="container other-links"><span>OTHER WORLDS</span>${otherWorlds}</div>
     </section>`;
@@ -520,29 +721,16 @@ function renderObjectsIndex() {
   const primaryTypes = objectTypes.filter((type) => type.isPrimary);
   const typeAnchorCards = primaryTypes.map((type) => {
     const count = productsForType(type.key).length;
-    return `<a class="quiet-card type-card" href="#${escapeHtml(type.slug)}">
-    <strong>${escapeHtml(type.label)}</strong>
-    <small>${escapeHtml(type.jp)} / 収蔵品 ${count}</small>
+    return `<a class="quiet-card type-card" href="${relPath(1, `category/${type.slug}/`)}" aria-label="${escapeHtml(type.jp)}の部屋へ">
+    <strong>${escapeHtml(type.jp)}</strong>
+    <small>${escapeHtml(type.label)} / ${collectionCountLabel(count)}</small>
     <p>${escapeHtml(type.lead)}</p>
   </a>`;
-  }).join("");
-  const typeSections = primaryTypes.map((type) => {
-    const items = productsForType(type.key);
-    const previewItems = items.slice(0, previewLimit);
-    const overview = items.length > previewLimit ? `<div class="section-follow-link">${typeOverviewLink(type, 1, `${type.jp}をすべて見る`)}</div>` : "";
-    return `<section class="object-type-section" id="${escapeHtml(type.slug)}">
-          <div class="section-heading section-heading--compact">
-            <p class="eyebrow">${escapeHtml(type.label)}</p>
-            <h3>${escapeHtml(type.jp)}</h3>
-          </div>
-          <div class="object-grid" data-product-list="objects-${escapeHtml(type.slug)}">${objectCards(previewItems, { depth: 1 })}</div>
-          ${overview}
-        </section>`;
   }).join("");
   const content = `    <section class="hero hero--text">
       <div class="container">
         <p class="eyebrow">OBJECTS</p>
-        <h1>ARCHIVE OF<br>RELICS</h1>
+        <h1 aria-label="ARCHIVE OF RELICS">ARCHIVE OF<br>RELICS</h1>
         <p class="lead">入口、記録、残響、遺物、記章。作品世界を越えて、断片のかたちから収蔵品を辿るための一覧です。</p>
       </div>
     </section>
@@ -555,7 +743,8 @@ function renderObjectsIndex() {
     <section class="section">
       <div class="container">
         <div class="section-heading"><p class="eyebrow">OBJECTS</p><h2>分類ごとの収蔵品</h2></div>
-        <div class="world-type-stack">${typeSections}</div>
+        ${objectsFilterPanel()}
+        <div class="object-grid" data-product-list="objects-all">${objectCards(publishedProducts, { depth: 1 })}</div>
       </div>
     </section>`;
   writeFile("objects/index.html", basePage({
@@ -590,7 +779,8 @@ function renderCategoryPages() {
       <div class="container">
         <p class="breadcrumb"><a href="../../objects/">OBJECTS</a> / ${escapeHtml(type.jp)}</p>
         <p class="eyebrow">OBJECT TYPE</p>
-        <h1>${escapeHtml(type.jp)}</h1>        <p class="lead">${escapeHtml(type.lead)}</p>
+        <h1>${escapeHtml(type.jp)}</h1>
+        <p class="lead">${escapeHtml(type.lead)}</p>
       </div>
     </section>
     <section class="section">
@@ -623,11 +813,29 @@ function renderProductPages() {
     <section class="section object-detail">
       <div class="container narrow">
         ${objectDetailMedia(product)}
-        <p class="object-detail-fragment">${escapeHtml(fragmentForProduct(product))}</p>
-        <div class="tag-list">${(product.tags || []).slice(0, 4).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>
-        ${externalLinks(product)}
-        <p class="object-note">${escapeHtml(product.note || "価格・在庫・販売状況は、外部販売先で確認してください。")}</p>
-        <p class="object-checked">Checked ${escapeHtml(product.lastChecked)}</p>
+        <div class="object-record-meta">
+          <p class="object-detail-fragment">${escapeHtml(fragmentForProduct(product))}</p>
+          <div class="tag-list">${(product.tags || []).slice(0, 4).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>
+          <p class="object-checked">Checked ${escapeHtml(product.lastChecked)}</p>
+        </div>
+        <div class="object-record">
+          <section class="object-record-section">
+            <p class="eyebrow">ARCHIVE NOTE</p>
+            <h2>Archive Note</h2>
+            <p>${escapeHtml(archiveNoteForProduct(product))}</p>
+          </section>
+          <section class="object-record-section">
+            <p class="eyebrow">WORLD FRAGMENT</p>
+            <h2>World Fragment</h2>
+            <p>${escapeHtml(worldFragmentForProduct(product))}</p>
+          </section>
+          <section class="object-record-section quiet-exit">
+            <p class="eyebrow">QUIET EXIT</p>
+            <h2>静かな出口</h2>
+            <p class="object-detail-notice">取り扱いの有無は、外部の記録をご確認ください。価格や在庫は変わり続けるため、この場所では固定していません。</p>
+            ${externalLinks(product)}
+          </section>
+        </div>
       </div>
     </section>`;
     writeFile(`objects/${productSlug(product)}/index.html`, basePage({
@@ -641,15 +849,28 @@ function renderProductPages() {
   });
 }
 
-function renderGuide() {
-  const content = `    <section class="hero hero--text"><div class="container narrow"><p class="eyebrow">NOTICE</p><h1>購入時の注意</h1><p class="lead">外部リンク、販売状況、権利表記について。ここでは正確性を優先して記録します。</p></div></section>
-    <section class="section"><div class="container narrow prose"><p>当サイトは非公式情報サイトであり、公式サイトや販売サイトではありません。</p><p>価格・在庫・販売状況は、外部販売先で必ず確認してください。プレミア価格、非公式品、模倣品、権利関係が不明な商品には注意してください。予約商品や再販商品は、販売元・製造元の情報を確認してください。</p><p>商品画像・商標・作品名の権利は各権利者に帰属します。当サイトは正規流通品・販売元確認可能な商品の紹介を基本方針とします。</p><p>${amazonImagePolicy}</p><p>${footerText}</p><p>${affiliateText}</p></div></section>`;
-  writeFile("guide/buying-notes/index.html", basePage({
-    title: `NOTICE | ${siteName}`,
-    description: "FromSoftware作品関連アイテムを見る際の注意事項。非公式表記、権利表記、外部リンク、価格・在庫確認について。",
-    route: "/guide/buying-notes/",
-    depth: 2,
-    bodyAttrs: 'data-page-type="static"',
+function renderJournalIndex() {
+  const content = `    <section class="hero hero--text">
+      <div class="container">
+        <p class="eyebrow">JOURNAL</p>
+        <h1>SITE NOTES</h1>
+        <p class="lead">この場所の姿勢、外部リンク、画像、権利について。必要なことだけを、静かに残します。</p>
+      </div>
+    </section>
+    <section class="section section--journal">
+      <div class="container narrow journal-body">
+        ${journalSections.map((section) => `<section class="journal-section">
+          <h2>${escapeHtml(section.title)}</h2>
+          <p>${escapeHtml(section.body)}</p>
+        </section>`).join("")}
+      </div>
+    </section>`;
+  writeFile("journal/index.html", basePage({
+    title: `JOURNAL | ${siteName}`,
+    description: "SEED A HOSTILE EARTHの姿勢、外部リンク、画像、権利、非公式表記についてまとめた記録。",
+    route: "/journal/",
+    depth: 1,
+    bodyAttrs: 'data-page-type="journal"',
     content
   }));
 }
@@ -658,17 +879,17 @@ function renderSitemapAndRobots() {
   const routes = [
     "/",
     "/about/",
+    "/journal/",
     "/worlds/",
     "/objects/",
     ...publishedProducts.map((product) => productRoute(product)),
     ...worlds.map((world) => `/worlds/${world.slug}/`),
-    ...objectTypes.map((type) => `/category/${type.slug}/`),
-    "/guide/buying-notes/"
+    ...objectTypes.map((type) => `/category/${type.slug}/`)
   ];
+  const sitemapLine = siteUrl ? `Sitemap: ${siteUrl}/sitemap.xml\n` : "";
   writeFile("robots.txt", `User-agent: *
 Allow: /
-Sitemap: ${siteUrl}/sitemap.xml
-`);
+${sitemapLine}`);
   writeFile("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${routes.map((route) => `  <url><loc>${pageUrl(route)}</loc><lastmod>${site.lastModified}</lastmod></url>`).join("\n")}
@@ -683,7 +904,7 @@ renderWorldPages();
 renderObjectsIndex();
 renderCategoryPages();
 renderProductPages();
-renderGuide();
+renderJournalIndex();
 renderSitemapAndRobots();
 
 console.log(`Built ${publishedProducts.length} curated objects.`);
